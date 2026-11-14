@@ -84,7 +84,12 @@ def _attr_missing(question, kept, ev):
         return []
     evm = {e["id"]: e for e in ev}
     text = " ".join((evm[x]["statement"] + " " + evm[x]["quote"]).lower() for c in kept for x in c["citations"] if x in evm)
-    return [a for a in asked if a not in text]
+    # a dimension stated as a length ("40.6 cm wide, 0.37 mm") answers size/width/thickness questions; a rate ("0.92 mm/s") does not
+    # (fix 15 Nov after holdout-3 H3-05 live: the first version of this rule wrongly declined that answer)
+    dims = {"size", "dimens", "diamet", "thickn", "width", "length"}
+    has_len = bool(re.search(r"\d+(?:\.\d+)?\s*(?:mm|cm|m)\b(?!\s*/)", text))
+    syn = {"width": "wide", "thickn": "thick", "length": "long"}
+    return [a for a in asked if a not in text and syn.get(a, "~") not in text and not (a in dims and has_len)]
 
 
 def _abstain(reason, question, related=None, kind="no-evidence"):

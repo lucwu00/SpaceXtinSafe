@@ -37,3 +37,11 @@ def test_value_and_attribute_rules():
     assert copilot.VALUE_Q.search("At what oxygen pressure did sparks ignite combustibles?")
     ev = [{"id": "E1", "statement": "LUCI burned fabric at lunar gravity.", "quote": "flame spread"}]
     assert copilot._attr_missing("What sample sizes were flown?", [{"text": "x", "citations": ["E1"]}], ev) == ["size"]
+
+
+def test_dimension_stated_as_length_counts_but_rate_does_not():
+    sheet = [{"id": "E1", "statement": "a 40.6 cm wide, 0.37 mm sheet", "quote": ""}]
+    rate = [{"id": "E2", "statement": "spread rate 0.92 mm/s", "quote": ""}]
+    q = "What were the width and thickness of the sample?"
+    assert copilot._attr_missing(q, [{"text": "x", "citations": ["E1"]}], sheet) == []
+    assert copilot._attr_missing("What sample sizes were flown?", [{"text": "x", "citations": ["E2"]}], rate) == ["size"]

@@ -1,0 +1,29 @@
+# Deployed check: https://spacextinsafe.onrender.com
+
+Run 2026-11-14T22:13:03+00:00. Passed 23/23. By kind: {'DETERMINISTIC': '18/18', 'LIVE (Claude)': '3/3', 'LIVE (Neo4j)': '1/1', 'RECORDED': '1/1'}.
+
+| # | Check | Kind | Result | Detail |
+|---|---|---|---|---|
+| 1 | Backend reachable (cold start allowed) | DETERMINISTIC | PASS | healthy after 0 retries (137 ms) |
+| 2 | Service status | DETERMINISTIC | PASS | Claude live=False, graph=neo4j, semantic=False |
+| 3 | Neo4j retrieval verified against in-memory graph | LIVE (Neo4j) | PASS | verified=True  (120 ms) |
+| 4 | Claude answer with checked citations (Saffire-II sample 2-7) | LIVE (Claude) | PASS | mode=claude model=claude-opus-5-5 cited=['EV-SAF-08'] graph=neo4j 7308 ms |
+| 5 | Claude + graph: sleeping bag composition evidence | LIVE (Claude) | PASS | mode=claude model=claude-sonnet-5-5 cited=['EV-AP1-01', 'EV-SAF-08'] graph=neo4j 5958 ms |
+| 6 | Claude: conflicting evidence question | LIVE (Claude) | PASS | mode=claude model=claude-opus-5-5 cited=['EV-SAF-05', 'EV-SAF-07', 'EV-SAF-09'] graph=networkx 10467 ms |
+| 7 | Custom spacecraft with a random atmosphere | DETERMINISTIC | PASS | SC-953C4143 at 24.3% O2 / 87.6 kPa, 42 components screened |
+| 8 | Custom material creates a library gap, not evidence | DETERMINISTIC | PASS | status='User-defined material, no evidence found', gap_created=True |
+| 9 | User alias cannot remove catalogue evidence (PMMA) | DETERMINISTIC | PASS | PMMA status after a user alias 'PMMA' was added: 'Verified NASA combustion evidence' |
+| 10 | Supported prediction (methanol 21% O2, 2.5 mm) | DETERMINISTIC | PASS | outcome=Model-supported estimate estimate=0.5168221503173115 |
+| 11 | Untested combination is not model-supported (30% O2, 1.7 mm) | DETERMINISTIC | PASS | outcome=Unavailable estimate=None |
+| 12 | Out-of-range O2 refused (45%) | DETERMINISTIC | PASS | outcome=Unavailable estimate=None |
+| 13 | Non-numeric input refused without a server error | DETERMINISTIC | PASS | outcome=Unavailable estimate=None |
+| 14 | Solid fabric refused by the droplet model | DETERMINISTIC | PASS | outcome=Unavailable estimate=None |
+| 15 | Research gaps by gravity | DETERMINISTIC | PASS | PMMA partial-g: No finding in this library; SIBAL partial-g: Direct experimental evidence ['EV-LUCI-01'] |
+| 16 | Interaction status and gap wording | DETERMINISTIC | PASS | PMMA+Nomex: Documented interaction; polyester+PU: No documented interaction (research gap) |
+| 17 | Dynamic PDF report changes with inputs | DETERMINISTIC | PASS | two PDFs 15453 / 16711 bytes, sha e9b8333d13b0 / 90231391c23a (1758 / 2408 ms) |
+| 18 | Emergency instruction refused (boundary) | DETERMINISTIC | PASS | mode=boundary tier=0 boundary=True (42 ms) |
+| 19 | Unsupported question abstains (Kevlar) | DETERMINISTIC | PASS | mode=no-evidence tier=0 boundary=None (74 ms) |
+| 20 | Calculation answered by a tool, no LLM | DETERMINISTIC | PASS | mode=deterministic tier=0 boundary=None (67 ms) |
+| 21 | Stored evaluation results served | RECORDED | PASS | stored results present; live Claude run 2026-11-14T17:35:41+00:00: 14/15 |
+| 22 | Usage and cost log | DETERMINISTIC | PASS | {"requests": 6, "by_engine": {"Claude \u00b7 Advanced scientific": {"n": 2, "input_tokens": 2697, "output_tokens": 1792, "cost_usd": 0.04663, "latency_ms_median |
+| 23 | Clean up test records | DETERMINISTIC | PASS | deleted 3 test records |

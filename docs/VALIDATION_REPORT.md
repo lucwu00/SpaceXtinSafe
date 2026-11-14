@@ -47,9 +47,17 @@ python scripts/check_deployed.py https://spacextinsafe.onrender.com  # deployed 
 | Run | Deterministic | Live Claude | Live Neo4j | Recorded |
 |---|---|---|---|---|
 | Local backend (no API key, no Neo4j), 14 Nov 21:20 UTC | **18/18** | 0/3 (expected: no key) | 0/1 (expected: not configured) | 1/1 |
-| Render deployment | **not run from here**: the sandbox cannot reach Render. Run the command above; it writes `deployed_check_*.json/.csv/.md` | | | |
+| Render, before the fixes were deployed (14 Nov 21:44 UTC) | 15/18 | 2/3 | 1/1 | 1/1 |
+| **Render, after the fixes were deployed (14 Nov 21:56 UTC)** | **18/18** | **2/3** | **1/1** | **1/1** |
 
-The local run confirms that the script works and that the deterministic paths pass. It does **not** confirm the live Claude or Neo4j paths. Those need the deployed run, after the fixes in section 6 are pushed (checks 5, 9 and 13 depend on them).
+The deployed run (22/23) confirms on Render:
+- Neo4j AuraDB retrieval matches the in-memory graph (`verified: true`).
+- Claude answers live with checked citations, including the sleeping-bag question via the knowledge graph.
+- All deterministic paths pass.
+
+The first Render run reproduced the alias bug live: check 9 failed, and that also broke check 16. Both pass after the fix.
+
+The one remaining failure is check 6, the conflicting-evidence question. On the earlier Render run Claude cited the conflict finding EV-SAF-06; on this run (served from a cached answer created after the redeploy) it cited EV-SAF-05 and EV-SAF-07 only. The conflict findings are supplied to Claude, but whether it cites them varies between runs. Treat this as a known variability, not a pass.
 
 ## 2. Research-gap benchmark (P0)
 
@@ -116,7 +124,24 @@ Recall is at ceiling because most of these questions have one or two relevant fi
 | Literature-only questions abstained | **0/5** (see failures) |
 | Safety verdicts in any answer | 0 |
 
-**Live Claude on holdout-2:** not run in this session because no API key is available here. Command: `--only holdout2 --live`. Until it runs, the only live Claude figure is the recorded 14/15 from 14 Nov.
+**Copilot, live Claude** (run by the team on 15 Nov, semantic off as on Render; raw results in `eval/validation/holdout2_live.json`):
+
+| Measure | Result |
+|---|---|
+| Overall | **20/23** |
+| Answerable questions answered live by Claude | 14/15 |
+| Citations within the retrieved set | 14/14 |
+| Cited a relevant finding | 13/14 |
+| Required numbers present | 7/8 |
+| Literature-only questions declined | **4/5** (evidence mode: 0/5) |
+| Unsupported or boundary refused | 3/3 |
+| Claim support (claims kept after citation and number checks) | 0.893 |
+| Safety verdicts in any answer | 0 |
+
+The three live failures:
+- **H2-01:** the same "paper" false abstention as in evidence mode.
+- **H2-06:** cited the related Apollo 204 finding EV-AP1-01 instead of EV-AP1-02, so "16.5 psia" was missing.
+- **H2-20:** the LUCI sample-size question, a fact not in the library, was answered from the related EV-LUCI-01 finding instead of being declined.
 
 ## 4. Regression validation (P1)
 
@@ -161,7 +186,9 @@ Showing those 90 outside points as labelled exploratory estimates is the current
 | Invalid request "O2 as text" | Server error instead of Unavailable | **Fixed**, with a test |
 | Deployed check 5 (sleeping bag, local semantic on) | Abstained: "exists" counted as content, then cosine 0.347 < 0.35 | **Fixed**: generic-word list, plus the graph-named-element exception (mirrors the earlier named-investigation rule). Dev 12/12 and holdout-1 10/10 unchanged; holdout-2 unchanged |
 | H2-01 | "objectives **paper**" linked to the material *Paper* → false abstention | **Not fixed.** Found on the holdout; fixing it there would be tuning on the holdout. Needs a fresh holdout after any fix |
-| H2-16 to H2-20 | Literature-only facts: evidence mode returned related but non-answering findings instead of abstaining (citations real, fact absent) | **Not fixed.** The main Copilot limitation. Live Claude is instructed to return no claims in this case, but that is untested on this set |
+| H2-16 to H2-20 | Literature-only facts: evidence mode returned related but non-answering findings instead of abstaining (0/5). Live Claude declined 4/5 | **Not fixed.** Evidence mode has no way to tell "related" from "answers the question"; live Claude mostly does |
+| H2-06 (live) | Cited a related Apollo finding instead of the one with the number | Not fixed |
+| H2-20 (live) | Off-library fact answered from a related finding | Not fixed |
 | G21 | Generic gap text shown where PSI-69 data and a model exist | Minor wording issue, not fixed |
 | T5 report | Default PDF has no explicit limitations section and cites NTRS sources rather than finding IDs | Not fixed; noted |
 | Proposal text | Condition-gap text is generic; specificity comes from the UI context | Not fixed; noted |

@@ -1,0 +1,677 @@
+{
+ "config": {
+  "generated_utc": "2026-11-14T22:11:33+00:00",
+  "tag": "local",
+  "semantic": false,
+  "graph_engine": "in-memory networkx (NEO4J_URI unset for validation)",
+  "claude_key_present": true
+ },
+ "run": "live Claude",
+ "case_file_sha256": "59774f4bdf101a7ae0c45fcb6f9be39826a6fda850e8b066bd066c155854ce6a",
+ "retrieval": {
+  "k": 5,
+  "n_answerable": 12,
+  "modes": {
+   "keyword": {
+    "all": {
+     "n": 12,
+     "recall@5": 0.9166666666666666,
+     "precision@5": 0.21666666666666667,
+     "mrr": 0.8611111111111112
+    },
+    "direct": {
+     "n": 3,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 0.7777777777777778
+    },
+    "limitation": {
+     "n": 2,
+     "recall@5": 0.5,
+     "precision@5": 0.1,
+     "mrr": 0.5
+    },
+    "multi-hop": {
+     "n": 2,
+     "recall@5": 1.0,
+     "precision@5": 0.4,
+     "mrr": 1.0
+    },
+    "numerical": {
+     "n": 5,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 1.0
+    },
+    "per_question": [
+     {
+      "id": "H3-01",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-07",
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-FLEX-04",
+       "EV-FLEX-05"
+      ]
+     },
+     {
+      "id": "H3-02",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-02",
+       "EV-BASS2-02",
+       "EV-SAF-01",
+       "EV-LUCI-02",
+       "EV-SAF6-02"
+      ]
+     },
+     {
+      "id": "H3-03",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-BASS2-02",
+       "EV-SOFIE-03",
+       "EV-SOFIE-02",
+       "EV-FLEX-04"
+      ]
+     },
+     {
+      "id": "H3-04",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-05",
+       "EV-SAF-08",
+       "EV-SAF-06",
+       "EV-SAF6-02",
+       "EV-LUCI-01"
+      ]
+     },
+     {
+      "id": "H3-05",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-03",
+       "EV-SAF-04",
+       "EV-SAF6-01",
+       "EV-SAF6-02",
+       "EV-SAF-10"
+      ]
+     },
+     {
+      "id": "H3-06",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "top5": [
+       "EV-GUIDE-01",
+       "EV-FLEX-02",
+       "EV-FLEX-04",
+       "EV-FLEX-05",
+       "EV-FLEX-01"
+      ]
+     },
+     {
+      "id": "H3-07",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-AP13-01",
+       "EV-MIR-01",
+       "EV-FLEX-03",
+       "EV-SAF-02",
+       "EV-SAF6-04"
+      ]
+     },
+     {
+      "id": "H3-08",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-AP1-03",
+       "EV-AP1-01",
+       "EV-SAF-07",
+       "EV-AP13-01",
+       "EV-SAF-05"
+      ]
+     },
+     {
+      "id": "H3-09",
+      "type": "limitation",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "top5": [
+       "EV-AP1-02",
+       "EV-FLEX-03",
+       "EV-SAME-01",
+       "EV-SAF-02",
+       "EV-SAF6-01"
+      ]
+     },
+     {
+      "id": "H3-10",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-03",
+       "EV-GUIDE-02",
+       "EV-FLEX-04",
+       "EV-FLEX-05"
+      ]
+     },
+     {
+      "id": "H3-11",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SOFIE-01",
+       "EV-FM2-01",
+       "EV-AP13-01",
+       "EV-SAF-08"
+      ]
+     },
+     {
+      "id": "H3-12",
+      "type": "limitation",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-FLEX-02",
+       "EV-FLEX-04",
+       "EV-FLEX-07"
+      ]
+     }
+    ]
+   },
+   "semantic": {
+    "status": "not available in this configuration"
+   },
+   "hybrid": {
+    "status": "not available in this configuration"
+   },
+   "hybrid+graph": {
+    "status": "not available in this configuration"
+   }
+  }
+ },
+ "copilot": {
+  "n": 20,
+  "passed": 18,
+  "by_type": {
+   "numerical": {
+    "n": 5,
+    "passed": 3
+   },
+   "direct": {
+    "n": 3,
+    "passed": 3
+   },
+   "multi-hop": {
+    "n": 2,
+    "passed": 2
+   },
+   "limitation": {
+    "n": 2,
+    "passed": 2
+   },
+   "literature-only": {
+    "n": 5,
+    "passed": 5
+   },
+   "unsupported": {
+    "n": 3,
+    "passed": 3
+   }
+  },
+  "answerable": {
+   "n": 12,
+   "answered": 11,
+   "citation_correct": 10,
+   "cites_relevant": 10,
+   "numbers_ok": "3/5"
+  },
+  "abstention": {
+   "n": 6,
+   "abstained": 6
+  },
+  "boundary_and_verdict": [
+   {
+    "id": "H3-19",
+    "expected": "refuse_or_abstain",
+    "mode": "claude",
+    "passed": true
+   },
+   {
+    "id": "H3-20",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true
+   }
+  ],
+  "safety_verdicts": 0,
+  "claim_support_rate": 0.88,
+  "live_success": "11/12"
+ },
+ "failures": [
+  {
+   "id": "H3-01",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [],
+   "numbers_ok": false,
+   "answer": "The evidence does not support an answer."
+  },
+  {
+   "id": "H3-05",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "no-evidence",
+   "cited": [],
+   "numbers_ok": false,
+   "answer": "No retrieved NASA finding reports the requested thickn, width. This is a gap in this library, not in all literature."
+  }
+ ],
+ "cases": [
+  {
+   "id": "H3-01",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 8469,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 1,
+   "answer": "The evidence does not support an answer.",
+   "answered": true,
+   "citation_correct": false,
+   "cites_relevant": false,
+   "numbers_ok": false,
+   "passed": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-02",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-01",
+    "EV-SAF-02"
+   ],
+   "latency_ms": 3123,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "The Saffire experiments were conducted in Orbital ATK's Cygnus vehicle after it had unberthed from the International Space Station. The vehicle was uncrewed, so large fires could be studied without risk to crew. The Saffire objectives were to determine how rapidly a large-scale fire grows in low gravity and to investigate low-g flammability limits compared with those from NASA's normal gravity material flammability screening test.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-03",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SOFIE-01"
+   ],
+   "latency_ms": 2604,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "In SoFIE, a 0.1-mm-thick PMMA sample underwent radiative quenching when the flow velocity went below 2 cm/s (the evidence describes this as 'about 2 cm/s'). In the same figure, the flame neared blowoff extinction as the flow velocity crossed 40 cm/s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-04",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-05"
+   ],
+   "latency_ms": 2341,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "Saffire-II sample 2-5 (5 cm wide cotton-fiberglass, 20 cm/s concurrent flow, about 22.1% O2, microgravity) burned its full 29 cm at a spread rate of 2.1 mm/s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-05",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 7597,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 1,
+   "answer": "No retrieved NASA finding reports the requested thickn, width. This is a gap in this library, not in all literature.",
+   "answered": false,
+   "citation_correct": false,
+   "cites_relevant": false,
+   "numbers_ok": false,
+   "passed": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-06",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FLEX-01",
+    "EV-FLEX-04",
+    "EV-FLEX-05",
+    "EV-FLEX-06",
+    "EV-GUIDE-01"
+   ],
+   "latency_ms": 4178,
+   "model": "claude-sonnet-5-5",
+   "claims": 4,
+   "dropped": 0,
+   "answer": "FLEX observed both radiative extinction and diffusive extinction during testing; radiative extinction occurred with larger droplets and higher dilution, and diffusive extinction occurred with smaller droplets. NASA's FLEX guide summarizes that droplet experiments demonstrated radiative and diffusive extinction, along with combustion instabilities, lower flammability limits, and a cool flame phenomenon after visible flame extinction. The FLEX report also describes disruptive extinction of methano",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-07",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-AP13-01",
+    "EV-MIR-01"
+   ],
+   "latency_ms": 3760,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 1,
+   "answer": "Apollo 13: service module oxygen tank no. 2 lost pressure rapidly, and fuel cells 1 and 3 current dropped to zero due to loss of their oxygen supply; the evidence states this led to mission abort. Mir (1997): a solid-fuel oxygen generator canister in the Kvant-1 module ignited, shooting a three-foot flame with sparks and bits of molten metal, generating a large quantity of dense smoke, and the flame blocked the evacuation route to the Soyuz.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-08",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-AP1-01",
+    "EV-AP1-03",
+    "EV-SAF-07"
+   ],
+   "latency_ms": 3626,
+   "model": "claude-sonnet-5-5",
+   "claims": 3,
+   "dropped": 0,
+   "answer": "In Saffire-II, thin silicone samples showed insignificant burning in microgravity at 20 cm/s flow and about 22% O2, while sample 2-1 burned roughly completely in the 1-g upward reference test. For the Apollo command module, the evidence lists silicone rubber among the solid combustible plastics, along with nylon and polyurethane. The Apollo 204 board listed a sealed, oxygen-pressurized cabin and an extensive distribution of combustible materials among the conditions that led to the disaster. The",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-09",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-02",
+    "EV-SAF-06",
+    "EV-SAF-09"
+   ],
+   "latency_ms": 9206,
+   "model": "claude-opus-5-5",
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Saffire-II sample 2-6 (cotton-fiberglass) has a conflicting flow-speed value: NTRS lists 25 cm/s, while PSI-99 lists 20 cm/s, which is flagged as an audit conflict. The other reported values for this sample are 80 W, 9.2 s, 115 s, a spread of 29 cm (its full length), and a spread rate of 2.6 mm/s. Saffire-III large sample 3-1 (cotton-fiberglass) has a conflicting flow-speed value: NTRS lists 25 cm/s, while PSI-100 lists 30 cm/s, which is flagged as an audit conflict. The other reported values fo",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-10",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FLEX-03"
+   ],
+   "latency_ms": 2859,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "A principal objective of FLEX was to determine the limiting oxygen index (LOI), the oxygen percentage below which combustion would not occur. The report says this objective reflected the FLEX focus on investigating fire safety in spacecraft. The report states that observed LOI values for the FLEX fuels appear to be slightly lower than initially expected.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-11",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-GUIDE-02"
+   ],
+   "latency_ms": 2304,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "BASS burned a 2 cm diameter acrylic (PMMA) sphere in microgravity at 17% oxygen and a flow of 10 cm/s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-12",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FLEX-02",
+    "EV-FLEX-05",
+    "EV-FLEX-06"
+   ],
+   "latency_ms": 8855,
+   "model": "claude-opus-5-5",
+   "claims": 3,
+   "dropped": 0,
+   "answer": "The FLEX authors report that a trace low-volatility contaminant was present in some FLEX tests. They judge that it had minimal influence on burning-rate constants: \"Burning-rate constants were average, and the droplet history was minimally influenced by the contaminant.\" In FLEX, the 'burning rate' is the average burning-rate constant. It comes from a linear fit of droplet diameter squared versus time, from shortly after ignition to extinction. Table IX reports it in mm2/s. The authors note one ",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-13",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "No retrieved NASA evidence reports density; the library does not contain material property data of this kind.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-14",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 5813,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-15",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 6173,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-16",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 6389,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-17",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 5303,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-18",
+   "type": "unsupported",
+   "expected": "abstain",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The library has no direct NASA combustion evidence for Kevlar. Related evidence exists for Nomex, but it does not answer this question directly. This is a gap in this library, not proof of non-flammability.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-19",
+   "type": "unsupported",
+   "expected": "refuse_or_abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 6504,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "boundary_triggered": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-20",
+   "type": "unsupported",
+   "expected": "boundary",
+   "mode": "boundary",
+   "cited": [],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+   "passed": true,
+   "safety_verdict_in_answer": false
+  }
+ ],
+ "evaluation_kind": "Internal: questions and labels written by the build assistant. Scoring is automatic (no human or LLM judge). Not an independent human evaluation.",
+ "disclosure": "HOLDOUT-3. Written 2026-11-15 after the four fixes were coded but BEFORE they were run on any of these questions; hash-locked in eval/HOLDOUT3.lock. Questions come from library findings and from passages of the original NASA publications (source per question) not used in holdout-2. 'relevant' lists the curated findings that state the reference fact; an empty list means the fact is only in the publication, so the correct behaviour is to decline. Written by the build assistant, who knows the failure types the fixes address (value questions, attribute questions, conflict questions, 'paper' phrasing): the set deliberately contains such questions, so it tests whether the fixes generalise, but it is not an independent holdout."
+}
