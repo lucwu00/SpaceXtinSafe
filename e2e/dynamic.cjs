@@ -10,6 +10,7 @@ const NAME = `Judge Lab ${STAMP}`, MAT = `Ti-6Al-4V bracket stock ${STAMP}`;
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 950 } });
+  await p.addInitScript(() => { try { localStorage.setItem("sxs-welcome-v1", "1"); } catch {} }); // skip the first-visit welcome
   const errors = []; p.on("pageerror", (e) => errors.push(String(e)));
   const res = []; const step = async (n, name, fn) => {
     try { res.push({ n, name, ok: true, detail: await fn() }); } catch (e) { res.push({ n, name, ok: false, detail: String(e).split("\n")[0].slice(0, 240) }); }

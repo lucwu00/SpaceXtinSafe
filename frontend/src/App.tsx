@@ -95,6 +95,36 @@ function Copilot() {
   );
 }
 
+const WELCOME_KEY = "sxs-welcome-v1";
+function Welcome() {
+  const { setDemo, go, setCopilotOpen } = useApp();
+  const [open, setOpen] = useState(() => { try { return !localStorage.getItem(WELCOME_KEY); } catch { return true; } });
+  const close = () => { try { localStorage.setItem(WELCOME_KEY, "1"); } catch { /* storage unavailable: show again next time */ } setOpen(false); };
+  useEffect(() => { if (!open) return; const k = (e: KeyboardEvent) => { if (e.key === "Escape") close(); }; addEventListener("keydown", k); return () => removeEventListener("keydown", k); }, [open]);
+  if (!open) return null;
+  return (
+    <div className="welcome-back" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+      <div className="welcome">
+        <div className="small" style={{ color: "var(--acc2)", letterSpacing: 2, fontFamily: "var(--mono)" }}>WELCOME · NASA SPACE APPS 2026 · FLAME IN FREEFALL</div>
+        <h1 id="welcome-title" style={{ fontSize: 26, margin: "8px 0 6px" }}>SpaceXtinsafe</h1>
+        <p className="muted" style={{ marginTop: 0 }}>Links the things inside a spacecraft to what NASA microgravity fire experiments actually measured, shows how far each finding applies, and says clearly where the evidence stops.</p>
+        <div className="grid g3" style={{ margin: "14px 0" }}>
+          <div className="kpi"><b style={{ fontSize: 15 }}>1 · Take the tour</b><span>18 short steps drive the real app: digital twin, evidence, predictions, audit, gaps, reports. About 3 minutes.</span></div>
+          <div className="kpi"><b style={{ fontSize: 15 }}>2 · Ask your own question</b><span>The Scientific Copilot answers only from NASA evidence, with citations, or says the evidence is missing.</span></div>
+          <div className="kpi"><b style={{ fontSize: 15 }}>3 · Build a spacecraft</b><span>Design Studio: change compartments, materials and the cabin atmosphere; every module updates.</span></div>
+        </div>
+        <div className="row">
+          <button autoFocus className="btn pri" onClick={() => { close(); setDemo(0); }}>▶ Start the guided tour (recommended for judges)</button>
+          <button className="btn" onClick={() => { close(); setCopilotOpen(true); }}>Ask the Copilot</button>
+          <button className="btn" onClick={() => { close(); go("studio"); }}>Open Design Studio</button>
+          <button className="btn" onClick={close}>Explore on my own</button>
+        </div>
+        <p className="small faint" style={{ marginBottom: 0 }}>Independent research prototype, not NASA-endorsed. No safety verdicts or emergency instructions. Restart the tour any time with “▶ Guided demo” in the header.</p>
+      </div>
+    </div>
+  );
+}
+
 function Shell() {
   const { page, go, list, scId, setScId, simple, setSimple, setDemo, demo } = useApp();
   const P = PAGES[page] || Overview;
@@ -124,6 +154,7 @@ function Shell() {
       </div>
       <Copilot />
       <DemoBar />
+      <Welcome />
     </div>
   );
 }

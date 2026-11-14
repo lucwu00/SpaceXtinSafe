@@ -5,6 +5,7 @@ const BASE = process.env.BASE || "http://localhost:8000";
 const OUT = process.env.OUT || "/tmp/claude-0/e2e";
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 950 } });
+  await p.addInitScript(() => { try { localStorage.setItem("sxs-welcome-v1", "1"); } catch {} }); // skip the first-visit welcome
   const errors = []; p.on("pageerror", (e) => errors.push(String(e))); p.on("console", (m) => m.type() === "error" && errors.push(m.text()));
   const res = []; const step = async (n, name, fn) => {
     try { const detail = await fn(); res.push({ n, name, ok: true, detail }); }

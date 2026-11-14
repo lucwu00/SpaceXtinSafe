@@ -71,3 +71,8 @@ tr.click { cursor: pointer; } tr.click:hover td { background: #142039; } tr.sel 
 .demo-progress div { height: 3px; background: var(--fire); transition: width .3s; }
 .btn:focus-visible, .nav:focus-visible, .tab:focus-visible { outline: 2px solid var(--acc2); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.welcome-back { position: fixed; inset: 0; z-index: 60; background: rgba(4,8,16,.72); display: grid; place-items: center; padding: 16px; }
+.welcome { width: min(860px, 100%); max-height: 92vh; overflow-y: auto; background: var(--panel); border: 1px solid #23497a; border-radius: 14px; padding: 22px 24px; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+.tour-ring { position: fixed; z-index: 44; pointer-events: none; border: 2px solid var(--fire); border-radius: 12px; box-shadow: 0 0 0 9999px rgba(4,8,16,.35), 0 0 24px rgba(255,138,61,.35); transition: top .25s, left .25s, width .25s, height .25s; }
+@media (prefers-reduced-motion: reduce) { .tour-ring { transition: none; } }
