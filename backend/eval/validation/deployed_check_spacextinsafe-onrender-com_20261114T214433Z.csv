@@ -1,0 +1,24 @@
+n,check,kind,passed,detail,seconds
+1,Backend reachable (cold start allowed),DETERMINISTIC,True,healthy after 0 retries (151 ms),0.2
+2,Service status,DETERMINISTIC,True,"Claude live=False, graph=neo4j, semantic=False",0.1
+3,Neo4j retrieval verified against in-memory graph,LIVE (Neo4j),True,verified=True  (152 ms),0.2
+4,Claude answer with checked citations (Saffire-II sample 2-7),LIVE (Claude),True,mode=claude model=claude-opus-5-5 cited=['EV-SAF-08'] graph=neo4j 6276 ms,6.3
+5,Claude + graph: sleeping bag composition evidence,LIVE (Claude),False,mode=no-evidence model=None cited=[] graph=None 154 ms,0.2
+6,Claude: conflicting evidence question,LIVE (Claude),True,"mode=claude model=claude-opus-5-5 cited=['EV-SAF-05', 'EV-SAF-06', 'EV-SAF-07'] graph=networkx 6708 ms",6.7
+7,Custom spacecraft with a random atmosphere,DETERMINISTIC,True,"SC-5C34A0B6 at 24.3% O2 / 73.7 kPa, 42 components screened",1.1
+8,"Custom material creates a library gap, not evidence",DETERMINISTIC,True,"status='User-defined material, no evidence found', gap_created=True",0.1
+9,User alias cannot remove catalogue evidence (PMMA),DETERMINISTIC,False,"PMMA status after a user alias 'PMMA' was added: 'Catalogue entry, no evidence in library'",0.1
+10,"Supported prediction (methanol 21% O2, 2.5 mm)",DETERMINISTIC,True,outcome=Model-supported estimate estimate=0.5168221503173115,0.1
+11,"Untested combination is not model-supported (30% O2, 1.7 mm)",DETERMINISTIC,True,outcome=Unavailable estimate=None,0.1
+12,Out-of-range O2 refused (45%),DETERMINISTIC,True,outcome=Unavailable estimate=None,0.1
+13,Non-numeric input refused without a server error,DETERMINISTIC,False,outcome=HTTP 500 estimate=None,0.1
+14,Solid fabric refused by the droplet model,DETERMINISTIC,True,outcome=Unavailable estimate=None,0.2
+15,Research gaps by gravity,DETERMINISTIC,True,PMMA partial-g: No finding in this library; SIBAL partial-g: Direct experimental evidence ['EV-LUCI-01'],0.1
+16,Interaction status and gap wording,DETERMINISTIC,False,PMMA+Nomex: No documented interaction (research gap); polyester+PU: No documented interaction (research gap),0.1
+17,Dynamic PDF report changes with inputs,DETERMINISTIC,True,"two PDFs 15431 / 16695 bytes, sha bd4651ba73ae / c0361886412d (1106 / 1591 ms)",2.7
+18,Emergency instruction refused (boundary),DETERMINISTIC,True,mode=boundary tier=0 boundary=True (91 ms),0.1
+19,Unsupported question abstains (Kevlar),DETERMINISTIC,True,mode=no-evidence tier=0 boundary=None (253 ms),0.3
+20,"Calculation answered by a tool, no LLM",DETERMINISTIC,True,mode=deterministic tier=0 boundary=None (61 ms),0.1
+21,Stored evaluation results served,RECORDED,True,stored results present; live Claude run 2026-11-14T17:35:41+00:00: 14/15,0.1
+22,Usage and cost log,DETERMINISTIC,True,"{""requests"": 6, ""by_engine"": {""Claude \u00b7 Advanced scientific"": {""n"": 2, ""input_tokens"": 2697, ""output_tokens"": 1308, ""cost_usd"": 0.03695, ""latency_ms_median",0.1
+23,Clean up test records,DETERMINISTIC,True,deleted 3 test records,0.2

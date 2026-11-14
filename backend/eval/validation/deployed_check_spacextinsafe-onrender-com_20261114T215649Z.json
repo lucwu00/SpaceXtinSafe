@@ -1,0 +1,705 @@
+{
+ "base": "https://spacextinsafe.onrender.com",
+ "generated_utc": "2026-11-14T21:56:49+00:00",
+ "passed": 22,
+ "n": 23,
+ "by_kind": {
+  "DETERMINISTIC": "18/18",
+  "LIVE (Claude)": "2/3",
+  "LIVE (Neo4j)": "1/1",
+  "RECORDED": "1/1"
+ },
+ "status": {
+  "claude_verified_live": true,
+  "graph": "neo4j",
+  "semantic": false
+ },
+ "checks": [
+  {
+   "n": 1,
+   "check": "Backend reachable (cold start allowed)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "healthy after 0 retries (87 ms)",
+   "seconds": 0.1,
+   "evidence": {
+    "health": {
+     "ok": true
+    }
+   }
+  },
+  {
+   "n": 2,
+   "check": "Service status",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "Claude live=True, graph=neo4j, semantic=False",
+   "seconds": 0.0,
+   "evidence": {
+    "claude_verified_live": true,
+    "key_configured": true,
+    "last_error": null,
+    "graph_engine": "neo4j",
+    "graph_mode": "Neo4j AuraDB (verified)",
+    "neo4j_error": null,
+    "semantic_enabled": false,
+    "evidence": 42,
+    "flex_tests": 274
+   }
+  },
+  {
+   "n": 3,
+   "check": "Neo4j retrieval verified against in-memory graph",
+   "kind": "LIVE (Neo4j)",
+   "passed": true,
+   "detail": "verified=True  (196 ms)",
+   "seconds": 0.2,
+   "evidence": {
+    "verified": true,
+    "entities_checked": 40,
+    "entities_with_findings": 13,
+    "mismatches": [],
+    "neo4j_query_ms": 82
+   }
+  },
+  {
+   "n": 4,
+   "check": "Claude answer with checked citations (Saffire-II sample 2-7)",
+   "kind": "LIVE (Claude)",
+   "passed": true,
+   "detail": "mode=claude model=claude-opus-5-5 cited=['EV-SAF-08'] graph=neo4j 57 ms",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "In Saffire-II combined PMMA and Nomex sample 2-7, tested in microgravity, the PMMA section burned (5 cm) but the adjoining Nomex did not burn. The data row for this sample reads: \"2-7 80 W 9.2 s 140 s 5 cm & 0 ii n/a (Nomex) ~ 0 (Nomex) n/a (Nomex)\".",
+    "cited": [
+     "EV-SAF-08"
+    ],
+    "retrieved": [
+     "EV-GUIDE-02",
+     "EV-SAF-01",
+     "EV-SAF-08",
+     "EV-SAF6-01",
+     "EV-SAF6-02",
+     "EV-SOFIE-03"
+    ],
+    "routing": {
+     "reason": "complexity score 3 \u2265 3: source discrepancies in Saffire-II, 5 investigations, 2 materials",
+     "complexity": {
+      "score": 3,
+      "investigations_in_top_evidence": 5,
+      "conditions_mentioned": [],
+      "materials_named": 2,
+      "conflict_question": false,
+      "synthesis_question": false,
+      "investigations_with_source_discrepancies": [
+       "Saffire-II"
+      ],
+      "evidence_sources": 5
+     },
+     "kind": "science",
+     "escalations": [],
+     "fallback": null,
+     "selected_tier": 3,
+     "selected_model": "claude-opus-5-5",
+     "tier": 3,
+     "model": "claude-opus-5-5",
+     "engine": "Claude \u00b7 Advanced scientific",
+     "input_tokens": 1256,
+     "output_tokens": 584,
+     "cost_usd": 0.016704,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 6
+    },
+    "graph_engine": "neo4j",
+    "dropped": 0
+   }
+  },
+  {
+   "n": 5,
+   "check": "Claude + graph: sleeping bag composition evidence",
+   "kind": "LIVE (Claude)",
+   "passed": true,
+   "detail": "mode=claude model=claude-sonnet-5-5 cited=['EV-AP1-01', 'EV-AP1-03', 'EV-SAF-08'] graph=neo4j 52 ms",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "The sleeping bag's shell fabric is Nomex. In Saffire-II sample 2-7, a combined PMMA and Nomex sample tested in microgravity, the PMMA section burned (5 cm) but the adjoining Nomex did not burn (~ 0 (Nomex)). This finding comes from material tests, not tests of the sleeping bag itself. The Apollo 204 board listed a sealed cabin pressurized with an oxygen atmosphere and an extensive distribution of combustible materials as conditions that led to the disaster. This is context for combustible materials such as nylon and polyurethane in that cabin, not a finding about the sleeping bag.",
+    "cited": [
+     "EV-AP1-01",
+     "EV-AP1-03",
+     "EV-SAF-08"
+    ],
+    "retrieved": [
+     "EV-AP1-01",
+     "EV-AP1-03",
+     "EV-FM2-01",
+     "EV-FM2-02",
+     "EV-SAF-01",
+     "EV-SAF-08",
+     "EV-SAF6-01"
+    ],
+    "routing": {
+     "reason": "evidence-grounded scientific question (complexity score 2 < 3)",
+     "complexity": {
+      "score": 2,
+      "investigations_in_top_evidence": 4,
+      "conditions_mentioned": [],
+      "materials_named": 0,
+      "conflict_question": false,
+      "synthesis_question": false,
+      "investigations_with_source_discrepancies": [
+       "Saffire-II"
+      ],
+      "evidence_sources": 4
+     },
+     "kind": "science",
+     "escalations": [],
+     "fallback": null,
+     "selected_tier": 2,
+     "selected_model": "claude-sonnet-5-5",
+     "tier": 2,
+     "model": "claude-sonnet-5-5",
+     "engine": "Claude \u00b7 Scientific",
+     "input_tokens": 1538,
+     "output_tokens": 729,
+     "cost_usd": 0.010366,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 7
+    },
+    "graph_engine": "neo4j",
+    "dropped": 2
+   }
+  },
+  {
+   "n": 6,
+   "check": "Claude: conflicting evidence question",
+   "kind": "LIVE (Claude)",
+   "passed": false,
+   "detail": "mode=claude model=claude-opus-5-5 cited=['EV-SAF-05', 'EV-SAF-07'] graph=networkx 67 ms",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "Other Saffire-II entries in the same NTRS source report 20 cm/s with no conflict noted. Sample 2-5 (5 cm wide cotton-fiberglass, 20 cm/s concurrent flow, about 22.1% O2) burned its full 29 cm at 2.1 mm/s. The thin silicone samples are also reported at 20 cm/s with no conflict noted. In microgravity at about 22% O2 they showed insignificant burning, while sample 2-1 burned roughly completely in the 1-g upward reference test.",
+    "cited": [
+     "EV-SAF-05",
+     "EV-SAF-07"
+    ],
+    "retrieved": [
+     "EV-BASS2-01",
+     "EV-FM2-02",
+     "EV-SAF-05",
+     "EV-SAF-06",
+     "EV-SAF-07",
+     "EV-SAF-09",
+     "EV-SOFIE-01"
+    ],
+    "routing": {
+     "reason": "complexity score 4 \u2265 3: conflict question, source discrepancies in Saffire-II, 4 investigations",
+     "complexity": {
+      "score": 4,
+      "investigations_in_top_evidence": 4,
+      "conditions_mentioned": [
+       "flow"
+      ],
+      "materials_named": 0,
+      "conflict_question": true,
+      "synthesis_question": false,
+      "investigations_with_source_discrepancies": [
+       "Saffire-II"
+      ],
+      "evidence_sources": 4
+     },
+     "kind": "science",
+     "escalations": [],
+     "fallback": null,
+     "selected_tier": 3,
+     "selected_model": "claude-opus-5-5",
+     "tier": 3,
+     "model": "claude-opus-5-5",
+     "engine": "Claude \u00b7 Advanced scientific",
+     "input_tokens": 1441,
+     "output_tokens": 792,
+     "cost_usd": 0.021604,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 7
+    },
+    "graph_engine": "networkx",
+    "dropped": 1
+   }
+  },
+  {
+   "n": 7,
+   "check": "Custom spacecraft with a random atmosphere",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "SC-3F54560C at 25.7% O2 / 88.0 kPa, 42 components screened",
+   "seconds": 1.3,
+   "evidence": {
+    "id": "SC-3F54560C",
+    "o2": 25.7,
+    "kpa": 88.0,
+    "components": 42
+   }
+  },
+  {
+   "n": 8,
+   "check": "Custom material creates a library gap, not evidence",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "status='User-defined material, no evidence found', gap_created=True",
+   "seconds": 0.1,
+   "evidence": {
+    "status": {
+     "status": "User-defined material, no evidence found",
+     "direct_findings": [],
+     "related_materials": [],
+     "related_findings": [],
+     "note": "Absence of evidence in this library is not evidence that a material is non-flammable, and is not a confirmed gap in all literature."
+    },
+    "library_search_ids": []
+   }
+  },
+  {
+   "n": 9,
+   "check": "User alias cannot remove catalogue evidence (PMMA)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "PMMA status after a user alias 'PMMA' was added: 'Verified NASA combustion evidence'",
+   "seconds": 0.1,
+   "evidence": {
+    "status": "Verified NASA combustion evidence"
+   }
+  },
+  {
+   "n": 10,
+   "check": "Supported prediction (methanol 21% O2, 2.5 mm)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "outcome=Model-supported estimate estimate=0.5168221503173115",
+   "seconds": 0.0,
+   "evidence": {
+    "response": {
+     "outcome": "Model-supported estimate",
+     "estimate": 0.5168221503173115,
+     "interval_90": [
+      0.4620709236797481,
+      0.5715733769548749
+     ],
+     "reasons": [
+      "All checks passed"
+     ]
+    }
+   }
+  },
+  {
+   "n": 11,
+   "check": "Untested combination is not model-supported (30% O2, 1.7 mm)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "outcome=Unavailable estimate=None",
+   "seconds": 0.1,
+   "evidence": {
+    "response": {
+     "outcome": "Unavailable",
+     "estimate": null,
+     "interval_90": null,
+     "reasons": [
+      "Request lies outside the joint experimental domain and far from any tested condition (extrapolation)"
+     ]
+    }
+   }
+  },
+  {
+   "n": 12,
+   "check": "Out-of-range O2 refused (45%)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "outcome=Unavailable estimate=None",
+   "seconds": 0.1,
+   "evidence": {
+    "response": {
+     "outcome": "Unavailable",
+     "estimate": null,
+     "interval_90": null,
+     "reasons": [
+      "Request lies outside the joint experimental domain and far from any tested condition (extrapolation)"
+     ]
+    }
+   }
+  },
+  {
+   "n": 13,
+   "check": "Non-numeric input refused without a server error",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "outcome=Unavailable estimate=None",
+   "seconds": 0.0,
+   "evidence": {
+    "response": {
+     "outcome": "Unavailable",
+     "estimate": null,
+     "interval_90": null,
+     "reasons": [
+      "O2, pressure and diameter must be numbers"
+     ]
+    }
+   }
+  },
+  {
+   "n": 14,
+   "check": "Solid fabric refused by the droplet model",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "outcome=Unavailable estimate=None",
+   "seconds": 0.1,
+   "evidence": {
+    "response": {
+     "outcome": "Unavailable",
+     "estimate": null,
+     "interval_90": null,
+     "reasons": [
+      "Material form 'fabric' differs from the experiments (isolated liquid droplets)"
+     ]
+    }
+   }
+  },
+  {
+   "n": 15,
+   "check": "Research gaps by gravity",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "PMMA partial-g: No finding in this library; SIBAL partial-g: Direct experimental evidence ['EV-LUCI-01']",
+   "seconds": 0.1,
+   "evidence": {
+    "note": "A zero means no finding in THIS library, not a confirmed gap in all scientific literature. Model cells show where a FLEX droplet estimate can complement missing measurements.",
+    "needed": "To close a gap: tests of the material in the stated form under the missing condition, with sample geometry, O2, pressure, flow and gravity reported."
+   }
+  },
+  {
+   "n": 16,
+   "check": "Interaction status and gap wording",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "PMMA+Nomex: Documented interaction; polyester+PU: No documented interaction (research gap)",
+   "seconds": 0.1,
+   "evidence": {
+    "documented_ids": [
+     "EV-SAF-08"
+    ],
+    "note": "Absence of a documented interaction is not evidence that materials do not interact."
+   }
+  },
+  {
+   "n": 17,
+   "check": "Dynamic PDF report changes with inputs",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "two PDFs 15456 / 16714 bytes, sha b617362b7746 / aecce00b24e1 (1764 / 2304 ms)",
+   "seconds": 4.1,
+   "evidence": {
+    "bytes": [
+     15456,
+     16714
+    ],
+    "sha": [
+     "b617362b7746",
+     "aecce00b24e1"
+    ],
+    "note": "Sizes differ when the scenario section is added; the generation timestamp alone also changes the hash."
+   }
+  },
+  {
+   "n": 18,
+   "check": "Emergency instruction refused (boundary)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "mode=boundary tier=0 boundary=True (71 ms)",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+    "routing": {
+     "reason": "boundary rule (verdict, risk score or operational instruction requested)",
+     "tier": 0,
+     "engine": "Python (no LLM)",
+     "model": null,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 0
+    }
+   }
+  },
+  {
+   "n": 19,
+   "check": "Unsupported question abstains (Kevlar)",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "mode=no-evidence tier=0 boundary=None (54 ms)",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "The library has no direct NASA combustion evidence for Kevlar. Related evidence exists for Nomex, but it does not answer this question directly. This is a gap in this library, not proof of non-flammability.",
+    "routing": {
+     "reason": "abstained: evidence insufficient (no model escalation for missing evidence)",
+     "tier": 0,
+     "engine": "Python (no LLM)",
+     "model": null,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 3
+    }
+   }
+  },
+  {
+   "n": 20,
+   "check": "Calculation answered by a tool, no LLM",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "mode=deterministic tier=0 boundary=None (50 ms)",
+   "seconds": 0.1,
+   "evidence": {
+    "answer": "O\u2082 partial pressure = 21.0% \u00d7 101.3 kPa = 21.27 kPa.",
+    "routing": {
+     "reason": "deterministic tool: o2_partial_pressure",
+     "tier": 0,
+     "engine": "Python (no LLM)",
+     "model": null,
+     "copilot_mode": "auto",
+     "latency_ms": 0,
+     "cached": true,
+     "evidence_retrieved": 0
+    }
+   }
+  },
+  {
+   "n": 21,
+   "check": "Stored evaluation results served",
+   "kind": "RECORDED",
+   "passed": true,
+   "detail": "stored results present; live Claude run 2026-11-14T17:35:41+00:00: 14/15",
+   "seconds": 0.1,
+   "evidence": {
+    "claude_live_generated": "2026-11-14T17:35:41+00:00"
+   }
+  },
+  {
+   "n": 22,
+   "check": "Usage and cost log",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "{\"requests\": 12, \"by_engine\": {\"Claude \\u00b7 Advanced scientific\": {\"n\": 4, \"input_tokens\": 2697, \"output_tokens\": 1376, \"cost_usd\": 0.03831, \"latency_ms_media",
+   "seconds": 0.1,
+   "evidence": {
+    "requests": 12,
+    "by_engine": {
+     "Claude \u00b7 Advanced scientific": {
+      "n": 4,
+      "input_tokens": 2697,
+      "output_tokens": 1376,
+      "cost_usd": 0.03831,
+      "latency_ms_median": 6026
+     },
+     "Claude \u00b7 Scientific": {
+      "n": 2,
+      "input_tokens": 1538,
+      "output_tokens": 729,
+      "cost_usd": 0.01037,
+      "latency_ms_median": 5469
+     },
+     "Python (no LLM)": {
+      "n": 6,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms_median": 0
+     }
+    },
+    "escalations": 0,
+    "fallbacks": 0,
+    "cache_hits": 6,
+    "today": {
+     "date": "2026-11-14",
+     "usd": 0.048674,
+     "tokens": 6340
+    },
+    "limits": {
+     "rate_per_min": 20,
+     "daily_budget_usd": 2.0,
+     "daily_token_budget": 400000,
+     "cache_ttl_s": 3600
+    },
+    "recent": [
+     {
+      "at": "2026-11-14T21:56:56+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:56+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:56+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:50+00:00",
+      "engine": "Claude \u00b7 Advanced scientific",
+      "model": "claude-opus-5-5",
+      "tier": 3,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:50+00:00",
+      "engine": "Claude \u00b7 Scientific",
+      "model": "claude-sonnet-5-5",
+      "tier": 2,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:50+00:00",
+      "engine": "Claude \u00b7 Advanced scientific",
+      "model": "claude-opus-5-5",
+      "tier": 3,
+      "reason": "cache hit",
+      "cached": true,
+      "latency_ms": 0,
+      "copilot_mode": "auto"
+     },
+     {
+      "at": "2026-11-14T21:56:45+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "deterministic tool: o2_partial_pressure",
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "evidence_retrieved": 0,
+      "escalations": null,
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "deterministic"
+     },
+     {
+      "at": "2026-11-14T21:56:45+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "abstained: evidence insufficient (no model escalation for missing evidence)",
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 22,
+      "evidence_retrieved": 3,
+      "escalations": null,
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "no-evidence"
+     },
+     {
+      "at": "2026-11-14T21:56:45+00:00",
+      "engine": "Python (no LLM)",
+      "model": null,
+      "tier": 0,
+      "reason": "boundary rule (verdict, risk score or operational instruction requested)",
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "evidence_retrieved": 0,
+      "escalations": null,
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "boundary"
+     },
+     {
+      "at": "2026-11-14T21:56:38+00:00",
+      "engine": "Claude \u00b7 Advanced scientific",
+      "model": "claude-opus-5-5",
+      "tier": 3,
+      "reason": "complexity score 4 \u2265 3: conflict question, source discrepancies in Saffire-II, 4 investigations",
+      "input_tokens": 1441,
+      "output_tokens": 792,
+      "cost_usd": 0.021604,
+      "latency_ms": 7247,
+      "evidence_retrieved": 7,
+      "escalations": [],
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "claude"
+     },
+     {
+      "at": "2026-11-14T21:56:31+00:00",
+      "engine": "Claude \u00b7 Scientific",
+      "model": "claude-sonnet-5-5",
+      "tier": 2,
+      "reason": "evidence-grounded scientific question (complexity score 2 < 3)",
+      "input_tokens": 1538,
+      "output_tokens": 729,
+      "cost_usd": 0.010366,
+      "latency_ms": 5469,
+      "evidence_retrieved": 7,
+      "escalations": [],
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "claude"
+     },
+     {
+      "at": "2026-11-14T21:56:25+00:00",
+      "engine": "Claude \u00b7 Advanced scientific",
+      "model": "claude-opus-5-5",
+      "tier": 3,
+      "reason": "complexity score 3 \u2265 3: source discrepancies in Saffire-II, 5 investigations, 2 materials",
+      "input_tokens": 1256,
+      "output_tokens": 584,
+      "cost_usd": 0.016704,
+      "latency_ms": 6026,
+      "evidence_retrieved": 6,
+      "escalations": [],
+      "fallback": null,
+      "copilot_mode": "auto",
+      "result_mode": "claude"
+     }
+    ]
+   }
+  },
+  {
+   "n": 23,
+   "check": "Clean up test records",
+   "kind": "DETERMINISTIC",
+   "passed": true,
+   "detail": "deleted 3 test records",
+   "seconds": 0.2,
+   "evidence": {}
+  }
+ ]
+}

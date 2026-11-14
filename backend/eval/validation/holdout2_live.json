@@ -1,0 +1,796 @@
+{
+ "config": {
+  "generated_utc": "2026-11-14T21:58:11+00:00",
+  "tag": "local",
+  "semantic": false,
+  "graph_engine": "in-memory networkx (NEO4J_URI unset for validation)",
+  "claude_key_present": true
+ },
+ "run": "live Claude",
+ "case_file_sha256": "0083774130a641fa19ff294d81ffee5077274ba8bfefdeead3c9b496c73b2eb9",
+ "retrieval": {
+  "k": 5,
+  "n_answerable": 15,
+  "modes": {
+   "keyword": {
+    "all": {
+     "n": 15,
+     "recall@5": 1.0,
+     "precision@5": 0.26666666666666666,
+     "mrr": 0.9666666666666667
+    },
+    "direct": {
+     "n": 3,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 1.0
+    },
+    "limitation": {
+     "n": 3,
+     "recall@5": 1.0,
+     "precision@5": 0.26666666666666666,
+     "mrr": 1.0
+    },
+    "multi-hop": {
+     "n": 3,
+     "recall@5": 1.0,
+     "precision@5": 0.4666666666666667,
+     "mrr": 0.8333333333333334
+    },
+    "numerical": {
+     "n": 6,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 1.0
+    },
+    "per_question": [
+     {
+      "id": "H2-01",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-SOFIE-03",
+       "EV-SAF6-02",
+       "EV-SAF6-01"
+      ]
+     },
+     {
+      "id": "H2-02",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-MIR-01",
+       "EV-MIR-02",
+       "EV-MIR-03",
+       "EV-SOFIE-01",
+       "EV-AP13-01"
+      ]
+     },
+     {
+      "id": "H2-03",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-BASS2-01",
+       "EV-BASS2-02",
+       "EV-SOFIE-01",
+       "EV-FM2-01",
+       "EV-SAF-01"
+      ]
+     },
+     {
+      "id": "H2-04",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-01",
+       "EV-FLEX-04",
+       "EV-FLEX-06",
+       "EV-SAF6-03",
+       "EV-AP13-01"
+      ]
+     },
+     {
+      "id": "H2-05",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-09",
+       "EV-SAF-10",
+       "EV-SAF-01",
+       "EV-SAF-03",
+       "EV-SAF6-02"
+      ]
+     },
+     {
+      "id": "H2-06",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-AP1-02",
+       "EV-AP1-01",
+       "EV-AP13-01",
+       "EV-AP1-03",
+       "EV-BASS2-02"
+      ]
+     },
+     {
+      "id": "H2-07",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SOFIE-02",
+       "EV-SAF6-03",
+       "EV-AP13-01",
+       "EV-AP1-01",
+       "EV-SOFIE-03"
+      ]
+     },
+     {
+      "id": "H2-08",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-FM2-02",
+       "EV-LUCI-02",
+       "EV-FM2-01",
+       "EV-SAF-01"
+      ]
+     },
+     {
+      "id": "H2-09",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-MIR-01",
+       "EV-GUIDE-03"
+      ]
+     },
+     {
+      "id": "H2-10",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-10",
+       "EV-SAF-04",
+       "EV-SAF-09",
+       "EV-SAF-03",
+       "EV-SAF6-02"
+      ]
+     },
+     {
+      "id": "H2-11",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF6-01",
+       "EV-SAF-08",
+       "EV-FM2-01",
+       "EV-SAF-01",
+       "EV-SAME-02"
+      ]
+     },
+     {
+      "id": "H2-12",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.6,
+      "rr": 0.5,
+      "top5": [
+       "EV-LUCI-02",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-FM2-02",
+       "EV-SAF-01"
+      ]
+     },
+     {
+      "id": "H2-13",
+      "type": "limitation",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-06",
+       "EV-FLEX-04",
+       "EV-FLEX-01",
+       "EV-FLEX-07",
+       "EV-FLEX-05"
+      ]
+     },
+     {
+      "id": "H2-14",
+      "type": "limitation",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-09",
+       "EV-SAF-10",
+       "EV-SOFIE-01",
+       "EV-SAF6-02",
+       "EV-SAF-04"
+      ]
+     },
+     {
+      "id": "H2-15",
+      "type": "limitation",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-BASS2-02",
+       "EV-BASS2-01",
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-SOFIE-01"
+      ]
+     }
+    ]
+   },
+   "semantic": {
+    "status": "not available in this configuration"
+   },
+   "hybrid": {
+    "status": "not available in this configuration"
+   },
+   "hybrid+graph": {
+    "status": "not available in this configuration"
+   }
+  }
+ },
+ "copilot": {
+  "n": 23,
+  "passed": 20,
+  "by_type": {
+   "direct": {
+    "n": 3,
+    "passed": 2
+   },
+   "numerical": {
+    "n": 6,
+    "passed": 5
+   },
+   "multi-hop": {
+    "n": 3,
+    "passed": 3
+   },
+   "limitation": {
+    "n": 3,
+    "passed": 3
+   },
+   "literature-only": {
+    "n": 5,
+    "passed": 4
+   },
+   "unsupported": {
+    "n": 3,
+    "passed": 3
+   }
+  },
+  "answerable": {
+   "n": 15,
+   "answered": 14,
+   "citation_correct": 14,
+   "cites_relevant": 13,
+   "numbers_ok": "7/8"
+  },
+  "abstention": {
+   "n": 6,
+   "abstained": 5
+  },
+  "boundary_and_verdict": [
+   {
+    "id": "H2-22",
+    "expected": "refuse_or_abstain",
+    "mode": "boundary",
+    "passed": true
+   },
+   {
+    "id": "H2-23",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true
+   }
+  ],
+  "safety_verdicts": 0,
+  "claim_support_rate": 0.929,
+  "live_success": "14/15"
+ },
+ "failures": [
+  {
+   "id": "H2-01",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "no-evidence",
+   "cited": [],
+   "numbers_ok": null,
+   "answer": "The library has no direct NASA combustion evidence for Paper. Related evidence exists for Cotton, but it does not answer this question directly. This is a gap in this library, not proof of non-flammability."
+  },
+  {
+   "id": "H2-06",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-AP1-01"
+   ],
+   "numbers_ok": false,
+   "answer": "The Apollo 204 board listed a sealed cabin pressurized with an oxygen atmosphere and an extensive distribution of combustible materials in the cabin among the conditions that led to the disaster."
+  },
+  {
+   "id": "H2-20",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [
+    "EV-LUCI-01",
+    "EV-LUCI-02"
+   ],
+   "numbers_ok": null,
+   "answer": "The only LUCI material the evidence names is a cotton-fiberglass fabric. It burned downward on the LUCI rotating sounding rocket (simulated Lunar gravity), with a flame-base spread rate of 0.92 mm/s and a flame-tip spread rate of 1.1 mm/s. LUCI showed that material flammability testing at partial gravity is feasible on a spinning vehicle."
+  }
+ ],
+ "cases": [
+  {
+   "id": "H2-01",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 33,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The library has no direct NASA combustion evidence for Paper. Related evidence exists for Cotton, but it does not answer this question directly. This is a gap in this library, not proof of non-flammability.",
+   "answered": false,
+   "citation_correct": false,
+   "cites_relevant": false,
+   "numbers_ok": null,
+   "passed": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-02",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-MIR-01",
+    "EV-MIR-02",
+    "EV-MIR-03"
+   ],
+   "latency_ms": 7148,
+   "model": "claude-sonnet-5-5",
+   "claims": 4,
+   "dropped": 0,
+   "answer": "In 1997, when a solid-fuel oxygen generator was activated in Mir's Kvant-1 module, the canister ignited, shooting a three-foot flame with sparks and bits of molten metal across the module and generating a large quantity of dense smoke. The flame blocked the evacuation route to the Soyuz escape vehicle. Investigators identified latex working glove material inadvertently introduced into the canister as the most likely cause. The crew quickly donned oxygen masks, and Korzun began dousing the flame ",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-03",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-BASS2-01",
+    "EV-BASS2-02"
+   ],
+   "latency_ms": 3381,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "In BASS-II, the crew adapted to new flow variations such as blowoff extinctions, and this proved very valuable data in outlining the U-shaped flammability boundary (flammability versus flow). The BASS-II microgravity tests examined flow velocities near the quenching limit, below those normally expected from the air supply and recirculation systems currently employed on the ISS, which is the low-flow region relevant to the boundary.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-04",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FLEX-01"
+   ],
+   "latency_ms": 2929,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "In FLEX, methanol and n-heptane droplets with initial diameters between 2 and 5 mm were burned at ambient temperature in oxidizing atmospheres at pressures between 0.70 and 3.05 atm, with oxygen diluted by nitrogen, carbon dioxide, or mixtures of the two.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-05",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-09"
+   ],
+   "latency_ms": 3389,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "The large Saffire-III cotton-fiberglass sample 3-1, burned in concurrent flow, spread about 84 cm at 2.3 mm/s. The table row lists 182 W, 8s, and 300 s. The flow speed for sample 3-1 is inconsistent across sources: NTRS lists 25 cm/s and PSI-100 lists 30 cm/s, which the evidence flags as an audit conflict.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-06",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-AP1-01"
+   ],
+   "latency_ms": 7359,
+   "model": "claude-opus-5-5",
+   "claims": 1,
+   "dropped": 1,
+   "answer": "The Apollo 204 board listed a sealed cabin pressurized with an oxygen atmosphere and an extensive distribution of combustible materials in the cabin among the conditions that led to the disaster.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": false,
+   "numbers_ok": false,
+   "passed": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-07",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SOFIE-02"
+   ],
+   "latency_ms": 2619,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "SoFIE gives the proposed exploration atmosphere as 34% O2 at 8.2 psia. It notes that few thin-sheet fuel materials are rated even in 1-g at these conditions.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-08",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-LUCI-01"
+   ],
+   "latency_ms": 2516,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "On the LUCI rotating sounding rocket, which simulated Lunar gravity, a cotton-fiberglass fabric burning downward had a flame-base spread rate of 0.92 mm/s and a flame-tip spread rate of 1.1 mm/s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-09",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAME-01"
+   ],
+   "latency_ms": 2641,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "SAME-2 aged smoke in an aging chamber to simulate the transport time from the smoke source to the detector, with aging times varied from 11 to 1800 s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-10",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-04",
+    "EV-SAF-10"
+   ],
+   "latency_ms": 3654,
+   "model": "claude-sonnet-5-5",
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Saffire-I opposed-flow sample I-2 spread about 10 cm at 1.3 mm/s over 70 s (table row: 182 W, 8s, 70 s, ~ 10 cm, 1.3 mm/s). Saffire-III opposed-flow sample 3-2 spread about 10 cm at 0.98 mm/s over 60 s (table row: 182 W, 8s, 60 s, ~ 10 cm, 0.98 mm/s). Comparing the two, both opposed-flow samples spread about 10 cm, but Saffire-I sample I-2 had the higher spread rate (1.3 mm/s) versus 0.98 mm/s for Saffire-III sample 3-2.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-11",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-08",
+    "EV-SAF6-01"
+   ],
+   "latency_ms": 4096,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "On Saffire VI, the Nomex fabric sample did not ignite. On Saffire-II, in the combined PMMA and Nomex sample 2-7, the PMMA section burned (5 cm) but the adjoining Nomex did not burn in microgravity (table entry lists ~ 0 (Nomex) for the Nomex).",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-12",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FM2-02",
+    "EV-LUCI-01",
+    "EV-LUCI-02"
+   ],
+   "latency_ms": 4580,
+   "model": "claude-sonnet-5-5",
+   "claims": 3,
+   "dropped": 1,
+   "answer": "LUCI (rotating sounding rocket, simulated Lunar gravity): cotton-fiberglass fabric burning downward had a flame-base spread rate of 0.92 mm/s and a flame-tip spread rate of 1.1 mm/s. LUCI also showed that material flammability testing at partial gravity is feasible using a spinning vehicle. The same abstract notes that early numerical and experimental evidence suggested Lunar gravity could be more hazardous, since flame spread rate as a function of gravity peaks there.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-13",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-FLEX-05",
+    "EV-FLEX-06"
+   ],
+   "latency_ms": 4578,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "In FLEX, disruptive extinction of methanol droplets is probably due to the presence of a contaminant, so methanol disruption outcomes should be treated cautiously. The FLEX authors judged that burning-rate constants were average and that the droplet history was minimally influenced by the contaminant. This caveat therefore applies mainly to disruption outcomes and not to the burning-rate constants.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-14",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-SAF-09"
+   ],
+   "latency_ms": 3155,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "The flow velocity for Saffire-III sample 3-1 is uncertain because two sources disagree: the NTRS record lists 25 cm/s, while PSI-100 lists 30 cm/s. The evidence labels this an audit conflict. The disagreement does not affect the reported spread figures for sample 3-1, which are about 84 cm at 2.3 mm/s, concurrent flow.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-15",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "claude",
+   "cited": [
+    "EV-BASS2-02"
+   ],
+   "latency_ms": 2444,
+   "model": "claude-sonnet-5-5",
+   "claims": 1,
+   "dropped": 0,
+   "answer": "In BASS-II microgravity tests, the flow velocities under investigation were near the quenching limit and below those normally expected from the air supply and recirculation systems currently employed on the ISS.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-16",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 2794,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-17",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 5333,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-18",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 6176,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-19",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [],
+   "latency_ms": 5517,
+   "model": "claude-opus-5-5",
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The evidence does not support an answer.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-20",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "claude",
+   "cited": [
+    "EV-LUCI-01",
+    "EV-LUCI-02"
+   ],
+   "latency_ms": 3055,
+   "model": "claude-sonnet-5-5",
+   "claims": 2,
+   "dropped": 0,
+   "answer": "The only LUCI material the evidence names is a cotton-fiberglass fabric. It burned downward on the LUCI rotating sounding rocket (simulated Lunar gravity), with a flame-base spread rate of 0.92 mm/s and a flame-tip spread rate of 1.1 mm/s. LUCI showed that material flammability testing at partial gravity is feasible on a spinning vehicle.",
+   "passed": false,
+   "false_answer_citations": [
+    "EV-LUCI-01",
+    "EV-LUCI-02"
+   ],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-21",
+   "type": "unsupported",
+   "expected": "abstain",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The library has no direct NASA combustion evidence for Kapton. This is a gap in this library, not proof of non-flammability.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-22",
+   "type": "unsupported",
+   "expected": "refuse_or_abstain",
+   "mode": "boundary",
+   "cited": [],
+   "latency_ms": 0,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+   "passed": true,
+   "boundary_triggered": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H2-23",
+   "type": "unsupported",
+   "expected": "boundary",
+   "mode": "boundary",
+   "cited": [],
+   "latency_ms": 0,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+   "passed": true,
+   "safety_verdict_in_answer": false
+  }
+ ],
+ "evaluation_kind": "Internal: questions and labels written by the build assistant. Scoring is automatic (no human or LLM judge). Not an independent human evaluation.",
+ "disclosure": "HOLDOUT-2. Questions written on 2026-11-15 from passages of the original NASA publications in app/data/source_text (file and page given per question), before any run. Reference answers are taken from those passages. 'relevant' lists the curated library findings that state the reference fact; an empty list means the fact is in the publication but not in this library, so the correct system behaviour is to abstain. Written by the build assistant, who has seen the library: this is an internal holdout, not an independent one. Hash-locked in eval/HOLDOUT2.lock. Not used for tuning."
+}
