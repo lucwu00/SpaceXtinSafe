@@ -81,7 +81,7 @@ function Interactions() {
           <label className="label">Airflow cm/s<input type="number" value={cond.flow_cm_s} onChange={(e) => setCond({ ...cond, flow_cm_s: +e.target.value })} /></label>
           <label className="label">Ignition context<input value={cond.ctx} onChange={(e) => setCond({ ...cond, ctx: e.target.value })} placeholder="e.g. hot wire" /></label>
         </div>
-        <p className="small faint">Unknown values stay unknown. SpaceXtinsafe does not infer how two materials burn together from their individual behaviour.</p>
+        <p className="small faint">Unknown values stay unknown. SpaceXtinSafe does not infer how two materials burn together from their individual behaviour.</p>
       </div>
       <div>
         <div className="card">{r.loading ? <Loading /> : !r.data ? <Empty>Choose at least two materials.</Empty> : <>
@@ -108,9 +108,9 @@ function Future() {
     ["Geometry and mesh generation", "A detailed, validated cabin geometry"], ["Experimental validation", "Comparison against Saffire-scale and ground tests before any use"]];
   return (
     <div className="card"><h2>Level 3: whole-spacecraft fire simulation (future research capability)</h2>
-      <div className="banner info">Not implemented. SpaceXtinsafe does not simulate fire growth in a spacecraft and shows no flame animations as results. A credible simulation would need all of the following.</div>
+      <div className="banner info">Not implemented. SpaceXtinSafe does not simulate fire growth in a spacecraft and shows no flame animations as results. A credible simulation would need all of the following.</div>
       <div className="grid g2">{reqs.map(([k, v]) => <div key={k} className="kpi"><b style={{ fontSize: 15 }}>{k}</b><span>{v}</span></div>)}</div>
-      <p className="small muted" style={{ marginTop: 10 }}>What exists today in SpaceXtinsafe: verified NASA findings, an applicability assessment, and burning-rate estimates for isolated droplets only where the FLEX data supports them.</p></div>
+      <p className="small muted" style={{ marginTop: 10 }}>What exists today in SpaceXtinSafe: verified NASA findings, an applicability assessment, and burning-rate estimates for isolated droplets only where the FLEX data supports them.</p></div>
   );
 }
 
@@ -145,7 +145,7 @@ export function FireLab() {
         {src === "question" && qres && <div className="card">{qres.note && <div className="banner info">{qres.note}</div>}{qres.results.map((e: any) => <EvidenceCard key={e.id} e={e} />)}</div>}
         {src !== "question" && (prof.loading ? <Loading /> : prof.error ? <Err e={prof.error} /> : prof.data && <div className="grid" style={{ gridTemplateColumns: "minmax(0,1.7fr) minmax(0,1fr)" }}>
           <div>{prof.data.evidence.length ? prof.data.evidence.map((e: any) => <EvidenceCard key={e.id} e={e} />) :
-            <div className="banner">No NASA finding in this library involves {prof.data.material.name}. This is a research gap in SpaceXtinsafe's library; it may or may not be a gap in the wider literature, and it is not evidence that the material is non-flammable.</div>}
+            <div className="banner">No NASA finding in this library involves {prof.data.material.name}. This is a research gap in SpaceXtinSafe's library; it may or may not be a gap in the wider literature, and it is not evidence that the material is non-flammable.</div>}
             <div className="card"><div className="row between"><h3>Discover more NASA literature (unverified)</h3><button className="btn sm" onClick={async () => setLit(await api.literature(prof.data.material.name).catch((e) => ({ available: false, label: e.message, results: [] })))}>Search NTRS</button></div>
               {lit && <><div className="small faint">{lit.label || lit.reason}</div>{lit.results?.length ? <ul className="small">{lit.results.map((x: any) => <li key={x.id}><a href={x.url} target="_blank" rel="noreferrer">{x.title}</a> <span className="faint">({x.year || "n.d."}, NTRS {x.id})</span></li>)}</ul> : <p className="small muted">No results returned.</p>}</>}</div></div>
           <div><MaterialMeta m={prof.data.material} status={typeof prof.data.status === "string" ? prof.data.status : prof.data.status?.status} />

@@ -123,7 +123,7 @@ def save_material(m: dict) -> dict:
            "applications": [a for a in m.get("applications", []) if a], "aliases": [a for a in m.get("aliases", []) if a], "related_to": rel,
            "phenomenon": m.get("phenomenon") or "unknown", "composition": m.get("composition") or None, "grade": m.get("grade") or None,
            "thickness_mm": m.get("thickness_mm"), "mass_g": m.get("mass_g"), "geometry": m.get("geometry") or None,
-           "provenance": "User-defined in SpaceXtinsafe (not verified)", "user_defined": True,
+           "provenance": "User-defined in SpaceXtinSafe (not verified)", "user_defined": True,
            "notes": "Entered by a user. Properties not supplied are unknown."}
     with _lock, _con() as c:
         c.execute("insert or replace into material values (?,?)", (mid, json.dumps(rec)))
@@ -160,7 +160,7 @@ def save_procedure(p: dict):
     if not p.get("title") or not p.get("spacecraft_id"):
         raise ValueError("title and spacecraft_id are required")
     rec = {"id": p.get("id") or "PROC-" + uuid.uuid4().hex[:8].upper(), "spacecraft_id": p["spacecraft_id"], "title": p["title"],
-           "identifier": p.get("identifier"), "url": p.get("url"), "authority": p.get("authority"), "registered_by": "user (not verified by SpaceXtinsafe)"}
+           "identifier": p.get("identifier"), "url": p.get("url"), "authority": p.get("authority"), "registered_by": "user (not verified by SpaceXtinSafe)"}
     with _lock, _con() as c:
         c.execute("insert or replace into procedure values (?,?,?)", (rec["id"], rec["spacecraft_id"], json.dumps(rec)))
     return rec

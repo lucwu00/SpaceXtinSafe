@@ -9,7 +9,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from . import analysis, audit, models, store, data
 
 VERSION = "1.1.0"
-DISCLAIMER = ("SpaceXtinsafe is an independent research and educational prototype. This report is not a certified spacecraft fire safety assessment, "
+DISCLAIMER = ("SpaceXtinSafe is an independent research and educational prototype. This report is not a certified spacecraft fire safety assessment, "
               "material qualification, operational recommendation, emergency procedure or NASA-endorsed product.")
 
 
@@ -28,8 +28,8 @@ def build(spacecraft_id: str, scenario: dict | None = None, prediction: dict | N
     small = ParagraphStyle("s", parent=ss["BodyText"], fontSize=7.5, leading=9)
     buf = io.BytesIO()
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=16 * mm, rightMargin=16 * mm, topMargin=14 * mm, bottomMargin=14 * mm,
-                            title=f"SpaceXtinsafe mission evidence report - {sc['name']}")
-    s = [P("SpaceXtinsafe — Mission Evidence Report", "Title"), P(f"{sc['name']} · {sc['vehicle_class']} · generated {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC"),
+                            title=f"SpaceXtinSafe mission evidence report - {sc['name']}")
+    s = [P("SpaceXtinSafe — Mission Evidence Report", "Title"), P(f"{sc['name']} · {sc['vehicle_class']} · generated {datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC"),
          Spacer(1, 4), P(DISCLAIMER, "Italic"), Spacer(1, 6), P("1. Configuration", "Heading2")]
     a = sc["atmosphere"]
     s.append(P(f"Atmosphere: {a['o2_pct']}% O2 (O2 partial pressure {a['o2_pct'] / 100 * a['pressure_kpa']:.1f} kPa), {a['pressure_kpa']} kPa, {a['gravity']}, ventilation {a.get('ventilation_cm_s')} cm/s, diluent {a.get('diluent')}. Origin: {sc.get('origin', '-')}."))

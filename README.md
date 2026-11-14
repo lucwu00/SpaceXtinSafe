@@ -1,8 +1,8 @@
-# SpaceXtinsafe: From Research to Readiness
+# SpaceXtinSafe: From Research to Readiness
 
 **NASA Space Apps Challenge 2026 · Flame in Freefall**
 
-SpaceXtinsafe is a spacecraft fire-safety *evidence* platform. It connects:
+SpaceXtinSafe is a spacecraft fire-safety *evidence* platform. It connects:
 
 - a configurable spacecraft, made of compartments, objects, components and materials;
 - original NASA microgravity combustion data (PSI) and NASA reports (NTRS).

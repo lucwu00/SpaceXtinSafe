@@ -1,13 +1,13 @@
-# SpaceXtinsafe — From Research to Readiness
+# SpaceXtinSafe — From Research to Readiness
 NASA Space Apps Challenge 2026 · Flame in Freefall
 
 ## Summary (short)
-SpaceXtinsafe is a knowledge-driven spacecraft digital twin. It links each compartment, object and material of a configurable spacecraft to original NASA microgravity combustion data. It shows how far each finding applies to the vehicle's conditions, audits the NASA sources against each other, and gives burning-rate estimates only where the experimental data supports them.
+SpaceXtinSafe is a knowledge-driven spacecraft digital twin. It links each compartment, object and material of a configurable spacecraft to original NASA microgravity combustion data. It shows how far each finding applies to the vehicle's conditions, audits the NASA sources against each other, and gives burning-rate estimates only where the experimental data supports them.
 
 ## Description
 Fire behaves differently in microgravity, and NASA's ISS and Cygnus experiments (FLEX, BASS, Saffire, SoFIE and others) produced the data to understand it. That data is spread across PSI tables, technical reports and presentations, so designers and researchers cannot easily ask "what does NASA know about the materials in this module, under these conditions?"
 
-SpaceXtinsafe answers that question. Users:
+SpaceXtinSafe answers that question. Users:
 - build or load a spacecraft;
 - inspect it in a cutaway digital twin;
 - trace object → component → material → finding → investigation → source across two linked knowledge graphs;
@@ -51,4 +51,4 @@ See `docs/EVAL_RESULTS.md`. Headline: hybrid+graph retrieval reached recall@5 0.
 5. L3 virtual experiments: a coupled CFD-combustion interface, clearly separated from the evidence layer.
 
 ## Disclaimer
-SpaceXtinsafe is an independent research and educational prototype. This report is not a certified spacecraft fire safety assessment, material qualification, operational recommendation, emergency procedure or NASA-endorsed product.
+SpaceXtinSafe is an independent research and educational prototype. This report is not a certified spacecraft fire safety assessment, material qualification, operational recommendation, emergency procedure or NASA-endorsed product.

@@ -26,7 +26,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -57,7 +57,7 @@
   "phenomenon": "material combustion",
   "composition": "Cellulose",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -86,7 +86,7 @@
   "phenomenon": "material combustion",
   "composition": "Poly(m-phenylene isophthalamide)",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -117,7 +117,7 @@
   "phenomenon": "material combustion",
   "composition": "(C5H8O2)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -147,7 +147,7 @@
   "phenomenon": "material combustion",
   "composition": "PDMS-based",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -172,7 +172,7 @@
   "phenomenon": "material combustion",
   "composition": "CH3OH",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -198,7 +198,7 @@
   "phenomenon": "material combustion",
   "composition": "C7H16",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -228,7 +228,7 @@
   "phenomenon": "material combustion",
   "composition": "Polyamide",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -255,7 +255,7 @@
   "phenomenon": "material combustion",
   "composition": "Polyurethane",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -284,7 +284,7 @@
   "phenomenon": "material combustion",
   "composition": "(C2F4)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -313,7 +313,7 @@
   "phenomenon": "electrical ignition source (not a material combustion dataset)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -340,7 +340,7 @@
   "phenomenon": "material combustion",
   "composition": "cis-1,4-polyisoprene",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -364,7 +364,7 @@
   "phenomenon": "oxygen-source reaction (chemical oxygen generation)",
   "composition": "Typically sodium chlorate + iron fuel (composition varies)",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -395,7 +395,7 @@
   "phenomenon": "metal combustion (form-dependent; bulk vs powder differ)",
   "composition": "Al + alloying elements",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -423,7 +423,7 @@
   "phenomenon": "battery thermal runaway (not ordinary material combustion)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -450,7 +450,7 @@
   "phenomenon": "material combustion",
   "composition": "(C16H14O3)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -479,7 +479,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Ti + alloying elements",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -508,7 +508,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Ti, 6% Al, 4% V",
   "grade": "Grade 5",
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -534,7 +534,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Mg + alloying elements",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -564,7 +564,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Fe-Cr-Ni",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -591,7 +591,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Fe + alloying elements",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -620,7 +620,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Cu",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -647,7 +647,7 @@
   "phenomenon": "metal combustion (form-dependent)",
   "composition": "Ni-Cr-Fe",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -677,7 +677,7 @@
   "phenomenon": "material combustion",
   "composition": "Carbon fibre in epoxy matrix",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -706,7 +706,7 @@
   "phenomenon": "material combustion",
   "composition": "Glass fibre in polymer matrix",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -734,7 +734,7 @@
   "phenomenon": "material combustion",
   "composition": "Epoxide thermoset",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -761,7 +761,7 @@
   "phenomenon": "material combustion",
   "composition": "Al or aramid paper core",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -788,7 +788,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -816,7 +816,7 @@
   "phenomenon": "generally non-combustible inorganic (not tested here)",
   "composition": "Al2O3 / SiO2",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -842,7 +842,7 @@
   "phenomenon": "generally non-combustible inorganic (not tested here)",
   "composition": "SiO2-based",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -869,7 +869,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -899,7 +899,7 @@
   "phenomenon": "material combustion",
   "composition": "(C2H4)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -925,7 +925,7 @@
   "phenomenon": "material combustion",
   "composition": "(C3H6)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -953,7 +953,7 @@
   "phenomenon": "material combustion",
   "composition": "(C2H3Cl)n",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -983,7 +983,7 @@
   "phenomenon": "material combustion",
   "composition": "PET",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1011,7 +1011,7 @@
   "phenomenon": "material combustion",
   "composition": "Poly(p-phenylene terephthalamide)",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1044,7 +1044,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1071,7 +1071,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1096,7 +1096,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1124,7 +1124,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1152,7 +1152,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1181,7 +1181,7 @@
   "phenomenon": "material combustion and electrical ignition source",
   "composition": null,
   "grade": "FR-4",
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1207,7 +1207,7 @@
   "phenomenon": "electrical ignition source",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1236,7 +1236,7 @@
   "phenomenon": "material combustion and electrical ignition source",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1264,7 +1264,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1291,7 +1291,7 @@
   "phenomenon": "battery thermal runaway context",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1315,7 +1315,7 @@
   "phenomenon": "battery thermal runaway context",
   "composition": "e.g. LiPF6 in carbonates",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1343,7 +1343,7 @@
   "phenomenon": "material combustion and electrical ignition source",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1375,7 +1375,7 @@
   "phenomenon": "material combustion",
   "composition": "Cellulose",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1401,7 +1401,7 @@
   "phenomenon": "material combustion",
   "composition": "Cellulose",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1427,7 +1427,7 @@
   "phenomenon": "material combustion (formulation-dependent)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1455,7 +1455,7 @@
   "phenomenon": "material combustion (solution-dependent)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1484,7 +1484,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1510,7 +1510,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1537,7 +1537,7 @@
   "phenomenon": "material combustion (mixed)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1565,7 +1565,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1590,7 +1590,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1614,7 +1614,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1639,7 +1639,7 @@
   "phenomenon": "material combustion (mixed)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1666,7 +1666,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1694,7 +1694,7 @@
   "phenomenon": "material combustion and electrical ignition (arc tracking context)",
   "composition": "Polyimide",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1722,7 +1722,7 @@
   "phenomenon": "material combustion",
   "composition": "Biaxially oriented PET",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1750,7 +1750,7 @@
   "phenomenon": "material combustion",
   "composition": "Aluminised Kapton/Mylar layers",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1776,7 +1776,7 @@
   "phenomenon": "external aerodynamic heating (not internal cabin combustion)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1800,7 +1800,7 @@
   "phenomenon": "generally inorganic (not tested here)",
   "composition": "SiO2",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1825,7 +1825,7 @@
   "phenomenon": "generally non-combustible fibre; binders may burn (not tested here)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1853,7 +1853,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1881,7 +1881,7 @@
   "phenomenon": "oxygen-system ignition (e.g. promoted combustion, adiabatic compression)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1908,7 +1908,7 @@
   "phenomenon": "material combustion (oxygen compatibility dependent)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1932,7 +1932,7 @@
   "phenomenon": "material combustion",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1957,7 +1957,7 @@
   "phenomenon": "material combustion (fluid-dependent)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -1982,7 +1982,7 @@
   "phenomenon": "propulsion combustion (not internal cabin fire)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -2007,7 +2007,7 @@
   "phenomenon": "material combustion (reagent-dependent)",
   "composition": null,
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  },
@@ -2034,7 +2034,7 @@
   "phenomenon": "material combustion",
   "composition": "C2H5OH",
   "grade": null,
-  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "provenance": "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)",
   "user_defined": false,
   "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
  }

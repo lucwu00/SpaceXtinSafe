@@ -1,4 +1,4 @@
-"""SpaceXtinsafe API."""
+"""SpaceXtinSafe API."""
 from __future__ import annotations
 import json, os
 from fastapi import FastAPI, HTTPException, Body, Header, Request
@@ -7,7 +7,7 @@ from fastapi.responses import Response, FileResponse
 from fastapi.staticfiles import StaticFiles
 from .core import data, models, audit, graph, retrieval, analysis, copilot, incidents, reports, store, coverage, router
 
-app = FastAPI(title="SpaceXtinsafe API", version="1.1.0",
+app = FastAPI(title="SpaceXtinSafe API", version="1.1.0",
               description="NASA microgravity combustion evidence intelligence. Research prototype, not NASA-endorsed.")
 origins = [o.strip() for o in os.environ.get("ALLOWED_ORIGINS", "*").split(",")]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["*"], allow_headers=["*"])

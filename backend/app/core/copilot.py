@@ -39,7 +39,7 @@ def salient_overlap(question, evidence, spacecraft_id=None):
 
 
 BOUNDARY = re.compile(r"\b(is|are|was|were)\b[^?.]{0,60}\bsafe\b|\bunsafe\b|\bsafe to\b|fire[- ]risk (score|percent|percentage|probability)|probability of (a )?fire|what should (the )?crew do|\bevacuat|emergency procedure|how (do|should|can) (we|i|they|the crew) (put out|extinguish|fight)", re.I)
-SYSTEM = ("You are SpaceXtinsafe's scientific copilot. Answer ONLY from the NASA evidence provided. Return JSON: "
+SYSTEM = ("You are SpaceXtinSafe's scientific copilot. Answer ONLY from the NASA evidence provided. Return JSON: "
           '{"claims":[{"text":"...","citations":["EV-..."]}],"limitations":"..."}. Every claim needs at least one citation from the provided IDs. '
           "Copy numbers exactly as written in the evidence. Never give safe/unsafe verdicts, fire-risk percentages, or emergency or operational instructions. "
           "Related evidence is not enough: if the evidence does not directly answer the question, return no claims and explain in limitations. "
@@ -71,7 +71,7 @@ def _abstain(reason, question, related=None, kind="no-evidence"):
     return {"mode": kind, "answer": reason, "claims": [], "dropped": [], "evidence": related or [], "abstained": True}
 
 
-APP_HELP = ("SpaceXtinsafe modules: Mission overview; Design Studio (build/edit spacecraft, custom materials); Digital twin (cutaway with "
+APP_HELP = ("SpaceXtinSafe modules: Mission overview; Design Studio (build/edit spacecraft, custom materials); Digital twin (cutaway with "
             "evidence, gap, conflict, interaction and sensor overlays); Material inventory; Mission Workspace (question + conditions -> evidence, "
             "applicability, insights, eligibility-checked prediction); Evidence library (keyword/semantic/hybrid/graph search; NASA investigations "
             "and datasets tab); Knowledge graphs (multi-hop traces, Neo4j sync); Virtual Fire Lab (L1 material intelligence, L2 interactions, FLEX "
@@ -79,7 +79,7 @@ APP_HELP = ("SpaceXtinsafe modules: Mission overview; Design Studio (build/edit 
             "pressure); Evidence audit; Incident intelligence (simulated replays, procedure registry); AI Evaluation Centre; Mission reports (PDF). "
             "Prediction eligibility: missing inputs, physical validity, condition compatibility, pressure band, convex hull, nearest-neighbour "
             "distance and local coverage -> Model-supported, Exploratory or Unavailable. The tool gives no safety verdicts or emergency instructions.")
-APP_SYSTEM = ("You are the SpaceXtinsafe app guide. Answer in at most 4 sentences using ONLY the app description provided. Do not make "
+APP_SYSTEM = ("You are the SpaceXtinSafe app guide. Answer in at most 4 sentences using ONLY the app description provided. Do not make "
               "scientific or numerical claims about combustion; for science, tell the user to ask a scientific question. Return JSON: "
               '{"answer":"..."}')
 
@@ -123,7 +123,7 @@ def ask(question: str, scenario: dict | None = None, spacecraft_id: str | None =
 
 def _ask(question, scenario, spacecraft_id, mode, client):
     if BOUNDARY.search(question) or OPERATIONAL.search(question):
-        return {"mode": "boundary", "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. "
+        return {"mode": "boundary", "answer": "SpaceXtinSafe does not give safety verdicts, fire-risk scores or emergency instructions. "
                 "It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's "
                 "authorised procedures and qualified fire-safety experts.", "claims": [], "dropped": [], "evidence": [], "boundary_triggered": True,
                 "routing": {"reason": "boundary rule (verdict, risk score or operational instruction requested)"}}

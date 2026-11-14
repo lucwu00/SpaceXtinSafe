@@ -23,7 +23,7 @@ export function Gaps() {
   const [cell, setCell] = useState<any>(null);
   const d = g.data;
   return (
-    <Page title="Research gap explorer" intro="Where NASA evidence exists in this library and where it is missing, by gravity, oxygen, pressure, airflow, material form, material pairs and compartments. An empty cell is a gap in SpaceXtinsafe's curated library; it is not proof of a gap in the wider literature, and never evidence that a material is safe."
+    <Page title="Research gap explorer" intro="Where NASA evidence exists in this library and where it is missing, by gravity, oxygen, pressure, airflow, material form, material pairs and compartments. An empty cell is a gap in SpaceXtinSafe's curated library; it is not proof of a gap in the wider literature, and never evidence that a material is safe."
       simple="Empty squares show combinations NASA research in this tool has not covered yet."
       actions={<div className="row"><button className={`btn sm ${scope === "sc" ? "pri" : ""}`} onClick={() => setScope("sc")}>Materials on {sc?.name}</button><button className={`btn sm ${scope === "all" ? "pri" : ""}`} onClick={() => setScope("all")}>Whole catalogue</button></div>}>
       <div className="tabs">{DIMS.map(([k, l]) => <button key={k} className={`tab ${dim === k ? "on" : ""}`} onClick={() => { setDim(k); setCell(null); }}>{l}</button>)}</div>

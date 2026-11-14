@@ -14,7 +14,7 @@ function Procedures({ sid }: { sid: string }) {
   const add = async () => { setErr(null); try { await api.addProcedure({ ...f, spacecraft_id: sid }); setList(await api.procedures(sid)); setF({ title: "", identifier: "", url: "", authority: "" }); } catch (e: any) { setErr(e.message); } };
   return (
     <div className="card"><h3>Registered vehicle procedure documents</h3>
-      <p className="small muted">Register references to authorised, vehicle-specific procedures so they can be found for human review. SpaceXtinsafe never writes or summarises procedure content.</p>
+      <p className="small muted">Register references to authorised, vehicle-specific procedures so they can be found for human review. SpaceXtinSafe never writes or summarises procedure content.</p>
       {list.length ? <ul className="small">{list.map((p) => <li key={p.id}><b>{p.title}</b> {p.identifier && <span className="mono">({p.identifier})</span>} {p.authority && `· ${p.authority}`} {p.url && <a href={p.url} target="_blank" rel="noreferrer">open</a>} <span className="faint">· {p.registered_by}</span></li>)}</ul> : <div className="small faint">None registered for this spacecraft.</div>}
       <Err e={err} />
       <div className="grid g4" style={{ marginTop: 6 }}>{(["title", "identifier", "authority", "url"] as const).map((k) => <input key={k} placeholder={k} value={f[k]} onChange={(e) => setF({ ...f, [k]: e.target.value })} aria-label={`Procedure ${k}`} />)}</div>
@@ -45,7 +45,7 @@ export function Incidents() {
   };
   if (!sc) return <Loading />;
   return (
-    <Page title="Incident intelligence (simulated)" intro="Replay a hypothetical incident against the active spacecraft's mission manifest. SpaceXtinsafe resolves the compartment, lists configured components that could be involved (unconfirmed), retrieves NASA evidence and historical analogues, flags where evidence comes from a different gravity regime, and points to registered vehicle procedures. It never generates emergency instructions or operational commands."
+    <Page title="Incident intelligence (simulated)" intro="Replay a hypothetical incident against the active spacecraft's mission manifest. SpaceXtinSafe resolves the compartment, lists configured components that could be involved (unconfirmed), retrieves NASA evidence and historical analogues, flags where evidence comes from a different gravity regime, and points to registered vehicle procedures. It never generates emergency instructions or operational commands."
       simple="A practice scenario: pretend smoke appears in a room. The tool shows what's in that room and what NASA research and past incidents say, and leaves decisions to trained people.">
       <div className="banner">SIMULATED training scenario. Sensor values are synthetic. Real emergency response requires certified vehicle procedures, validated sensors, trained crews, mission-control coordination, certified onboard safety systems and human decision authority.</div>
       <div className="card tight row">
@@ -64,7 +64,7 @@ export function Incidents() {
             <div key={i} className={`tl ${i <= step ? "on" : ""}`} style={{ opacity: i <= step ? 1 : 0.35 }}>
               <div className="row"><b className="mono">{s.t}</b><span className="pill fire">{s.label}</span><span className="pill">{s.source}</span><span className={`pill ${s.confirmed ? "ok" : "warn"}`}>{s.confirmed ? "confirmed" : "unconfirmed"}</span></div>
               <div>{s.observation}</div>{Object.keys(s.simulated_values || {}).length > 0 && <div className="mono small faint">{JSON.stringify(s.simulated_values)}</div>}
-              {i <= step && <div className="small" style={{ color: "var(--acc2)" }}>SpaceXtinsafe: {s.system}</div>}</div>))}</div>
+              {i <= step && <div className="small" style={{ color: "var(--acc2)" }}>SpaceXtinSafe: {s.system}</div>}</div>))}</div>
             <div className="banner info">{r.timeline[0]?.procedure_reference}</div>
             <h3>Possibly involved components (unconfirmed)</h3>
             {r.candidates.length ? <div className="scroll" style={{ maxHeight: 280 }}><table><thead><tr><th>Object</th><th>Component</th><th>Material</th><th>NASA evidence</th></tr></thead><tbody>

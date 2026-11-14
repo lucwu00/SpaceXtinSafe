@@ -11,7 +11,7 @@ esc = lambda s: s.replace("</", "<\\/")
 fonts = re.findall(r'<link[^>]+fonts[^>]+>', html)
 body = (f'<div id="root"></div>\n<script>window.__SXS_META__={json.dumps(meta)};window.__SXS_SNAPSHOT__={esc(json.dumps(snap, separators=(",", ":")))};</script>\n'
         f'<script type="module">{esc(js)}</script>')
-head = f'<title>SpaceXtinsafe</title>\n{"".join(fonts)}\n<style>{css}</style>'
+head = f'<title>SpaceXtinSafe</title>\n{"".join(fonts)}\n<style>{css}</style>'
 open(art_out, "w").write(head + "\n" + body)
 open(std_out, "w").write(f'<!doctype html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">{head}</head><body>{body}</body></html>')
 print("ok", len(open(art_out).read()) // 1024, "KB")

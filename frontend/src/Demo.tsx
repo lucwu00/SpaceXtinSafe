@@ -6,7 +6,7 @@ type Step = { title: string; page: string; text: string; target?: string; run?: 
 
 // Every step drives the real application: navigation, shared scenario changes and live backend calls. Nothing is pre-recorded.
 const STEPS: Step[] = [
-  { title: "What SpaceXtinsafe does", target: "text:Powered by NASA data", page: "overview", text: "SpaceXtinsafe links a spacecraft's compartments, objects and materials to original NASA microgravity combustion data, shows how far each finding applies, audits the sources, and gives estimates only where the data supports them." },
+  { title: "What SpaceXtinSafe does", target: "text:Powered by NASA data", page: "overview", text: "SpaceXtinSafe links a spacecraft's compartments, objects and materials to original NASA microgravity combustion data, shows how far each finding applies, audits the sources, and gives estimates only where the data supports them." },
   { title: "Select a spacecraft template", target: "text:Quick Start", page: "studio", text: "Quick Start loads an illustrative template. The demo uses the Orbital Research Module (generic, not a real vehicle).", run: (a) => a.setScId("SC-ORBITAL") },
   { title: "Explore the digital twin", target: "text:Evidence coverage", page: "twin", text: "The cutaway shows each compartment. Overlays switch between material distribution, evidence coverage, research gaps, conflicts, interactions and sensors." },
   { title: "Select a compartment", target: "g[aria-label='Compartment Crew quarters']", page: "twin", text: "The Crew quarters is selected. The panel lists its objects, materials, linked NASA investigations and gaps.", run: (a) => a.patch({ compartment_id: "C-CREW" }) },

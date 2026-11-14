@@ -23,13 +23,13 @@ export function Overview() {
   const rows = screen.data?.rows || [];
   const gapsN = rows.filter((r: any) => r.status.startsWith("No NASA")).length;
   return (
-    <Page title="SpaceXtinsafe" intro="From Research to Readiness. A knowledge-driven spacecraft digital twin that turns NASA microgravity combustion research into vehicle-aware scientific intelligence for design investigations, material understanding, evidence-based prediction, research discovery and emergency preparedness."
+    <Page title="SpaceXtinSafe" intro="From Research to Readiness. A knowledge-driven spacecraft digital twin that turns NASA microgravity combustion research into vehicle-aware scientific intelligence for design investigations, material understanding, evidence-based prediction, research discovery and emergency preparedness."
       simple="See what NASA fire experiments in space say about the things inside a spacecraft, and where we still don't know."
       actions={<button className="btn pri" onClick={() => setDemo(0)}>▶ Start guided demo ({DEMO_STEPS} steps)</button>}>
       <div className="grid g2">
         <div className="card"><h2>Why spacecraft fire research matters</h2>
           <p className="small">In microgravity there is no buoyant flow: flames are shaped by ventilation and diffusion, so materials can burn, spread or self-extinguish differently from Earth. Ground screening tests run in 1 g, and NASA notes that designers have had to rely on 1-g understanding of flame spread, detection and suppression.</p>
-          <p className="small">NASA's ISS and Cygnus experiments (FLEX, BASS, Saffire, SoFIE and others) produced the data to close that gap, but it is spread across datasets, reports and presentations. SpaceXtinsafe connects it to the objects aboard a specific spacecraft.</p>
+          <p className="small">NASA's ISS and Cygnus experiments (FLEX, BASS, Saffire, SoFIE and others) produced the data to close that gap, but it is spread across datasets, reports and presentations. SpaceXtinSafe connects it to the objects aboard a specific spacecraft.</p>
           <div className="small faint">Source for the 1-g statement: Saffire VI, ICES-2024-365 (EV-SAF6-04).</div></div>
         <div className="card"><h2>Powered by NASA data</h2>
           {!use.data ? <Loading /> : <div className="grid g2">

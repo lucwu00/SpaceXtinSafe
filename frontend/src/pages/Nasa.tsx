@@ -59,7 +59,7 @@ export function NasaCoverage() {
         <div className="grid g2" style={{ marginTop: 10 }}>
           <div><h3>Scientific objective</h3><p className="small">{sel.objective || "Not curated."}</p><div className="small faint">Text source: {sel.text_source}</div>
             <h3 style={{ marginTop: 10 }}>Materials and conditions</h3><p className="small">{sel.materials?.join(", ") || "—"}</p><p className="small muted">{sel.conditions?.join(" · ") || ""}</p></div>
-          <div><h3>Integration in SpaceXtinsafe</h3>
+          <div><h3>Integration in SpaceXtinSafe</h3>
             <ul className="small">
               <li>Original PSI files acquired: {sel.psi_files_acquired ?? 0}</li>
               <li>Records used in analysis: {sel.integrated_measurements ?? 0}</li>
@@ -73,7 +73,7 @@ export function NasaCoverage() {
               {(sel.sources || []).map((s: any) => <a key={s.id} className="btn sm" href={s.url} target="_blank" rel="noreferrer">{s.identifier}</a>)}
               {sel.finding_ids?.length > 0 && <button className="btn sm pri" onClick={() => { patch({ question: `What did ${sel.acronym} find?` }); go("library"); }}>Open its findings</button>}</div></div>
         </div></div>}
-      <div className="card" style={{ marginTop: 14 }}><h2>How NASA investigations power SpaceXtinsafe</h2><p className="small muted">Lines are drawn only where the backend reports integrated data or verified findings for that feature.</p>
+      <div className="card" style={{ marginTop: 14 }}><h2>How NASA investigations power SpaceXtinSafe</h2><p className="small muted">Lines are drawn only where the backend reports integrated data or verified findings for that feature.</p>
         {invs.data && <FeatureMap invs={invs.data} />}</div>
       <div className="card"><h2>Original NASA datasets and provenance</h2>
         {ds.loading ? <Loading /> : !ds.data?.length ? <Empty>No datasets.</Empty> : <div className="scroll"><table><thead><tr><th>Dataset</th><th>Investigation</th><th>Original file</th><th>Integrity</th><th>Rows used / in file</th><th>Used for</th><th>Transformations</th><th>Limitations</th></tr></thead>

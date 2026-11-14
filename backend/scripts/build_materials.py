@@ -1,9 +1,9 @@
-"""Generates app/data/curated/materials.json: the SpaceXtinsafe material ontology.
+"""Generates app/data/curated/materials.json: the SpaceXtinSafe material ontology.
 Catalogue entries describe what a material is and where it could plausibly be used. They carry NO combustion properties;
 evidence status is computed at runtime from the verified NASA findings. No entry claims flight use on a real vehicle."""
 import json, os
 OUT = os.path.join(os.path.dirname(__file__), "..", "app", "data", "curated", "materials.json")
-C = "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)"
+C = "SpaceXtinSafe catalogue entry (descriptive only; no combustion properties assigned)"
 # id, common name, scientific name, category, class, default form, other forms, applications, aliases, related_to, phenomenon, composition, grade
 M = [
  # --- existing evidence-bearing materials (ids preserved) ---

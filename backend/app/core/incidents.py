@@ -14,10 +14,10 @@ PHASES = {"pre-launch": ("1-g", "On the pad: Earth gravity; ground support avail
           "martian surface": ("partial gravity", "Partial gravity (Mars): no direct findings in this library."),
           "descent and landing": ("variable (landing loads)", "Changing loads; NASA microgravity findings apply poorly.")}
 
-PROC = "Refer to the vehicle's authorised emergency procedures and flight controllers. SpaceXtinsafe does not generate emergency instructions."
+PROC = "Refer to the vehicle's authorised emergency procedures and flight controllers. SpaceXtinSafe does not generate emergency instructions."
 NON_CABIN = {
-    "propulsion": "Propulsion combustion event (outside the pressurised cabin). Cabin-material combustion research does not describe this; SpaceXtinsafe has no propulsion evidence.",
-    "external_heating": "External aerodynamic or entry heating (thermal protection). This is not internal cabin combustion; SpaceXtinsafe has no TPS evidence.",
+    "propulsion": "Propulsion combustion event (outside the pressurised cabin). Cabin-material combustion research does not describe this; SpaceXtinSafe has no propulsion evidence.",
+    "external_heating": "External aerodynamic or entry heating (thermal protection). This is not internal cabin combustion; SpaceXtinSafe has no TPS evidence.",
 }
 TYPES = {
     "smoke": {"title": "Smoke detected (simulated)", "classes": {"fabric", "polymer", "polymer foam", "elastomer", "energy storage", "assembly", "fluoropolymer"},
@@ -48,7 +48,7 @@ def replay(spacecraft_id: str, compartment_id: str, itype: str, phase: str = "or
     if itype in NON_CABIN:
         return {"spacecraft": sc["name"], "type": itype, "phase": phase, "title": itype.replace("_", " ").title() + " (simulated)", "classification": "Not internal cabin combustion",
                 "message": NON_CABIN[itype], "timeline": [], "candidates": [], "evidence": [], "analogues": [], "procedures": store.list_procedures(spacecraft_id),
-                "disclaimer": "Simulated. SpaceXtinsafe does not model propulsion or entry heating and gives no operational commands."}
+                "disclaimer": "Simulated. SpaceXtinSafe does not model propulsion or entry heating and gives no operational commands."}
     spec = TYPES[itype]
     comp = next(c for c in sc["compartments"] if c["id"] == compartment_id)
     mats = data.materials(); evm = {e["id"]: e for e in data.evidence()}
