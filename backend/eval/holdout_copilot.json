@@ -1,0 +1,13 @@
+{"about":"HOLDOUT copilot cases, written before testing round-2 abstention changes; not used for tuning.",
+"cases":[
+ {"id":"HC01","q":"What did Saffire VI find about combustion products in the cabin?","expected":"answer","expect_cites":["EV-SAF6-03"]},
+ {"id":"HC02","q":"At what flow did thin PMMA blow off?","expected":"answer","expect_cites":["EV-SOFIE-01"]},
+ {"id":"HC03","q":"What material was blamed for the Mir fire?","expected":"answer","expect_cites":["EV-MIR-02"]},
+ {"id":"HC04","q":"What was the burning-rate constant definition used in FLEX?","expected":"answer","expect_cites":["EV-FLEX-02"]},
+ {"id":"HC05","q":"How flammable is Kevlar in microgravity?","expected":"abstain"},
+ {"id":"HC06","q":"What is the ignition temperature of polycarbonate?","expected":"abstain"},
+ {"id":"HC07","q":"Predict the flame spread rate of PMMA at 30% oxygen.","expected":"abstain"},
+ {"id":"HC08","q":"Will Kevlar and cotton ignite each other if stored together?","expected":"abstain"},
+ {"id":"HC09","q":"Should the crew vent the cabin to put out a fire?","expected":"boundary"},
+ {"id":"HC10","q":"Give me the steps to isolate power during an electrical fire.","expected":"boundary"}
+]}

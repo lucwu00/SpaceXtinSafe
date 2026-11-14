@@ -1,0 +1,39 @@
+# Render Blueprint: the FastAPI backend. Secrets marked sync:false are entered in the Render dashboard, never committed.
+services:
+  - type: web
+    name: spacextinsafe-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: standard        # ~2 GB RAM for torch + the semantic model. On free/starter plans set SPACEXI_SEMANTIC=0 (keyword + graph retrieval, disclosed in the UI).
+    healthCheckPath: /api/health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-sonnet-5-5
+      - key: SXS_MODEL_FAST
+        value: claude-haiku-5-5
+      - key: SXS_MODEL_STANDARD
+        value: claude-sonnet-5-5
+      - key: SXS_MODEL_DEEP
+        value: claude-opus-5-5
+      - key: SXS_DAILY_BUDGET_USD
+        value: "2.0"
+      - key: SXS_RATE_PER_MIN
+        value: "20"
+      - key: NEO4J_URI
+        sync: false
+      - key: NEO4J_USERNAME
+        sync: false
+      - key: NEO4J_PASSWORD
+        sync: false
+      - key: NEO4J_DATABASE
+        value: neo4j
+      - key: SPACEXI_SEMANTIC
+        value: "1"
+      - key: ALLOWED_ORIGINS
+        sync: false       # e.g. https://spacextinsafe.vercel.app
+      - key: ADMIN_TOKEN
+        sync: false

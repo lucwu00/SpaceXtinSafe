@@ -1,0 +1,16 @@
+# Versions tested in the build environment on 2026-11-14.
+fastapi==0.162.7
+uvicorn==0.54.0
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+networkx==3.7
+reportlab==5.0.1
+anthropic==2.8.0
+neo4j==6.4.1
+# Semantic retrieval. CPU wheels keep the image small. Set SPACEXI_SEMANTIC=0 to run without it.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0
+sentence-transformers==6.3.0
+# tests
+pytest

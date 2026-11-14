@@ -1,0 +1,2041 @@
+[
+ {
+  "id": "MAT-SIBAL",
+  "name": "Cotton-fiberglass fabric (SIBAL)",
+  "scientific_name": "Cotton/glass-fibre blended fabric",
+  "category": "Interior textiles",
+  "class": "fabric",
+  "default_form": "thin fabric sheet",
+  "forms": [
+   "thin fabric sheet",
+   "fabric"
+  ],
+  "applications": [
+   "NASA reference test fabric",
+   "curtains",
+   "stowage covers"
+  ],
+  "aliases": [
+   "cotton-fiberglass fabric",
+   "SIBAL",
+   "cotton-fiberglass"
+  ],
+  "related_to": [
+   "MAT-COTTON"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-COTTON",
+  "name": "Cotton",
+  "scientific_name": "Cellulose fibre textile",
+  "category": "Interior textiles",
+  "class": "fabric",
+  "default_form": "fabric",
+  "forms": [
+   "fabric",
+   "thin fabric sheet",
+   "towel"
+  ],
+  "applications": [
+   "clothing",
+   "towels",
+   "wipes"
+  ],
+  "aliases": [
+   "cotton",
+   "cotton jersey"
+  ],
+  "related_to": [
+   "MAT-SIBAL"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Cellulose",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-NOMEX",
+  "name": "Nomex",
+  "scientific_name": "Meta-aramid fibre fabric",
+  "category": "Interior textiles",
+  "class": "fabric",
+  "default_form": "fabric",
+  "forms": [
+   "fabric",
+   "felt"
+  ],
+  "applications": [
+   "flight suits",
+   "bag shells",
+   "seat covers"
+  ],
+  "aliases": [
+   "Nomex"
+  ],
+  "related_to": [
+   "MAT-KEVLAR"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Poly(m-phenylene isophthalamide)",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PMMA",
+  "name": "PMMA (acrylic)",
+  "scientific_name": "Poly(methyl methacrylate)",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "thin sheet",
+  "forms": [
+   "thin sheet",
+   "slab",
+   "rod",
+   "sphere",
+   "cylinder"
+  ],
+  "applications": [
+   "windows",
+   "bezels",
+   "test samples"
+  ],
+  "aliases": [
+   "PMMA",
+   "acrylic"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C5H8O2)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SILICONE",
+  "name": "Silicone",
+  "scientific_name": "Polydimethylsiloxane elastomer",
+  "category": "Elastomers and sealants",
+  "class": "elastomer",
+  "default_form": "thin sheet",
+  "forms": [
+   "thin sheet",
+   "seal",
+   "sealant",
+   "foam"
+  ],
+  "applications": [
+   "seals",
+   "gaskets",
+   "wire jackets"
+  ],
+  "aliases": [
+   "silicone",
+   "silicone rubber"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "PDMS-based",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-METHANOL",
+  "name": "Methanol",
+  "scientific_name": "Methanol",
+  "category": "Research fuels and chemicals",
+  "class": "liquid fuel",
+  "default_form": "liquid droplet",
+  "forms": [
+   "liquid droplet",
+   "liquid pool"
+  ],
+  "applications": [
+   "combustion research fuel"
+  ],
+  "aliases": [
+   "methanol"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "CH3OH",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-HEPTANE",
+  "name": "n-Heptane",
+  "scientific_name": "n-Heptane",
+  "category": "Research fuels and chemicals",
+  "class": "liquid fuel",
+  "default_form": "liquid droplet",
+  "forms": [
+   "liquid droplet",
+   "liquid pool"
+  ],
+  "applications": [
+   "combustion research fuel"
+  ],
+  "aliases": [
+   "n-heptane",
+   "heptane"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "C7H16",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-NYLON",
+  "name": "Nylon",
+  "scientific_name": "Polyamide (PA6 / PA66)",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "fabric",
+  "forms": [
+   "fabric",
+   "strap",
+   "hook-and-loop",
+   "moulded part"
+  ],
+  "applications": [
+   "straps",
+   "hook-and-loop fasteners",
+   "bags"
+  ],
+  "aliases": [
+   "nylon",
+   "Velcro"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "Polyamide",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PU",
+  "name": "Polyurethane foam",
+  "scientific_name": "Polyurethane",
+  "category": "Foams and insulation",
+  "class": "polymer foam",
+  "default_form": "foam",
+  "forms": [
+   "foam",
+   "sheet"
+  ],
+  "applications": [
+   "padding",
+   "packing foam",
+   "seat cushions"
+  ],
+  "aliases": [
+   "polyurethane"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "Polyurethane",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PTFE",
+  "name": "PTFE (Teflon)",
+  "scientific_name": "Polytetrafluoroethylene",
+  "category": "Polymers",
+  "class": "fluoropolymer",
+  "default_form": "thin sheet",
+  "forms": [
+   "thin sheet",
+   "wire insulation",
+   "tape"
+  ],
+  "applications": [
+   "wire insulation",
+   "seals",
+   "tape"
+  ],
+  "aliases": [
+   "Teflon",
+   "PTFE"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C2F4)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-WIRING",
+  "name": "Electrical wiring assembly",
+  "scientific_name": "Insulated conductor assembly",
+  "category": "Electronics and electrical",
+  "class": "assembly",
+  "default_form": "wire",
+  "forms": [
+   "wire",
+   "harness"
+  ],
+  "applications": [
+   "harnesses",
+   "power distribution"
+  ],
+  "aliases": [
+   "wiring"
+  ],
+  "related_to": [
+   "MAT-COPPER",
+   "MAT-PTFE"
+  ],
+  "phenomenon": "electrical ignition source (not a material combustion dataset)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-LATEX",
+  "name": "Latex",
+  "scientific_name": "Natural rubber latex",
+  "category": "Elastomers and sealants",
+  "class": "elastomer",
+  "default_form": "glove film",
+  "forms": [
+   "glove film",
+   "film"
+  ],
+  "applications": [
+   "gloves"
+  ],
+  "aliases": [
+   "latex"
+  ],
+  "related_to": [
+   "MAT-RUBBER"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "cis-1,4-polyisoprene",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SFOG",
+  "name": "Solid-fuel oxygen generator",
+  "scientific_name": "Chlorate candle oxygen generator",
+  "category": "Oxygen systems",
+  "class": "oxygen system",
+  "default_form": "canister",
+  "forms": [
+   "canister"
+  ],
+  "applications": [
+   "backup oxygen supply"
+  ],
+  "aliases": [
+   "solid-fuel oxygen generator"
+  ],
+  "related_to": [],
+  "phenomenon": "oxygen-source reaction (chemical oxygen generation)",
+  "composition": "Typically sodium chlorate + iron fuel (composition varies)",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ALU",
+  "name": "Aluminium alloy",
+  "scientific_name": "Aluminium alloy",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "foil",
+   "powder",
+   "shavings",
+   "honeycomb"
+  ],
+  "applications": [
+   "structure",
+   "racks",
+   "packaging foil"
+  ],
+  "aliases": [
+   "aluminum",
+   "aluminium"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent; bulk vs powder differ)",
+  "composition": "Al + alloying elements",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-LIION",
+  "name": "Lithium-ion battery cell",
+  "scientific_name": "Lithium-ion electrochemical cell",
+  "category": "Energy storage",
+  "class": "energy storage",
+  "default_form": "cell",
+  "forms": [
+   "cell",
+   "pack"
+  ],
+  "applications": [
+   "laptops",
+   "tools",
+   "power banks"
+  ],
+  "aliases": [
+   "lithium-ion",
+   "li-ion battery"
+  ],
+  "related_to": [],
+  "phenomenon": "battery thermal runaway (not ordinary material combustion)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-POLYC",
+  "name": "Polycarbonate",
+  "scientific_name": "Bisphenol-A polycarbonate",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "thin sheet",
+  "forms": [
+   "thin sheet",
+   "moulded part"
+  ],
+  "applications": [
+   "enclosures",
+   "visors",
+   "containers"
+  ],
+  "aliases": [
+   "polycarbonate"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C16H14O3)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-TI",
+  "name": "Titanium alloy",
+  "scientific_name": "Titanium alloy",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "powder",
+   "foil",
+   "shavings"
+  ],
+  "applications": [
+   "fittings",
+   "pressure vessels",
+   "fasteners"
+  ],
+  "aliases": [
+   "titanium"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Ti + alloying elements",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-TI64",
+  "name": "Titanium alloy Ti-6Al-4V",
+  "scientific_name": "Ti-6Al-4V",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "powder"
+  ],
+  "applications": [
+   "fittings",
+   "brackets"
+  ],
+  "aliases": [
+   "Ti-6Al-4V",
+   "Ti64"
+  ],
+  "related_to": [
+   "MAT-TI"
+  ],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Ti, 6% Al, 4% V",
+  "grade": "Grade 5",
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-MG",
+  "name": "Magnesium alloy",
+  "scientific_name": "Magnesium alloy",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "powder",
+   "shavings"
+  ],
+  "applications": [
+   "lightweight housings"
+  ],
+  "aliases": [
+   "magnesium"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Mg + alloying elements",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SS",
+  "name": "Stainless steel",
+  "scientific_name": "Austenitic stainless steel",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "foil",
+   "mesh"
+  ],
+  "applications": [
+   "tubing",
+   "fasteners",
+   "galley equipment"
+  ],
+  "aliases": [
+   "stainless steel",
+   "304",
+   "316"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Fe-Cr-Ni",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-STEEL",
+  "name": "Aerospace steel",
+  "scientific_name": "High-strength alloy steel",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk"
+  ],
+  "applications": [
+   "fasteners",
+   "mechanisms"
+  ],
+  "aliases": [
+   "alloy steel"
+  ],
+  "related_to": [
+   "MAT-SS"
+  ],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Fe + alloying elements",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-COPPER",
+  "name": "Copper",
+  "scientific_name": "Copper and copper alloys",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "wire",
+  "forms": [
+   "wire",
+   "bulk",
+   "foil"
+  ],
+  "applications": [
+   "conductors",
+   "heat exchangers"
+  ],
+  "aliases": [
+   "copper",
+   "brass",
+   "bronze"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Cu",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-NI",
+  "name": "Nickel-based alloy",
+  "scientific_name": "Nickel superalloy (e.g. Inconel)",
+  "category": "Metals and alloys",
+  "class": "metal",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "foil"
+  ],
+  "applications": [
+   "oxygen-system tubing",
+   "high-temperature parts"
+  ],
+  "aliases": [
+   "Inconel",
+   "nickel alloy"
+  ],
+  "related_to": [],
+  "phenomenon": "metal combustion (form-dependent)",
+  "composition": "Ni-Cr-Fe",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-CFRP",
+  "name": "Carbon-fibre-reinforced polymer",
+  "scientific_name": "Carbon fibre / epoxy composite",
+  "category": "Composites",
+  "class": "composite",
+  "default_form": "laminate",
+  "forms": [
+   "laminate",
+   "panel"
+  ],
+  "applications": [
+   "structure",
+   "panels"
+  ],
+  "aliases": [
+   "CFRP",
+   "carbon fibre",
+   "carbon fiber"
+  ],
+  "related_to": [
+   "MAT-EPOXY"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Carbon fibre in epoxy matrix",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-GFRP",
+  "name": "Glass-fibre-reinforced polymer",
+  "scientific_name": "Glass fibre / epoxy composite",
+  "category": "Composites",
+  "class": "composite",
+  "default_form": "laminate",
+  "forms": [
+   "laminate",
+   "panel"
+  ],
+  "applications": [
+   "panels",
+   "enclosures"
+  ],
+  "aliases": [
+   "GFRP",
+   "fiberglass composite"
+  ],
+  "related_to": [
+   "MAT-EPOXY"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Glass fibre in polymer matrix",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-EPOXY",
+  "name": "Epoxy resin",
+  "scientific_name": "Epoxy thermoset",
+  "category": "Composites",
+  "class": "polymer",
+  "default_form": "laminate",
+  "forms": [
+   "laminate",
+   "adhesive",
+   "coating"
+  ],
+  "applications": [
+   "composite matrix",
+   "potting",
+   "adhesives"
+  ],
+  "aliases": [
+   "epoxy"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "Epoxide thermoset",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-HONEYCOMB",
+  "name": "Honeycomb core",
+  "scientific_name": "Aluminium or aramid honeycomb",
+  "category": "Composites",
+  "class": "composite",
+  "default_form": "honeycomb",
+  "forms": [
+   "honeycomb"
+  ],
+  "applications": [
+   "sandwich panels"
+  ],
+  "aliases": [
+   "honeycomb"
+  ],
+  "related_to": [
+   "MAT-ALU",
+   "MAT-NOMEX"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Al or aramid paper core",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ADHESIVE",
+  "name": "Structural adhesive",
+  "scientific_name": "Epoxy or acrylic structural adhesive",
+  "category": "Elastomers and sealants",
+  "class": "polymer",
+  "default_form": "adhesive layer",
+  "forms": [
+   "adhesive layer"
+  ],
+  "applications": [
+   "bonded joints"
+  ],
+  "aliases": [
+   "adhesive",
+   "structural adhesive"
+  ],
+  "related_to": [
+   "MAT-EPOXY"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-CERAMIC",
+  "name": "Technical ceramic",
+  "scientific_name": "Alumina / silica ceramics",
+  "category": "Ceramics and glass",
+  "class": "ceramic",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "tile",
+   "fibre"
+  ],
+  "applications": [
+   "insulators",
+   "thermal parts"
+  ],
+  "aliases": [
+   "ceramic",
+   "alumina"
+  ],
+  "related_to": [],
+  "phenomenon": "generally non-combustible inorganic (not tested here)",
+  "composition": "Al2O3 / SiO2",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-GLASS",
+  "name": "Glass",
+  "scientific_name": "Silicate glass",
+  "category": "Ceramics and glass",
+  "class": "ceramic",
+  "default_form": "sheet",
+  "forms": [
+   "sheet",
+   "fibre"
+  ],
+  "applications": [
+   "windows",
+   "displays"
+  ],
+  "aliases": [
+   "glass"
+  ],
+  "related_to": [],
+  "phenomenon": "generally non-combustible inorganic (not tested here)",
+  "composition": "SiO2-based",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-COATING",
+  "name": "Protective coating",
+  "scientific_name": "Paint / conformal coating",
+  "category": "Coatings",
+  "class": "polymer",
+  "default_form": "coating",
+  "forms": [
+   "coating"
+  ],
+  "applications": [
+   "surface protection",
+   "conformal coating"
+  ],
+  "aliases": [
+   "paint",
+   "coating",
+   "conformal coating"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PE",
+  "name": "Polyethylene",
+  "scientific_name": "Polyethylene",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film",
+   "bag",
+   "moulded part"
+  ],
+  "applications": [
+   "bags",
+   "food packaging",
+   "containers"
+  ],
+  "aliases": [
+   "polyethylene",
+   "HDPE",
+   "LDPE"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C2H4)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PP",
+  "name": "Polypropylene",
+  "scientific_name": "Polypropylene",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "moulded part",
+  "forms": [
+   "moulded part",
+   "film"
+  ],
+  "applications": [
+   "containers",
+   "utensils"
+  ],
+  "aliases": [
+   "polypropylene"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C3H6)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PVC",
+  "name": "PVC",
+  "scientific_name": "Poly(vinyl chloride)",
+  "category": "Polymers",
+  "class": "polymer",
+  "default_form": "thin sheet",
+  "forms": [
+   "thin sheet",
+   "wire insulation",
+   "film"
+  ],
+  "applications": [
+   "cable jackets",
+   "bags"
+  ],
+  "aliases": [
+   "PVC",
+   "vinyl"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": "(C2H3Cl)n",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-POLYESTER",
+  "name": "Polyester",
+  "scientific_name": "Poly(ethylene terephthalate) fibre",
+  "category": "Interior textiles",
+  "class": "fabric",
+  "default_form": "fabric",
+  "forms": [
+   "fabric",
+   "film"
+  ],
+  "applications": [
+   "clothing",
+   "bags",
+   "liners"
+  ],
+  "aliases": [
+   "polyester",
+   "PET fabric"
+  ],
+  "related_to": [
+   "MAT-MYLAR"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "PET",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-KEVLAR",
+  "name": "Kevlar",
+  "scientific_name": "Para-aramid fibre fabric",
+  "category": "Interior textiles",
+  "class": "fabric",
+  "default_form": "fabric",
+  "forms": [
+   "fabric"
+  ],
+  "applications": [
+   "protective covers",
+   "straps"
+  ],
+  "aliases": [
+   "Kevlar",
+   "para-aramid"
+  ],
+  "related_to": [
+   "MAT-NOMEX"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Poly(p-phenylene terephthalamide)",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-RUBBER",
+  "name": "Rubber",
+  "scientific_name": "Synthetic or natural rubber",
+  "category": "Elastomers and sealants",
+  "class": "elastomer",
+  "default_form": "bulk",
+  "forms": [
+   "bulk",
+   "sheet",
+   "seal"
+  ],
+  "applications": [
+   "grips",
+   "seals",
+   "bumpers"
+  ],
+  "aliases": [
+   "rubber",
+   "EPDM",
+   "neoprene"
+  ],
+  "related_to": [
+   "MAT-LATEX",
+   "MAT-SILICONE"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SEALANT",
+  "name": "Sealant",
+  "scientific_name": "RTV silicone / polysulfide sealant",
+  "category": "Elastomers and sealants",
+  "class": "elastomer",
+  "default_form": "sealant",
+  "forms": [
+   "sealant"
+  ],
+  "applications": [
+   "joint sealing"
+  ],
+  "aliases": [
+   "sealant",
+   "RTV"
+  ],
+  "related_to": [
+   "MAT-SILICONE"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-FLOOR",
+  "name": "Flooring laminate",
+  "scientific_name": "Polymer floor covering",
+  "category": "Interior textiles",
+  "class": "polymer",
+  "default_form": "sheet",
+  "forms": [
+   "sheet"
+  ],
+  "applications": [
+   "floors",
+   "foot restraints"
+  ],
+  "aliases": [
+   "flooring"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PANEL",
+  "name": "Interior panel",
+  "scientific_name": "Polymer or composite interior panel",
+  "category": "Composites",
+  "class": "composite",
+  "default_form": "panel",
+  "forms": [
+   "panel"
+  ],
+  "applications": [
+   "close-out panels"
+  ],
+  "aliases": [
+   "interior panel",
+   "closeout panel"
+  ],
+  "related_to": [
+   "MAT-GFRP",
+   "MAT-POLYC"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ACOUSTIC",
+  "name": "Acoustic insulation",
+  "scientific_name": "Polymer or glass-fibre acoustic blanket",
+  "category": "Foams and insulation",
+  "class": "polymer foam",
+  "default_form": "blanket",
+  "forms": [
+   "blanket"
+  ],
+  "applications": [
+   "noise reduction"
+  ],
+  "aliases": [
+   "acoustic insulation",
+   "acoustic blanket"
+  ],
+  "related_to": [
+   "MAT-PU",
+   "MAT-FIBERGLASS"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PCB",
+  "name": "Printed circuit board (FR-4)",
+  "scientific_name": "Glass-epoxy laminate with copper",
+  "category": "Electronics and electrical",
+  "class": "composite",
+  "default_form": "board",
+  "forms": [
+   "board"
+  ],
+  "applications": [
+   "electronics"
+  ],
+  "aliases": [
+   "PCB",
+   "FR-4",
+   "circuit board"
+  ],
+  "related_to": [
+   "MAT-EPOXY",
+   "MAT-COPPER"
+  ],
+  "phenomenon": "material combustion and electrical ignition source",
+  "composition": null,
+  "grade": "FR-4",
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-CONNECTOR",
+  "name": "Electrical connector",
+  "scientific_name": "Metal contacts in polymer housing",
+  "category": "Electronics and electrical",
+  "class": "assembly",
+  "default_form": "assembly",
+  "forms": [
+   "assembly"
+  ],
+  "applications": [
+   "connectors"
+  ],
+  "aliases": [
+   "connector"
+  ],
+  "related_to": [
+   "MAT-COPPER"
+  ],
+  "phenomenon": "electrical ignition source",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-CABLEINS",
+  "name": "Cable insulation (generic)",
+  "scientific_name": "Polymer cable jacket",
+  "category": "Electronics and electrical",
+  "class": "polymer",
+  "default_form": "wire insulation",
+  "forms": [
+   "wire insulation"
+  ],
+  "applications": [
+   "cable jackets"
+  ],
+  "aliases": [
+   "cable insulation",
+   "wire insulation"
+  ],
+  "related_to": [
+   "MAT-PTFE",
+   "MAT-PVC",
+   "MAT-SILICONE"
+  ],
+  "phenomenon": "material combustion and electrical ignition source",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ENCLOSURE",
+  "name": "Electronic enclosure",
+  "scientific_name": "Polymer or metal enclosure",
+  "category": "Electronics and electrical",
+  "class": "assembly",
+  "default_form": "moulded part",
+  "forms": [
+   "moulded part"
+  ],
+  "applications": [
+   "housings"
+  ],
+  "aliases": [
+   "enclosure",
+   "housing"
+  ],
+  "related_to": [
+   "MAT-POLYC",
+   "MAT-ALU"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SEPARATOR",
+  "name": "Battery separator",
+  "scientific_name": "Microporous polyolefin film",
+  "category": "Energy storage",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film"
+  ],
+  "applications": [
+   "Li-ion cells"
+  ],
+  "aliases": [
+   "separator"
+  ],
+  "related_to": [
+   "MAT-PE",
+   "MAT-PP"
+  ],
+  "phenomenon": "battery thermal runaway context",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ELECTROLYTE",
+  "name": "Battery electrolyte",
+  "scientific_name": "Organic carbonate electrolyte with lithium salt",
+  "category": "Energy storage",
+  "class": "liquid",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "Li-ion cells"
+  ],
+  "aliases": [
+   "electrolyte"
+  ],
+  "related_to": [],
+  "phenomenon": "battery thermal runaway context",
+  "composition": "e.g. LiPF6 in carbonates",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-DISPLAY",
+  "name": "Display assembly",
+  "scientific_name": "Glass, polymer films and electronics",
+  "category": "Electronics and electrical",
+  "class": "assembly",
+  "default_form": "assembly",
+  "forms": [
+   "assembly"
+  ],
+  "applications": [
+   "screens"
+  ],
+  "aliases": [
+   "display",
+   "screen"
+  ],
+  "related_to": [
+   "MAT-GLASS",
+   "MAT-PCB"
+  ],
+  "phenomenon": "material combustion and electrical ignition source",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PAPER",
+  "name": "Paper",
+  "scientific_name": "Cellulose paper",
+  "category": "Crew provisions",
+  "class": "cellulose",
+  "default_form": "sheet",
+  "forms": [
+   "sheet",
+   "stack",
+   "book"
+  ],
+  "applications": [
+   "notebooks",
+   "procedures",
+   "books"
+  ],
+  "aliases": [
+   "paper",
+   "notebook",
+   "book"
+  ],
+  "related_to": [
+   "MAT-COTTON"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Cellulose",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-CARDBOARD",
+  "name": "Cardboard",
+  "scientific_name": "Corrugated cellulose board",
+  "category": "Food, packaging and waste",
+  "class": "cellulose",
+  "default_form": "sheet",
+  "forms": [
+   "sheet"
+  ],
+  "applications": [
+   "packaging"
+  ],
+  "aliases": [
+   "cardboard"
+  ],
+  "related_to": [
+   "MAT-PAPER"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Cellulose",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-TOILETRY",
+  "name": "Toiletries",
+  "scientific_name": "Personal-care products (mixed formulations)",
+  "category": "Crew provisions",
+  "class": "consumable",
+  "default_form": "container",
+  "forms": [
+   "container"
+  ],
+  "applications": [
+   "hygiene kits"
+  ],
+  "aliases": [
+   "toiletries",
+   "cosmetics",
+   "hygiene products"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion (formulation-dependent)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ALCOHOLWIPE",
+  "name": "Cleaning wipes",
+  "scientific_name": "Non-woven wipe with cleaning solution",
+  "category": "Crew provisions",
+  "class": "consumable",
+  "default_form": "fabric",
+  "forms": [
+   "fabric"
+  ],
+  "applications": [
+   "cleaning"
+  ],
+  "aliases": [
+   "cleaning wipes",
+   "wipes"
+  ],
+  "related_to": [
+   "MAT-COTTON",
+   "MAT-POLYESTER"
+  ],
+  "phenomenon": "material combustion (solution-dependent)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-NITRILE",
+  "name": "Nitrile gloves",
+  "scientific_name": "Nitrile butadiene rubber",
+  "category": "Crew provisions",
+  "class": "elastomer",
+  "default_form": "glove film",
+  "forms": [
+   "glove film"
+  ],
+  "applications": [
+   "medical",
+   "lab"
+  ],
+  "aliases": [
+   "nitrile",
+   "gloves"
+  ],
+  "related_to": [
+   "MAT-LATEX",
+   "MAT-RUBBER"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-MASK",
+  "name": "Face masks",
+  "scientific_name": "Polypropylene non-woven",
+  "category": "Crew provisions",
+  "class": "polymer",
+  "default_form": "fabric",
+  "forms": [
+   "fabric"
+  ],
+  "applications": [
+   "medical supplies"
+  ],
+  "aliases": [
+   "mask"
+  ],
+  "related_to": [
+   "MAT-PP"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-MEDKIT",
+  "name": "Medical supplies",
+  "scientific_name": "Mixed medical consumables",
+  "category": "Crew provisions",
+  "class": "consumable",
+  "default_form": "mixed",
+  "forms": [
+   "mixed"
+  ],
+  "applications": [
+   "medical kit"
+  ],
+  "aliases": [
+   "medical supplies",
+   "bandages"
+  ],
+  "related_to": [
+   "MAT-COTTON"
+  ],
+  "phenomenon": "material combustion (mixed)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-FOODFILM",
+  "name": "Food packaging film",
+  "scientific_name": "Multilayer polymer/aluminium laminate",
+  "category": "Food, packaging and waste",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film"
+  ],
+  "applications": [
+   "food pouches"
+  ],
+  "aliases": [
+   "food packaging",
+   "pouch"
+  ],
+  "related_to": [
+   "MAT-PE",
+   "MAT-ALU"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-OIL",
+  "name": "Food oils and fats",
+  "scientific_name": "Triglycerides",
+  "category": "Food, packaging and waste",
+  "class": "liquid fuel",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "food"
+  ],
+  "aliases": [
+   "cooking oil",
+   "fat"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-DRYFOOD",
+  "name": "Dried food",
+  "scientific_name": "Dehydrated foodstuffs",
+  "category": "Food, packaging and waste",
+  "class": "organic",
+  "default_form": "solid",
+  "forms": [
+   "solid"
+  ],
+  "applications": [
+   "food"
+  ],
+  "aliases": [
+   "dried food"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-WASTE",
+  "name": "Organic waste",
+  "scientific_name": "Mixed organic waste",
+  "category": "Food, packaging and waste",
+  "class": "organic",
+  "default_form": "mixed",
+  "forms": [
+   "mixed"
+  ],
+  "applications": [
+   "waste storage"
+  ],
+  "aliases": [
+   "waste",
+   "trash"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion (mixed)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-WASTEBAG",
+  "name": "Waste storage bag",
+  "scientific_name": "Polyethylene bag",
+  "category": "Food, packaging and waste",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film"
+  ],
+  "applications": [
+   "waste"
+  ],
+  "aliases": [
+   "waste bag",
+   "trash bag"
+  ],
+  "related_to": [
+   "MAT-PE"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-KAPTON",
+  "name": "Kapton",
+  "scientific_name": "Polyimide film",
+  "category": "Aerospace specialty",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film",
+   "wire insulation",
+   "tape"
+  ],
+  "applications": [
+   "wire insulation",
+   "flexible circuits"
+  ],
+  "aliases": [
+   "Kapton",
+   "polyimide"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion and electrical ignition (arc tracking context)",
+  "composition": "Polyimide",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-MYLAR",
+  "name": "Mylar",
+  "scientific_name": "BoPET film",
+  "category": "Aerospace specialty",
+  "class": "polymer",
+  "default_form": "film",
+  "forms": [
+   "film"
+  ],
+  "applications": [
+   "insulation blankets",
+   "bags"
+  ],
+  "aliases": [
+   "Mylar",
+   "BoPET"
+  ],
+  "related_to": [
+   "MAT-POLYESTER"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Biaxially oriented PET",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-MLI",
+  "name": "Multilayer insulation",
+  "scientific_name": "Aluminised polymer film blanket",
+  "category": "Aerospace specialty",
+  "class": "polymer",
+  "default_form": "blanket",
+  "forms": [
+   "blanket"
+  ],
+  "applications": [
+   "thermal blankets"
+  ],
+  "aliases": [
+   "MLI",
+   "multilayer insulation"
+  ],
+  "related_to": [
+   "MAT-KAPTON",
+   "MAT-MYLAR"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "Aluminised Kapton/Mylar layers",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-TPS",
+  "name": "Thermal protection material",
+  "scientific_name": "Ablator or ceramic TPS",
+  "category": "Aerospace specialty",
+  "class": "ceramic",
+  "default_form": "tile",
+  "forms": [
+   "tile"
+  ],
+  "applications": [
+   "heat shields"
+  ],
+  "aliases": [
+   "heat shield",
+   "TPS",
+   "ablator"
+  ],
+  "related_to": [],
+  "phenomenon": "external aerodynamic heating (not internal cabin combustion)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-AEROGEL",
+  "name": "Aerogel",
+  "scientific_name": "Silica aerogel",
+  "category": "Foams and insulation",
+  "class": "ceramic",
+  "default_form": "blanket",
+  "forms": [
+   "blanket"
+  ],
+  "applications": [
+   "insulation"
+  ],
+  "aliases": [
+   "aerogel"
+  ],
+  "related_to": [],
+  "phenomenon": "generally inorganic (not tested here)",
+  "composition": "SiO2",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-FIBERGLASS",
+  "name": "Fiberglass insulation",
+  "scientific_name": "Glass-fibre batt",
+  "category": "Foams and insulation",
+  "class": "ceramic",
+  "default_form": "blanket",
+  "forms": [
+   "blanket"
+  ],
+  "applications": [
+   "insulation"
+  ],
+  "aliases": [
+   "fiberglass",
+   "glass wool"
+  ],
+  "related_to": [],
+  "phenomenon": "generally non-combustible fibre; binders may burn (not tested here)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-SUITFAB",
+  "name": "Space suit fabric",
+  "scientific_name": "Layered suit textiles (e.g. Ortho-fabric)",
+  "category": "Aerospace specialty",
+  "class": "fabric",
+  "default_form": "fabric",
+  "forms": [
+   "fabric"
+  ],
+  "applications": [
+   "EVA suits"
+  ],
+  "aliases": [
+   "suit fabric",
+   "ortho-fabric"
+  ],
+  "related_to": [
+   "MAT-NOMEX",
+   "MAT-KEVLAR"
+  ],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-O2VALVE",
+  "name": "Oxygen-system component",
+  "scientific_name": "Valves, regulators and lines in oxygen service",
+  "category": "Oxygen systems",
+  "class": "assembly",
+  "default_form": "assembly",
+  "forms": [
+   "assembly"
+  ],
+  "applications": [
+   "oxygen distribution"
+  ],
+  "aliases": [
+   "oxygen valve",
+   "regulator"
+  ],
+  "related_to": [
+   "MAT-NI",
+   "MAT-SS"
+  ],
+  "phenomenon": "oxygen-system ignition (e.g. promoted combustion, adiabatic compression)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-LUBE",
+  "name": "Lubricant",
+  "scientific_name": "Perfluoropolyether or hydrocarbon lubricant",
+  "category": "Aerospace specialty",
+  "class": "liquid",
+  "default_form": "liquid",
+  "forms": [
+   "liquid",
+   "grease"
+  ],
+  "applications": [
+   "mechanisms"
+  ],
+  "aliases": [
+   "lubricant",
+   "grease",
+   "Braycote"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion (oxygen compatibility dependent)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-HYDFLUID",
+  "name": "Hydraulic fluid",
+  "scientific_name": "Hydraulic fluid",
+  "category": "Aerospace specialty",
+  "class": "liquid",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "actuators"
+  ],
+  "aliases": [
+   "hydraulic fluid"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-COOLANT",
+  "name": "Coolant",
+  "scientific_name": "Water/glycol or fluorinated coolant",
+  "category": "Aerospace specialty",
+  "class": "liquid",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "thermal control loops"
+  ],
+  "aliases": [
+   "coolant",
+   "ethylene glycol"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion (fluid-dependent)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-PROP",
+  "name": "Propellant (representative)",
+  "scientific_name": "Representative storable propellant",
+  "category": "Aerospace specialty",
+  "class": "propellant",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "propulsion (outside cabin)"
+  ],
+  "aliases": [
+   "propellant",
+   "hydrazine"
+  ],
+  "related_to": [],
+  "phenomenon": "propulsion combustion (not internal cabin fire)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-LABCHEM",
+  "name": "Laboratory chemical",
+  "scientific_name": "Generic laboratory reagent",
+  "category": "Research fuels and chemicals",
+  "class": "chemical",
+  "default_form": "liquid",
+  "forms": [
+   "liquid"
+  ],
+  "applications": [
+   "experiments"
+  ],
+  "aliases": [
+   "lab chemical",
+   "reagent"
+  ],
+  "related_to": [],
+  "phenomenon": "material combustion (reagent-dependent)",
+  "composition": null,
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ },
+ {
+  "id": "MAT-ETHANOL",
+  "name": "Ethanol",
+  "scientific_name": "Ethanol",
+  "category": "Research fuels and chemicals",
+  "class": "liquid fuel",
+  "default_form": "liquid droplet",
+  "forms": [
+   "liquid droplet"
+  ],
+  "applications": [
+   "research fuel",
+   "cleaning"
+  ],
+  "aliases": [
+   "ethanol"
+  ],
+  "related_to": [
+   "MAT-METHANOL"
+  ],
+  "phenomenon": "material combustion",
+  "composition": "C2H5OH",
+  "grade": null,
+  "provenance": "SpaceXtinsafe catalogue entry (descriptive only; no combustion properties assigned)",
+  "user_defined": false,
+  "notes": "Typical applications are illustrative possibilities, not claims of flight use on a real vehicle."
+ }
+]

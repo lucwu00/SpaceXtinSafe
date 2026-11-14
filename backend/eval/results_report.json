@@ -1,0 +1,2158 @@
+{
+ "generated_utc": "2026-11-14T17:39:49+00:00",
+ "evaluation_run_utc": "2026-11-14T17:30:57+00:00",
+ "retrieval": {
+  "development": {
+   "keyword": {
+    "recall@5": 0.729,
+    "precision@5": 0.232,
+    "mrr": 0.784,
+    "n": 38,
+    "multi_hop_recall@5": 0.199
+   },
+   "semantic": {
+    "recall@5": 0.712,
+    "precision@5": 0.221,
+    "mrr": 0.698,
+    "n": 38,
+    "multi_hop_recall@5": 0.142
+   },
+   "hybrid": {
+    "recall@5": 0.742,
+    "precision@5": 0.247,
+    "mrr": 0.768,
+    "n": 38,
+    "multi_hop_recall@5": 0.238
+   },
+   "hybrid+graph": {
+    "recall@5": 0.853,
+    "precision@5": 0.321,
+    "mrr": 0.875,
+    "n": 38,
+    "multi_hop_recall@5": 0.591
+   }
+  },
+  "holdout": {
+   "keyword": {
+    "recall@5": 0.571,
+    "precision@5": 0.244,
+    "mrr": 0.639,
+    "n": 18,
+    "multi_hop_recall@5": 0.167
+   },
+   "semantic": {
+    "recall@5": 0.548,
+    "precision@5": 0.233,
+    "mrr": 0.634,
+    "n": 18,
+    "multi_hop_recall@5": 0.292
+   },
+   "hybrid": {
+    "recall@5": 0.548,
+    "precision@5": 0.233,
+    "mrr": 0.681,
+    "n": 18,
+    "multi_hop_recall@5": 0.208
+   },
+   "hybrid+graph": {
+    "recall@5": 0.731,
+    "precision@5": 0.3,
+    "mrr": 0.798,
+    "n": 18,
+    "multi_hop_recall@5": 0.589
+   }
+  }
+ },
+ "deterministic_copilot": {
+  "development": {
+   "n": 12,
+   "answer_cases": 6,
+   "answered": 6,
+   "citation_correctness": "6/6",
+   "citation_precision_vs_gold": 0.556,
+   "citation_recall_vs_gold": 0.764,
+   "claim_support": "18/18",
+   "abstention_rate_unsupported": "3/3",
+   "false_abstention_on_answerable": "0/6",
+   "boundary_refusal": "3/3",
+   "latency_ms_median": 22.700000000000003,
+   "latency_ms_max": 13912.6,
+   "cases": [
+    {
+     "id": "C01",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 13912.6,
+     "cited": [
+      "EV-LUCI-01",
+      "EV-SAF-03",
+      "EV-SAF-05"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.667,
+     "citation_recall_vs_gold": 0.333,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C02",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 25.6,
+     "cited": [
+      "EV-FLEX-02",
+      "EV-FLEX-05",
+      "EV-FLEX-07"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C03",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 24.7,
+     "cited": [
+      "EV-SAF-01",
+      "EV-SAF-08",
+      "EV-SAF6-01"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.667,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C04",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 21.1,
+     "cited": [
+      "EV-MIR-01",
+      "EV-MIR-02",
+      "EV-MIR-03"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.667,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C05",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 24.0,
+     "cited": [
+      "EV-FM2-01",
+      "EV-FM2-02",
+      "EV-LUCI-02"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.667,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C06",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 23.3,
+     "cited": [
+      "EV-AP1-03",
+      "EV-SAF-01",
+      "EV-SAF-02"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 0.25,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "C07",
+     "expected": "boundary",
+     "mode": "boundary",
+     "latency_ms": 0.1,
+     "cited": [],
+     "boundary": true
+    },
+    {
+     "id": "C08",
+     "expected": "boundary",
+     "mode": "boundary",
+     "latency_ms": 0.0,
+     "cited": [],
+     "boundary": true
+    },
+    {
+     "id": "C09",
+     "expected": "boundary",
+     "mode": "boundary",
+     "latency_ms": 0.0,
+     "cited": [],
+     "boundary": true
+    },
+    {
+     "id": "C10",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 11.6,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "C11",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 27.2,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "C12",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 22.1,
+     "cited": [],
+     "abstained": true
+    }
+   ]
+  },
+  "holdout": {
+   "n": 10,
+   "answer_cases": 4,
+   "answered": 4,
+   "citation_correctness": "4/4",
+   "citation_precision_vs_gold": 0.333,
+   "citation_recall_vs_gold": 1.0,
+   "claim_support": "12/12",
+   "abstention_rate_unsupported": "4/4",
+   "false_abstention_on_answerable": "0/4",
+   "boundary_refusal": "2/2",
+   "latency_ms_median": 11.15,
+   "latency_ms_max": 23.2,
+   "cases": [
+    {
+     "id": "HC01",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 23.2,
+     "cited": [
+      "EV-AP1-01",
+      "EV-SAF6-01",
+      "EV-SAF6-03"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "HC02",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 20.1,
+     "cited": [
+      "EV-BASS2-01",
+      "EV-GUIDE-02",
+      "EV-SOFIE-01"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "HC03",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 20.2,
+     "cited": [
+      "EV-MIR-01",
+      "EV-MIR-02",
+      "EV-MIR-03"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "HC04",
+     "expected": "answer",
+     "mode": "evidence-retrieval",
+     "latency_ms": 19.6,
+     "cited": [
+      "EV-FLEX-02",
+      "EV-FLEX-03",
+      "EV-FLEX-05"
+     ],
+     "answered": true,
+     "citations_in_retrieved": true,
+     "citation_precision_vs_gold": 0.333,
+     "citation_recall_vs_gold": 1.0,
+     "claims_verbatim_supported": 3,
+     "claims": 3
+    },
+    {
+     "id": "HC05",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 10.6,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "HC06",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 9.9,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "HC07",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 11.0,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "HC08",
+     "expected": "abstain",
+     "mode": "no-evidence",
+     "latency_ms": 11.3,
+     "cited": [],
+     "abstained": true
+    },
+    {
+     "id": "HC09",
+     "expected": "boundary",
+     "mode": "boundary",
+     "latency_ms": 0.1,
+     "cited": [],
+     "boundary": true
+    },
+    {
+     "id": "HC10",
+     "expected": "boundary",
+     "mode": "boundary",
+     "latency_ms": 0.1,
+     "cited": [],
+     "boundary": true
+    }
+   ]
+  }
+ },
+ "live_claude": {
+  "status": "run",
+  "generated_utc": "2026-11-14T17:35:41+00:00",
+  "models": {
+   "1": {
+    "name": "Lightweight",
+    "model": "claude-haiku-5-5",
+    "env": "SXS_MODEL_FAST",
+    "max_tokens": 500,
+    "price_usd_per_mtok": [
+     0.1,
+     0.5
+    ],
+    "available": null
+   },
+   "2": {
+    "name": "Scientific",
+    "model": "claude-sonnet-5-5",
+    "env": "SXS_MODEL_STANDARD",
+    "max_tokens": 900,
+    "price_usd_per_mtok": [
+     2.0,
+     10.0
+    ],
+    "available": null
+   },
+   "3": {
+    "name": "Advanced scientific",
+    "model": "claude-opus-5-5",
+    "env": "SXS_MODEL_DEEP",
+    "max_tokens": 1400,
+    "price_usd_per_mtok": [
+     4.0,
+     20.0
+    ],
+    "available": null
+   }
+  },
+  "case_file_sha256": "61d01c2b254d9b1d2453d698bb498ce73130facb71d2bf5b0d585efa02871358",
+  "n_cases": 15,
+  "n_passed": 14,
+  "answer_cases": {
+   "n": 8,
+   "live_claude_used": 8,
+   "citation_correct": 8,
+   "mean_citation_completeness": 1.0,
+   "numbers_ok": 7,
+   "conditions_ok": 8,
+   "claims_removed_by_checks": 1
+  },
+  "live_success_rate": {
+   "answer_cases_answered_by_claude": "8/8",
+   "api_fallbacks": 0
+  },
+  "claim_support_rate": 0.941,
+  "latency_ms_llm": {
+   "median": 5761,
+   "max": 21788
+  },
+  "tokens": {
+   "input": 10459,
+   "output": 4377
+  },
+  "estimated_cost_usd": 0.09932,
+  "by_model": {
+   "claude-opus-5-5": 4,
+   "claude-sonnet-5-5": 4
+  },
+  "abstain": {
+   "n": 4,
+   "passed": 4
+  },
+  "boundary": {
+   "n": 3,
+   "passed": 3
+  },
+  "judge": "No LLM judge",
+  "cases": [
+   {
+    "id": "L01",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-SAF-05"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "In Saffire-II, sample 2-5, a 5 cm wide cotton-fiberglass sample, burned its full 29 cm at a flame spread rate of 2.1 mm/s. Sample 2-5 was tested in 20 cm/s concurrent flow at about 22.1% O2.",
+    "latency_ms": 21788,
+    "model": "claude-opus-5-5",
+    "tier": 3,
+    "input_tokens": 1223,
+    "output_tokens": 598,
+    "cost_usd": 0.016852,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L02",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-FLEX-02"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "In the FLEX report, the burning rate is defined as the average burning rate constant from a linear fit of the droplet diameter squared versus time, taken from shortly after ignition to extinction. Table IX reports the FLEX burning rate in mm2/s. The PSI-69 column header says 'mm'.",
+    "latency_ms": 3380,
+    "model": "claude-sonnet-5-5",
+    "tier": 2,
+    "input_tokens": 1317,
+    "output_tokens": 299,
+    "cost_usd": 0.005624,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L03",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-SAF-08"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "In Saffire-II combined PMMA and Nomex sample 2-7, tested in microgravity, the PMMA section burned (5 cm) but the adjoining Nomex did not burn. The Saffire-II data row for sample 2-7 reads \"2-7 80 W 9.2 s 140 s 5 cm & 0 ii n/a (Nomex) ~ 0 (Nomex) n/a (Nomex)\". The evidence gives \"5 cm & 0\" and \"~ 0 (Nomex)\" for the Nomex portion.",
+    "latency_ms": 6998,
+    "model": "claude-opus-5-5",
+    "tier": 3,
+    "input_tokens": 1128,
+    "output_tokens": 755,
+    "cost_usd": 0.019612,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L04",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-FM2-01",
+     "EV-FM2-02"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "Early numerical and experimental evidence suggested Lunar gravity could be more hazardous because flame spread rate as a function of gravity peaks near Lunar gravity. Theoretical and experimental results have shown that some materials that will not burn in 1-g will burn in 0-g (with a low-speed flow) or in partial gravity such as Lunar-g.",
+    "latency_ms": 4724,
+    "model": "claude-sonnet-5-5",
+    "tier": 2,
+    "input_tokens": 1139,
+    "output_tokens": 516,
+    "cost_usd": 0.007438,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L05",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-SOFIE-01"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "In SoFIE imagery of 0.1-mm-thick PMMA, radiative quenching is shown when flow velocity goes below 2 cm/s. In the same SoFIE imagery of 0.1-mm-thick PMMA, the flame is shown nearing blow off extinction as the flow velocity crosses 40 cm/s.",
+    "latency_ms": 4356,
+    "model": "claude-sonnet-5-5",
+    "tier": 2,
+    "input_tokens": 1175,
+    "output_tokens": 403,
+    "cost_usd": 0.00638,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L06",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-SAF-01",
+     "EV-SAF-02",
+     "EV-SAF6-03"
+    ],
+    "claims": 2,
+    "dropped": 0,
+    "answer": "Saffire IV-VI found that the temperature and pressure rise in the spacecraft were less significant than the increase in carbon dioxide and carbon monoxide: \"Overall, the temperature and pressure rise in the spacecraft were found to be less significant than the increase in carbon dioxide and carbon monoxide.\" Saffire experiments were designed to run in Orbital ATK's Cygnus vehicle after it unberthed from the International Space Station. The aim was to study how rapidly a large-scale fire grows in low gravity.",
+    "latency_ms": 9089,
+    "model": "claude-opus-5-5",
+    "tier": 3,
+    "input_tokens": 2194,
+    "output_tokens": 805,
+    "cost_usd": 0.020292,
+    "fallback": null,
+    "escalations": [
+     {
+      "from": "claude-sonnet-5-5",
+      "to": "claude-opus-5-5",
+      "why": "no claim passed the checks"
+     }
+    ],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L07",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-MIR-01",
+     "EV-MIR-02",
+     "EV-MIR-03"
+    ],
+    "claims": 3,
+    "dropped": 0,
+    "answer": "In 1997, a solid-fuel oxygen generator canister in Mir's Kvant-1 module ignited when it was activated, shooting a three-foot flame with sparks and bits of molten metal across the module and generating a large quantity of dense smoke. The flame blocked the evacuation route to the Soyuz. Investigators identified latex working glove material inadvertently introduced into the canister as the most likely cause of the fire. The crew quickly donned oxygen masks, and Korzun began dousing the flame with foam from a fire extinguisher.",
+    "latency_ms": 3399,
+    "model": "claude-sonnet-5-5",
+    "tier": 2,
+    "input_tokens": 1174,
+    "output_tokens": 368,
+    "cost_usd": 0.006028,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": true,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 0,
+    "passed": true
+   },
+   {
+    "id": "L08",
+    "expected": "answer",
+    "mode": "claude",
+    "cited": [
+     "EV-SAF-06"
+    ],
+    "claims": 1,
+    "dropped": 1,
+    "answer": "Saffire-II sample 2-6 was a cotton-fiberglass sample tested in microgravity. It burned its full length at 2.6 mm/s. The tabulated values are \"2-6 80 W 9.2 s 115 s 29 cm 2.6 mm/s\".",
+    "latency_ms": 5761,
+    "model": "claude-opus-5-5",
+    "tier": 3,
+    "input_tokens": 1109,
+    "output_tokens": 633,
+    "cost_usd": 0.017096,
+    "fallback": null,
+    "escalations": [],
+    "live_claude_used": true,
+    "citation_correct": true,
+    "citation_completeness": 1.0,
+    "numbers_ok": false,
+    "conditions_ok": true,
+    "unsupported_numbers_removed": 1,
+    "passed": false
+   },
+   {
+    "id": "L09",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "The library has no direct NASA combustion evidence for Lithium-ion battery cell. This is a gap in this library, not proof of non-flammability.",
+    "latency_ms": 16,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L10",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "The library has no direct NASA combustion evidence for Titanium alloy Ti-6Al-4V, Titanium alloy. This is a gap in this library, not proof of non-flammability.",
+    "latency_ms": 17,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L11",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "The library has no direct NASA combustion evidence for Polyethylene. This is a gap in this library, not proof of non-flammability.",
+    "latency_ms": 15,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L12",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "No documented interaction between Kapton, Silicone in the library. Absence of a documented interaction is not evidence that materials do not interact.",
+    "latency_ms": 14,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L13",
+    "expected": "boundary",
+    "mode": "boundary",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+    "latency_ms": 0,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L14",
+    "expected": "boundary",
+    "mode": "boundary",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+    "latency_ms": 0,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   },
+   {
+    "id": "L15",
+    "expected": "boundary",
+    "mode": "boundary",
+    "cited": [],
+    "claims": 0,
+    "dropped": 0,
+    "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+    "latency_ms": 0,
+    "model": null,
+    "tier": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "fallback": null,
+    "escalations": [],
+    "passed": true
+   }
+  ],
+  "claude_error": null,
+  "disclosure": "Evaluates the live generative Copilot. Separate from the deterministic retrieval evaluation. 15 cases written before the first live run; small set, indicative only."
+ },
+ "routing": {
+  "generated_utc": "2026-11-14T17:36:13+00:00",
+  "case_file_sha256": "481e6160308e4664a84273cd610dd2137fad085d4d1daf6baef843e5a0b5473e",
+  "lock_matches": true,
+  "config": {
+   "tiers": {
+    "1": {
+     "name": "Lightweight",
+     "model": "claude-haiku-5-5",
+     "env": "SXS_MODEL_FAST",
+     "max_tokens": 500,
+     "price_usd_per_mtok": [
+      0.1,
+      0.5
+     ],
+     "available": null
+    },
+    "2": {
+     "name": "Scientific",
+     "model": "claude-sonnet-5-5",
+     "env": "SXS_MODEL_STANDARD",
+     "max_tokens": 900,
+     "price_usd_per_mtok": [
+      2.0,
+      10.0
+     ],
+     "available": null
+    },
+    "3": {
+     "name": "Advanced scientific",
+     "model": "claude-opus-5-5",
+     "env": "SXS_MODEL_DEEP",
+     "max_tokens": 1400,
+     "price_usd_per_mtok": [
+      4.0,
+      20.0
+     ],
+     "available": null
+    }
+   },
+   "availability_checked": null,
+   "availability_error": null,
+   "price_source": "Anthropic pricing page, standard tier, checked 2026-11-14; override with SXS_PRICE_*"
+  },
+  "routing_accuracy": {
+   "n": 28,
+   "correct": 27,
+   "by_expected_tier": {
+    "0": {
+     "n": 12,
+     "correct": 12
+    },
+    "1": {
+     "n": 5,
+     "correct": 4
+    },
+    "2": {
+     "n": 7,
+     "correct": 7
+    },
+    "3": {
+     "n": 4,
+     "correct": 4
+    }
+   },
+   "confusion": {
+    "0->0": 12,
+    "1->0": 1,
+    "1->1": 4,
+    "2->2": 7,
+    "3->3": 4
+   },
+   "cases": [
+    {
+     "id": "R01",
+     "kind": "calculation",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: o2_partial_pressure"
+    },
+    {
+     "id": "R02",
+     "kind": "calculation",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: o2_partial_pressure"
+    },
+    {
+     "id": "R03",
+     "kind": "inventory",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: spacecraft_inventory"
+    },
+    {
+     "id": "R04",
+     "kind": "dataset statistics",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: dataset_statistics"
+    },
+    {
+     "id": "R05",
+     "kind": "dataset statistics",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: dataset_statistics"
+    },
+    {
+     "id": "R06",
+     "kind": "prediction",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: flex_model_prediction"
+    },
+    {
+     "id": "R07",
+     "kind": "prediction",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: flex_model_prediction"
+    },
+    {
+     "id": "R08",
+     "kind": "navigation",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: navigation"
+    },
+    {
+     "id": "R09",
+     "kind": "navigation",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "deterministic tool: app_guidance"
+    },
+    {
+     "id": "R10",
+     "kind": "boundary",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "boundary rule (verdict, risk score or operational instruction requested)"
+    },
+    {
+     "id": "R11",
+     "kind": "abstain",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "abstained: evidence insufficient (no model escalation for missing evidence)"
+    },
+    {
+     "id": "R12",
+     "kind": "abstain",
+     "expected": 0,
+     "routed": 0,
+     "correct": true,
+     "reason": "abstained: retrieved evidence does not match the question (no model escalation for missing evidence)"
+    },
+    {
+     "id": "R13",
+     "kind": "app enquiry",
+     "expected": 1,
+     "routed": 1,
+     "correct": true,
+     "reason": "general application enquiry"
+    },
+    {
+     "id": "R14",
+     "kind": "app enquiry",
+     "expected": 1,
+     "routed": 1,
+     "correct": true,
+     "reason": "general application enquiry"
+    },
+    {
+     "id": "R15",
+     "kind": "terminology",
+     "expected": 1,
+     "routed": 1,
+     "correct": true,
+     "reason": "terminology explanation"
+    },
+    {
+     "id": "R16",
+     "kind": "terminology",
+     "expected": 1,
+     "routed": 0,
+     "correct": false,
+     "reason": "abstained: retrieved evidence does not match the question (no model escalation for missing evidence)"
+    },
+    {
+     "id": "R17",
+     "kind": "summary",
+     "expected": 1,
+     "routed": 1,
+     "correct": true,
+     "reason": "simple summary"
+    },
+    {
+     "id": "R18",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 1 < 3)"
+    },
+    {
+     "id": "R19",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 0 < 3)"
+    },
+    {
+     "id": "R20",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 1 < 3)"
+    },
+    {
+     "id": "R21",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 0 < 3)"
+    },
+    {
+     "id": "R22",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 1 < 3)"
+    },
+    {
+     "id": "R23",
+     "kind": "multi-hop",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 2 < 3)"
+    },
+    {
+     "id": "R24",
+     "kind": "science",
+     "expected": 2,
+     "routed": 2,
+     "correct": true,
+     "reason": "evidence-grounded scientific question (complexity score 1 < 3)"
+    },
+    {
+     "id": "R25",
+     "kind": "conflict + conditions",
+     "expected": 3,
+     "routed": 3,
+     "correct": true,
+     "reason": "complexity score 5 \u2265 3: conflict question, source discrepancies in Saffire-II, 5 investigations, 4 interacting conditions"
+    },
+    {
+     "id": "R26",
+     "kind": "synthesis",
+     "expected": 3,
+     "routed": 3,
+     "correct": true,
+     "reason": "complexity score 4 \u2265 3: synthesis question, source discrepancies in FLEX, Saffire-I, Saffire-III, 5 investigations"
+    },
+    {
+     "id": "R27",
+     "kind": "conflict",
+     "expected": 3,
+     "routed": 3,
+     "correct": true,
+     "reason": "complexity score 5 \u2265 3: conflict question, synthesis question, source discrepancies in FLEX"
+    },
+    {
+     "id": "R28",
+     "kind": "multiple conditions",
+     "expected": 3,
+     "routed": 3,
+     "correct": true,
+     "reason": "complexity score 5 \u2265 3: synthesis question, source discrepancies in Saffire-I, Saffire-III, 4 investigations, 5 interacting conditions"
+    }
+   ]
+  },
+  "live": {
+   "status": "run",
+   "auto": {
+    "summary": {
+     "n": 28,
+     "llm_calls": 15,
+     "input_tokens": 15431,
+     "output_tokens": 5887,
+     "cost_usd": 0.12978,
+     "latency_ms_median": 1728.5,
+     "escalations": 2,
+     "fallbacks": 3,
+     "claims_kept": 24,
+     "claims_dropped": 0,
+     "by_model": {
+      "claude-haiku-5-5": 4,
+      "claude-opus-5-5": 6,
+      "claude-sonnet-5-5": 5
+     }
+    },
+    "cases": [
+     {
+      "id": "R01",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R02",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R03",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 103,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R04",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R05",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R06",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R07",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R08",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R09",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R10",
+      "mode": "boundary",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R11",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 15,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R12",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 21,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R13",
+      "mode": "claude",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 508,
+      "output_tokens": 240,
+      "cost_usd": 0.000171,
+      "latency_ms": 1782,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R14",
+      "mode": "claude",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 512,
+      "output_tokens": 133,
+      "cost_usd": 0.000118,
+      "latency_ms": 1675,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R15",
+      "mode": "evidence-retrieval",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 3467,
+      "escalations": [],
+      "fallback": "API error on claude-haiku-5-5: JSONDecodeError",
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R16",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 30,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R17",
+      "mode": "evidence-retrieval",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 2904,
+      "escalations": [],
+      "fallback": "API error on claude-haiku-5-5: JSONDecodeError",
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R18",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1097,
+      "output_tokens": 346,
+      "cost_usd": 0.005654,
+      "latency_ms": 3534,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R19",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1189,
+      "output_tokens": 308,
+      "cost_usd": 0.005458,
+      "latency_ms": 3106,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R20",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1115,
+      "output_tokens": 459,
+      "cost_usd": 0.00682,
+      "latency_ms": 4169,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R21",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1085,
+      "output_tokens": 258,
+      "cost_usd": 0.00475,
+      "latency_ms": 3022,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 1,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R22",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1166,
+      "output_tokens": 372,
+      "cost_usd": 0.006052,
+      "latency_ms": 3582,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R23",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 2416,
+      "output_tokens": 531,
+      "cost_usd": 0.015838,
+      "latency_ms": 6222,
+      "escalations": [
+       {
+        "from": "claude-sonnet-5-5",
+        "to": "claude-opus-5-5",
+        "why": "no claim passed the checks"
+       }
+      ],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R24",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 2568,
+      "output_tokens": 682,
+      "cost_usd": 0.018654,
+      "latency_ms": 6877,
+      "escalations": [
+       {
+        "from": "claude-sonnet-5-5",
+        "to": "claude-opus-5-5",
+        "why": "no claim passed the checks"
+       }
+      ],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R25",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1252,
+      "output_tokens": 821,
+      "cost_usd": 0.021428,
+      "latency_ms": 8296,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R26",
+      "mode": "evidence-retrieval",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 12445,
+      "escalations": [],
+      "fallback": "API error on claude-opus-5-5: JSONDecodeError",
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R27",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1333,
+      "output_tokens": 1132,
+      "cost_usd": 0.027972,
+      "latency_ms": 10244,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 5,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R28",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1190,
+      "output_tokens": 605,
+      "cost_usd": 0.01686,
+      "latency_ms": 6194,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     }
+    ]
+   },
+   "deep_baseline": {
+    "summary": {
+     "n": 28,
+     "llm_calls": 15,
+     "input_tokens": 15328,
+     "output_tokens": 7973,
+     "cost_usd": 0.19339,
+     "latency_ms_median": 2079.5,
+     "escalations": 0,
+     "fallbacks": 1,
+     "claims_kept": 27,
+     "claims_dropped": 1,
+     "by_model": {
+      "claude-haiku-5-5": 2,
+      "claude-opus-5-5": 11,
+      "claude-sonnet-5-5": 2
+     }
+    },
+    "cases": [
+     {
+      "id": "R01",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R02",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R03",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 101,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R04",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R05",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R06",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R07",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 1,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R08",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R09",
+      "mode": "deterministic",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R10",
+      "mode": "boundary",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 0,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R11",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 13,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R12",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 22,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R13",
+      "mode": "claude",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 508,
+      "output_tokens": 280,
+      "cost_usd": 0.000191,
+      "latency_ms": 1966,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R14",
+      "mode": "claude",
+      "tier": 1,
+      "model": "claude-haiku-5-5",
+      "input_tokens": 512,
+      "output_tokens": 132,
+      "cost_usd": 0.000117,
+      "latency_ms": 2193,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R15",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1252,
+      "output_tokens": 370,
+      "cost_usd": 0.006204,
+      "latency_ms": 3443,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R16",
+      "mode": "no-evidence",
+      "tier": 0,
+      "model": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_usd": null,
+      "latency_ms": 23,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": true
+     },
+     {
+      "id": "R17",
+      "mode": "claude",
+      "tier": 2,
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 1137,
+      "output_tokens": 689,
+      "cost_usd": 0.009164,
+      "latency_ms": 5256,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 5,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R18",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1097,
+      "output_tokens": 660,
+      "cost_usd": 0.017588,
+      "latency_ms": 6173,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R19",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1189,
+      "output_tokens": 504,
+      "cost_usd": 0.014836,
+      "latency_ms": 5134,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R20",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1115,
+      "output_tokens": 875,
+      "cost_usd": 0.02196,
+      "latency_ms": 8625,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R21",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1085,
+      "output_tokens": 479,
+      "cost_usd": 0.01392,
+      "latency_ms": 4324,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R22",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1166,
+      "output_tokens": 585,
+      "cost_usd": 0.016364,
+      "latency_ms": 5809,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 2,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R23",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1208,
+      "output_tokens": 302,
+      "cost_usd": 0.010872,
+      "latency_ms": 2943,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R24",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1284,
+      "output_tokens": 437,
+      "cost_usd": 0.013876,
+      "latency_ms": 4310,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R25",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1252,
+      "output_tokens": 708,
+      "cost_usd": 0.019168,
+      "latency_ms": 7486,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R26",
+      "mode": "evidence-retrieval",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cost_usd": 0.0,
+      "latency_ms": 12663,
+      "escalations": [],
+      "fallback": "API error on claude-opus-5-5: JSONDecodeError",
+      "claims_kept": 3,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R27",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1333,
+      "output_tokens": 1332,
+      "cost_usd": 0.031972,
+      "latency_ms": 12562,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 5,
+      "claims_dropped": 1,
+      "citations_all_retrieved": true,
+      "abstained": false
+     },
+     {
+      "id": "R28",
+      "mode": "claude",
+      "tier": 3,
+      "model": "claude-opus-5-5",
+      "input_tokens": 1190,
+      "output_tokens": 620,
+      "cost_usd": 0.01716,
+      "latency_ms": 6903,
+      "escalations": [],
+      "fallback": null,
+      "claims_kept": 0,
+      "claims_dropped": 0,
+      "citations_all_retrieved": true,
+      "abstained": false
+     }
+    ],
+    "same_questions_llm_only": {
+     "auto": {
+      "n": 15,
+      "llm_calls": 15,
+      "input_tokens": 15431,
+      "output_tokens": 5887,
+      "cost_usd": 0.12978,
+      "latency_ms_median": 3582,
+      "escalations": 2,
+      "fallbacks": 3,
+      "claims_kept": 24,
+      "claims_dropped": 0,
+      "by_model": {
+       "claude-haiku-5-5": 4,
+       "claude-opus-5-5": 6,
+       "claude-sonnet-5-5": 5
+      }
+     },
+     "deep": {
+      "n": 15,
+      "llm_calls": 15,
+      "input_tokens": 15328,
+      "output_tokens": 7973,
+      "cost_usd": 0.19339,
+      "latency_ms_median": 5256,
+      "escalations": 0,
+      "fallbacks": 1,
+      "claims_kept": 27,
+      "claims_dropped": 1,
+      "by_model": {
+       "claude-haiku-5-5": 2,
+       "claude-opus-5-5": 11,
+       "claude-sonnet-5-5": 2
+      }
+     },
+     "note": "Measured on the same questions in this run. Quality is compared by claim checks only, not by expert review."
+    }
+   }
+  }
+ },
+ "models": [
+  {
+   "model_id": "FLEX-K-METH-1atm",
+   "status": "Model-supported",
+   "n_observations": 41,
+   "n_sessions": 13,
+   "n_parameters": 3,
+   "failed_criteria": [],
+   "cv": "leave-one-session-out",
+   "mae": 0.0309,
+   "baseline_mae": 0.0972,
+   "skill": 0.682,
+   "oof_r2": 0.835,
+   "rf_mae": 0.047,
+   "band90": 0.055
+  },
+  {
+   "model_id": "FLEX-K-METH-0.7atm",
+   "status": "Exploratory",
+   "n_observations": 12,
+   "n_sessions": 6,
+   "n_parameters": 2,
+   "failed_criteria": [
+    "min_tests",
+    "min_sessions"
+   ],
+   "cv": "leave-one-session-out",
+   "mae": 0.0539,
+   "baseline_mae": 0.1015,
+   "skill": 0.469,
+   "oof_r2": 0.512,
+   "rf_mae": 0.0918,
+   "band90": 0.068
+  },
+  {
+   "model_id": "FLEX-K-HEPT-1atm",
+   "status": "Exploratory",
+   "n_observations": 31,
+   "n_sessions": 14,
+   "n_parameters": 3,
+   "failed_criteria": [
+    "min_skill"
+   ],
+   "cv": "leave-one-session-out",
+   "mae": 0.1055,
+   "baseline_mae": 0.1368,
+   "skill": 0.229,
+   "oof_r2": 0.255,
+   "rf_mae": 0.1451,
+   "band90": 0.223
+  },
+  {
+   "model_id": "FLEX-K-HEPT-0.7atm",
+   "status": "Exploratory",
+   "n_observations": 9,
+   "n_sessions": 6,
+   "n_parameters": 2,
+   "failed_criteria": [
+    "min_tests",
+    "min_sessions",
+    "min_skill"
+   ],
+   "cv": "leave-one-session-out",
+   "mae": 0.1095,
+   "baseline_mae": 0.1352,
+   "skill": 0.19,
+   "oof_r2": 0.114,
+   "rf_mae": 0.1297,
+   "band90": 0.175
+  }
+ ],
+ "eligibility": {
+  "n": 10,
+  "passed": 10
+ }
+}

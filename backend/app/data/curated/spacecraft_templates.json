@@ -1,0 +1,1193 @@
+[
+ {
+  "id": "TPL-ORBITAL",
+  "name": "Orbital Research Module",
+  "vehicle_class": "Orbital laboratory (generic, illustrative)",
+  "shape": "module",
+  "description": "A generic microgravity laboratory module with a sea-level air atmosphere. Illustrative layout, not a real or certified vehicle.",
+  "atmosphere": {
+   "o2_pct": 21.0,
+   "pressure_kpa": 101.3,
+   "gravity": "microgravity",
+   "ventilation_cm_s": 15,
+   "diluent": "nitrogen"
+  },
+  "compartments": [
+   {
+    "id": "C-LAB",
+    "name": "Laboratory bay",
+    "type": "laboratory",
+    "volume_m3": 35,
+    "x": 0,
+    "y": 0,
+    "w": 34,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "O2"
+     },
+     {
+      "id": "S3",
+      "type": "CO"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-RACK",
+      "name": "Experiment rack",
+      "category": "equipment",
+      "components": [
+       {
+        "id": "K-RACK-FRAME",
+        "name": "Rack frame",
+        "material_id": "MAT-ALU",
+        "form": "bulk",
+        "thickness_mm": 3.0,
+        "mass_g": 20000
+       },
+       {
+        "id": "K-RACK-WIN",
+        "name": "Acrylic sample window",
+        "material_id": "MAT-PMMA",
+        "form": "thin sheet",
+        "thickness_mm": 2.0,
+        "mass_g": 300
+       }
+      ]
+     },
+     {
+      "id": "O-FUEL",
+      "name": "Combustion research fuel vial",
+      "category": "experiment",
+      "components": [
+       {
+        "id": "K-FUEL-M",
+        "name": "Methanol fuel reservoir",
+        "material_id": "MAT-METHANOL",
+        "form": "liquid droplet",
+        "thickness_mm": null,
+        "mass_g": 5
+       }
+      ]
+     },
+     {
+      "id": "O-HARNESS",
+      "name": "Cable harness",
+      "category": "power",
+      "components": [
+       {
+        "id": "K-HARN-W",
+        "name": "Copper conductors",
+        "material_id": "MAT-WIRING",
+        "form": "wire",
+        "thickness_mm": 1.0,
+        "mass_g": 800
+       },
+       {
+        "id": "K-HARN-INS",
+        "name": "Wire insulation",
+        "material_id": "MAT-PTFE",
+        "form": "wire insulation",
+        "thickness_mm": 0.25,
+        "mass_g": 120
+       }
+      ]
+     },
+     {
+      "id": "O-WALL",
+      "name": "Wall panel",
+      "category": "structure",
+      "components": [
+       {
+        "id": "K-WALL-AL",
+        "name": "Structural alloy skin",
+        "material_id": "MAT-ALU",
+        "form": "bulk",
+        "thickness_mm": 2.0,
+        "mass_g": 9000
+       },
+       {
+        "id": "K-WALL-CFRP",
+        "name": "Composite layer",
+        "material_id": "MAT-CFRP",
+        "form": "laminate",
+        "thickness_mm": 1.5,
+        "mass_g": 2500
+       },
+       {
+        "id": "K-WALL-MLI",
+        "name": "Thermal insulation",
+        "material_id": "MAT-MLI",
+        "form": "blanket",
+        "thickness_mm": 5.0,
+        "mass_g": 400
+       },
+       {
+        "id": "K-WALL-ADH",
+        "name": "Adhesive layer",
+        "material_id": "MAT-ADHESIVE",
+        "form": "adhesive layer",
+        "thickness_mm": 0.2,
+        "mass_g": 80
+       },
+       {
+        "id": "K-WALL-COAT",
+        "name": "Surface coating",
+        "material_id": "MAT-COATING",
+        "form": "coating",
+        "thickness_mm": 0.05,
+        "mass_g": 30
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-AVIONICS",
+    "name": "Avionics bay",
+    "type": "avionics",
+    "volume_m3": 6,
+    "x": 34,
+    "y": 0,
+    "w": 20,
+    "h": 18,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "temperature"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-COMPUTER",
+      "name": "Flight computer",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-FC-PCB",
+        "name": "Circuit boards",
+        "material_id": "MAT-PCB",
+        "form": "board",
+        "thickness_mm": 1.6,
+        "mass_g": 600
+       },
+       {
+        "id": "K-FC-CONN",
+        "name": "Connectors",
+        "material_id": "MAT-CONNECTOR",
+        "form": "assembly",
+        "thickness_mm": null,
+        "mass_g": 120
+       },
+       {
+        "id": "K-FC-ENC",
+        "name": "Enclosure",
+        "material_id": "MAT-ENCLOSURE",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 1500
+       },
+       {
+        "id": "K-FC-KAP",
+        "name": "Flex circuits",
+        "material_id": "MAT-KAPTON",
+        "form": "film",
+        "thickness_mm": 0.05,
+        "mass_g": 10
+       }
+      ]
+     },
+     {
+      "id": "O-PDU",
+      "name": "Power distribution unit",
+      "category": "power",
+      "components": [
+       {
+        "id": "K-PDU-CU",
+        "name": "Bus bars",
+        "material_id": "MAT-COPPER",
+        "form": "bulk",
+        "thickness_mm": 3.0,
+        "mass_g": 900
+       },
+       {
+        "id": "K-PDU-INS",
+        "name": "Cable insulation",
+        "material_id": "MAT-CABLEINS",
+        "form": "wire insulation",
+        "thickness_mm": 0.3,
+        "mass_g": 200
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-CREW",
+    "name": "Crew quarters",
+    "type": "habitation",
+    "volume_m3": 12,
+    "x": 34,
+    "y": 18,
+    "w": 20,
+    "h": 22,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "CO"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-CLOTH",
+      "name": "Crew clothing stowage",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-CLOTH",
+        "name": "Cotton garments",
+        "material_id": "MAT-COTTON",
+        "form": "fabric",
+        "thickness_mm": 0.4,
+        "mass_g": 2000
+       },
+       {
+        "id": "K-CLOTH-STRAP",
+        "name": "Hook-and-loop straps",
+        "material_id": "MAT-NYLON",
+        "form": "fabric",
+        "thickness_mm": 1.0,
+        "mass_g": 60
+       }
+      ]
+     },
+     {
+      "id": "O-BAG",
+      "name": "Sleeping bag",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-BAG-SHELL",
+        "name": "Shell fabric",
+        "material_id": "MAT-NOMEX",
+        "form": "fabric",
+        "thickness_mm": 0.4,
+        "mass_g": 900
+       },
+       {
+        "id": "K-BAG-INNER",
+        "name": "Inner fabric",
+        "material_id": "MAT-POLYESTER",
+        "form": "fabric",
+        "thickness_mm": 0.3,
+        "mass_g": 400
+       },
+       {
+        "id": "K-BAG-FILL",
+        "name": "Padding",
+        "material_id": "MAT-PU",
+        "form": "foam",
+        "thickness_mm": 20,
+        "mass_g": 700
+       },
+       {
+        "id": "K-BAG-FAST",
+        "name": "Fasteners",
+        "material_id": "MAT-NYLON",
+        "form": "hook-and-loop",
+        "thickness_mm": 1.0,
+        "mass_g": 40
+       },
+       {
+        "id": "K-BAG-ZIP",
+        "name": "Zipper",
+        "material_id": "MAT-PE",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 30
+       }
+      ]
+     },
+     {
+      "id": "O-LAPTOP",
+      "name": "Crew laptop",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-LAP-BATT",
+        "name": "Battery pack",
+        "material_id": "MAT-LIION",
+        "form": "cell",
+        "thickness_mm": null,
+        "mass_g": 300
+       },
+       {
+        "id": "K-LAP-CASE",
+        "name": "Polymer enclosure",
+        "material_id": "MAT-POLYC",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 500
+       },
+       {
+        "id": "K-LAP-PCB",
+        "name": "Printed circuit board",
+        "material_id": "MAT-PCB",
+        "form": "board",
+        "thickness_mm": 1.6,
+        "mass_g": 150
+       },
+       {
+        "id": "K-LAP-CU",
+        "name": "Copper wiring",
+        "material_id": "MAT-COPPER",
+        "form": "wire",
+        "thickness_mm": 0.3,
+        "mass_g": 40
+       },
+       {
+        "id": "K-LAP-INS",
+        "name": "Cable insulation",
+        "material_id": "MAT-CABLEINS",
+        "form": "wire insulation",
+        "thickness_mm": 0.3,
+        "mass_g": 20
+       },
+       {
+        "id": "K-LAP-DISP",
+        "name": "Display assembly",
+        "material_id": "MAT-DISPLAY",
+        "form": "assembly",
+        "thickness_mm": null,
+        "mass_g": 400
+       },
+       {
+        "id": "K-LAP-ADH",
+        "name": "Adhesives",
+        "material_id": "MAT-ADHESIVE",
+        "form": "adhesive layer",
+        "thickness_mm": 0.1,
+        "mass_g": 5
+       }
+      ]
+     },
+     {
+      "id": "O-PERSONAL",
+      "name": "Personal items kit",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-PERS-BOOK",
+        "name": "Notebook",
+        "material_id": "MAT-PAPER",
+        "form": "stack",
+        "thickness_mm": 10,
+        "mass_g": 250
+       },
+       {
+        "id": "K-PERS-TOIL",
+        "name": "Toiletries",
+        "material_id": "MAT-TOILETRY",
+        "form": "container",
+        "thickness_mm": null,
+        "mass_g": 300
+       },
+       {
+        "id": "K-PERS-WIPE",
+        "name": "Cleaning wipes",
+        "material_id": "MAT-ALCOHOLWIPE",
+        "form": "fabric",
+        "thickness_mm": 0.3,
+        "mass_g": 120
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-GALLEY",
+    "name": "Galley",
+    "type": "food preparation",
+    "volume_m3": 8,
+    "x": 54,
+    "y": 0,
+    "w": 22,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-FOOD",
+      "name": "Food stowage",
+      "category": "food",
+      "components": [
+       {
+        "id": "K-FOOD-POUCH",
+        "name": "Food packaging film",
+        "material_id": "MAT-FOODFILM",
+        "form": "film",
+        "thickness_mm": 0.1,
+        "mass_g": 400
+       },
+       {
+        "id": "K-FOOD-DRY",
+        "name": "Dried food",
+        "material_id": "MAT-DRYFOOD",
+        "form": "solid",
+        "thickness_mm": null,
+        "mass_g": 3000
+       },
+       {
+        "id": "K-FOOD-BOX",
+        "name": "Cardboard cartons",
+        "material_id": "MAT-CARDBOARD",
+        "form": "sheet",
+        "thickness_mm": 2.0,
+        "mass_g": 500
+       }
+      ]
+     },
+     {
+      "id": "O-WASTE",
+      "name": "Waste container",
+      "category": "waste",
+      "components": [
+       {
+        "id": "K-WASTE-BAG",
+        "name": "Waste bags",
+        "material_id": "MAT-WASTEBAG",
+        "form": "film",
+        "thickness_mm": 0.05,
+        "mass_g": 100
+       },
+       {
+        "id": "K-WASTE-ORG",
+        "name": "Organic waste",
+        "material_id": "MAT-WASTE",
+        "form": "mixed",
+        "thickness_mm": null,
+        "mass_g": 1500
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-ECLSS",
+    "name": "Life support bay",
+    "type": "environmental control",
+    "volume_m3": 10,
+    "x": 76,
+    "y": 0,
+    "w": 24,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "O2"
+     },
+     {
+      "id": "S3",
+      "type": "CO"
+     },
+     {
+      "id": "S4",
+      "type": "CO2"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-O2GEN",
+      "name": "Backup oxygen generator",
+      "category": "life support",
+      "components": [
+       {
+        "id": "K-SFOG",
+        "name": "Solid-fuel oxygen canister",
+        "material_id": "MAT-SFOG",
+        "form": "canister",
+        "thickness_mm": null,
+        "mass_g": 1500
+       }
+      ]
+     },
+     {
+      "id": "O-O2LINE",
+      "name": "Oxygen distribution line",
+      "category": "life support",
+      "components": [
+       {
+        "id": "K-O2-VALVE",
+        "name": "Regulator and valve",
+        "material_id": "MAT-O2VALVE",
+        "form": "assembly",
+        "thickness_mm": null,
+        "mass_g": 600
+       },
+       {
+        "id": "K-O2-TUBE",
+        "name": "Tubing",
+        "material_id": "MAT-NI",
+        "form": "bulk",
+        "thickness_mm": 1.0,
+        "mass_g": 400
+       }
+      ]
+     },
+     {
+      "id": "O-SEAL",
+      "name": "Hatch seal",
+      "category": "structure",
+      "components": [
+       {
+        "id": "K-SEAL",
+        "name": "Seal",
+        "material_id": "MAT-SILICONE",
+        "form": "thin sheet",
+        "thickness_mm": 1.0,
+        "mass_g": 200
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "TPL-CAPSULE",
+  "name": "Crew Capsule",
+  "vehicle_class": "Crew transport capsule (generic, illustrative)",
+  "shape": "capsule",
+  "description": "A compact generic crew capsule with a sea-level air cabin. Illustrative layout, not a real or certified vehicle.",
+  "atmosphere": {
+   "o2_pct": 21.0,
+   "pressure_kpa": 101.3,
+   "gravity": "microgravity",
+   "ventilation_cm_s": 10,
+   "diluent": "nitrogen"
+  },
+  "compartments": [
+   {
+    "id": "C-CABIN",
+    "name": "Crew cabin",
+    "type": "habitation",
+    "volume_m3": 9,
+    "x": 0,
+    "y": 0,
+    "w": 58,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "O2"
+     },
+     {
+      "id": "S3",
+      "type": "CO"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-SEATS",
+      "name": "Crew seats",
+      "category": "structure",
+      "components": [
+       {
+        "id": "K-SEAT-PAD",
+        "name": "Seat padding",
+        "material_id": "MAT-PU",
+        "form": "foam",
+        "thickness_mm": 25,
+        "mass_g": 1500
+       },
+       {
+        "id": "K-SEAT-COVER",
+        "name": "Seat cover",
+        "material_id": "MAT-NOMEX",
+        "form": "fabric",
+        "thickness_mm": 0.4,
+        "mass_g": 400
+       },
+       {
+        "id": "K-SEAT-FRAME",
+        "name": "Seat frame",
+        "material_id": "MAT-TI64",
+        "form": "bulk",
+        "thickness_mm": 3.0,
+        "mass_g": 6000
+       }
+      ]
+     },
+     {
+      "id": "O-DISPLAY",
+      "name": "Display panel",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-DISP-HARN",
+        "name": "Panel wiring insulation",
+        "material_id": "MAT-PTFE",
+        "form": "wire insulation",
+        "thickness_mm": 0.25,
+        "mass_g": 80
+       },
+       {
+        "id": "K-DISP-WIN",
+        "name": "Acrylic bezel",
+        "material_id": "MAT-PMMA",
+        "form": "thin sheet",
+        "thickness_mm": 1.5,
+        "mass_g": 150
+       },
+       {
+        "id": "K-DISP-GLASS",
+        "name": "Display glass",
+        "material_id": "MAT-GLASS",
+        "form": "sheet",
+        "thickness_mm": 1.0,
+        "mass_g": 300
+       }
+      ]
+     },
+     {
+      "id": "O-LAPTOP-CAP",
+      "name": "Crew laptop",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-LAP-BATT-CAP",
+        "name": "Battery pack",
+        "material_id": "MAT-LIION",
+        "form": "cell",
+        "thickness_mm": null,
+        "mass_g": 300
+       },
+       {
+        "id": "K-LAP-CASE-CAP",
+        "name": "Polymer enclosure",
+        "material_id": "MAT-POLYC",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 500
+       },
+       {
+        "id": "K-LAP-PCB-CAP",
+        "name": "Printed circuit board",
+        "material_id": "MAT-PCB",
+        "form": "board",
+        "thickness_mm": 1.6,
+        "mass_g": 150
+       },
+       {
+        "id": "K-LAP-CU-CAP",
+        "name": "Copper wiring",
+        "material_id": "MAT-COPPER",
+        "form": "wire",
+        "thickness_mm": 0.3,
+        "mass_g": 40
+       },
+       {
+        "id": "K-LAP-INS-CAP",
+        "name": "Cable insulation",
+        "material_id": "MAT-CABLEINS",
+        "form": "wire insulation",
+        "thickness_mm": 0.3,
+        "mass_g": 20
+       },
+       {
+        "id": "K-LAP-DISP-CAP",
+        "name": "Display assembly",
+        "material_id": "MAT-DISPLAY",
+        "form": "assembly",
+        "thickness_mm": null,
+        "mass_g": 400
+       },
+       {
+        "id": "K-LAP-ADH-CAP",
+        "name": "Adhesives",
+        "material_id": "MAT-ADHESIVE",
+        "form": "adhesive layer",
+        "thickness_mm": 0.1,
+        "mass_g": 5
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-AVIONICS",
+    "name": "Avionics bay",
+    "type": "avionics",
+    "volume_m3": 2,
+    "x": 58,
+    "y": 0,
+    "w": 42,
+    "h": 16,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "temperature"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-COMPUTER",
+      "name": "Flight computer",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-FC-PCB",
+        "name": "Circuit boards",
+        "material_id": "MAT-PCB",
+        "form": "board",
+        "thickness_mm": 1.6,
+        "mass_g": 600
+       },
+       {
+        "id": "K-FC-ENC",
+        "name": "Enclosure",
+        "material_id": "MAT-ENCLOSURE",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 1500
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-STOW",
+    "name": "Stowage bay",
+    "type": "stowage",
+    "volume_m3": 3,
+    "x": 58,
+    "y": 16,
+    "w": 42,
+    "h": 24,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-CARGO",
+      "name": "Soft cargo bags",
+      "category": "stowage",
+      "components": [
+       {
+        "id": "K-CARGO",
+        "name": "Bag fabric",
+        "material_id": "MAT-NOMEX",
+        "form": "fabric",
+        "thickness_mm": 0.5,
+        "mass_g": 600
+       },
+       {
+        "id": "K-CARGO-TOWEL",
+        "name": "Towels",
+        "material_id": "MAT-COTTON",
+        "form": "fabric",
+        "thickness_mm": 2.0,
+        "mass_g": 400
+       }
+      ]
+     },
+     {
+      "id": "O-MEDKIT",
+      "name": "Medical kit",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-MED-SUP",
+        "name": "Medical supplies",
+        "material_id": "MAT-MEDKIT",
+        "form": "mixed",
+        "thickness_mm": null,
+        "mass_g": 800
+       },
+       {
+        "id": "K-MED-GLOVE",
+        "name": "Gloves",
+        "material_id": "MAT-NITRILE",
+        "form": "glove film",
+        "thickness_mm": 0.1,
+        "mass_g": 50
+       },
+       {
+        "id": "K-MED-MASK",
+        "name": "Masks",
+        "material_id": "MAT-MASK",
+        "form": "fabric",
+        "thickness_mm": 0.3,
+        "mass_g": 30
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "TPL-LUNAR",
+  "name": "Lunar Surface Habitat",
+  "vehicle_class": "Surface habitat (generic, illustrative)",
+  "shape": "habitat",
+  "description": "A generic lunar surface habitat using the 34% O2 / 56.5 kPa (8.2 psia) exploration atmosphere discussed in NASA research. Illustrative, not a real design.",
+  "atmosphere": {
+   "o2_pct": 34.0,
+   "pressure_kpa": 56.5,
+   "gravity": "partial gravity",
+   "ventilation_cm_s": 10,
+   "diluent": "nitrogen"
+  },
+  "compartments": [
+   {
+    "id": "C-HAB",
+    "name": "Living area",
+    "type": "habitation",
+    "volume_m3": 40,
+    "x": 0,
+    "y": 0,
+    "w": 40,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "O2"
+     },
+     {
+      "id": "S3",
+      "type": "CO"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-CURTAIN",
+      "name": "Privacy curtain",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-CURT",
+        "name": "Curtain fabric",
+        "material_id": "MAT-SIBAL",
+        "form": "thin fabric sheet",
+        "thickness_mm": 0.37,
+        "mass_g": 500
+       }
+      ]
+     },
+     {
+      "id": "O-TABLE",
+      "name": "Galley table",
+      "category": "furniture",
+      "components": [
+       {
+        "id": "K-TABLE-TOP",
+        "name": "Acrylic tabletop",
+        "material_id": "MAT-PMMA",
+        "form": "slab",
+        "thickness_mm": 10,
+        "mass_g": 3000
+       },
+       {
+        "id": "K-TABLE-LEG",
+        "name": "Legs",
+        "material_id": "MAT-MG",
+        "form": "bulk",
+        "thickness_mm": 3.0,
+        "mass_g": 1200
+       }
+      ]
+     },
+     {
+      "id": "O-BUNK",
+      "name": "Sleep bunk",
+      "category": "crew provisions",
+      "components": [
+       {
+        "id": "K-BUNK-MAT",
+        "name": "Mattress foam",
+        "material_id": "MAT-PU",
+        "form": "foam",
+        "thickness_mm": 50,
+        "mass_g": 2500
+       },
+       {
+        "id": "K-BUNK-COVER",
+        "name": "Mattress cover",
+        "material_id": "MAT-COTTON",
+        "form": "fabric",
+        "thickness_mm": 0.5,
+        "mass_g": 400
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-LAB",
+    "name": "Science workstation",
+    "type": "laboratory",
+    "volume_m3": 15,
+    "x": 40,
+    "y": 0,
+    "w": 30,
+    "h": 20,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "CO"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-SAMPLE",
+      "name": "Sample processing kit",
+      "category": "experiment",
+      "components": [
+       {
+        "id": "K-SAMPLE-ETOH",
+        "name": "Ethanol",
+        "material_id": "MAT-ETHANOL",
+        "form": "liquid",
+        "thickness_mm": null,
+        "mass_g": 200
+       },
+       {
+        "id": "K-SAMPLE-GLOVE",
+        "name": "Gloves",
+        "material_id": "MAT-NITRILE",
+        "form": "glove film",
+        "thickness_mm": 0.1,
+        "mass_g": 60
+       }
+      ]
+     },
+     {
+      "id": "O-LAPTOP-LUN",
+      "name": "Crew laptop",
+      "category": "electronics",
+      "components": [
+       {
+        "id": "K-LAP-BATT-LUN",
+        "name": "Battery pack",
+        "material_id": "MAT-LIION",
+        "form": "cell",
+        "thickness_mm": null,
+        "mass_g": 300
+       },
+       {
+        "id": "K-LAP-CASE-LUN",
+        "name": "Polymer enclosure",
+        "material_id": "MAT-POLYC",
+        "form": "moulded part",
+        "thickness_mm": 2.0,
+        "mass_g": 500
+       },
+       {
+        "id": "K-LAP-PCB-LUN",
+        "name": "Printed circuit board",
+        "material_id": "MAT-PCB",
+        "form": "board",
+        "thickness_mm": 1.6,
+        "mass_g": 150
+       },
+       {
+        "id": "K-LAP-CU-LUN",
+        "name": "Copper wiring",
+        "material_id": "MAT-COPPER",
+        "form": "wire",
+        "thickness_mm": 0.3,
+        "mass_g": 40
+       },
+       {
+        "id": "K-LAP-INS-LUN",
+        "name": "Cable insulation",
+        "material_id": "MAT-CABLEINS",
+        "form": "wire insulation",
+        "thickness_mm": 0.3,
+        "mass_g": 20
+       },
+       {
+        "id": "K-LAP-DISP-LUN",
+        "name": "Display assembly",
+        "material_id": "MAT-DISPLAY",
+        "form": "assembly",
+        "thickness_mm": null,
+        "mass_g": 400
+       },
+       {
+        "id": "K-LAP-ADH-LUN",
+        "name": "Adhesives",
+        "material_id": "MAT-ADHESIVE",
+        "form": "adhesive layer",
+        "thickness_mm": 0.1,
+        "mass_g": 5
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-ENG",
+    "name": "Engineering bay",
+    "type": "engineering",
+    "volume_m3": 12,
+    "x": 40,
+    "y": 20,
+    "w": 30,
+    "h": 20,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "temperature"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-BATT",
+      "name": "Habitat battery module",
+      "category": "power",
+      "components": [
+       {
+        "id": "K-BATT-CELL",
+        "name": "Battery cells",
+        "material_id": "MAT-LIION",
+        "form": "cell",
+        "thickness_mm": null,
+        "mass_g": 40000
+       },
+       {
+        "id": "K-BATT-SEP",
+        "name": "Separators",
+        "material_id": "MAT-SEPARATOR",
+        "form": "film",
+        "thickness_mm": 0.02,
+        "mass_g": 300
+       }
+      ]
+     },
+     {
+      "id": "O-PUMP",
+      "name": "Coolant pump",
+      "category": "thermal control",
+      "components": [
+       {
+        "id": "K-PUMP-COOL",
+        "name": "Coolant",
+        "material_id": "MAT-COOLANT",
+        "form": "liquid",
+        "thickness_mm": null,
+        "mass_g": 5000
+       },
+       {
+        "id": "K-PUMP-LUBE",
+        "name": "Lubricant",
+        "material_id": "MAT-LUBE",
+        "form": "grease",
+        "thickness_mm": null,
+        "mass_g": 50
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C-AIRLOCK",
+    "name": "Suit port and airlock",
+    "type": "airlock",
+    "volume_m3": 8,
+    "x": 70,
+    "y": 0,
+    "w": 30,
+    "h": 40,
+    "sensors": [
+     {
+      "id": "S1",
+      "type": "smoke"
+     },
+     {
+      "id": "S2",
+      "type": "O2"
+     }
+    ],
+    "objects": [
+     {
+      "id": "O-SUITSTOW",
+      "name": "Suit maintenance kit",
+      "category": "EVA",
+      "components": [
+       {
+        "id": "K-SUIT-SEAL",
+        "name": "Spare seals",
+        "material_id": "MAT-SILICONE",
+        "form": "thin sheet",
+        "thickness_mm": 0.6,
+        "mass_g": 100
+       },
+       {
+        "id": "K-SUIT-WIPES",
+        "name": "Cleaning wipes",
+        "material_id": "MAT-COTTON",
+        "form": "fabric",
+        "thickness_mm": 0.3,
+        "mass_g": 200
+       },
+       {
+        "id": "K-SUIT-FAB",
+        "name": "Suit fabric patches",
+        "material_id": "MAT-SUITFAB",
+        "form": "fabric",
+        "thickness_mm": 1.0,
+        "mass_g": 150
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

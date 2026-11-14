@@ -1,0 +1,99 @@
+{
+ "base": "http://localhost:8000",
+ "when": "2026-11-14T12:48:02.432Z",
+ "steps": [
+  {
+   "n": 1,
+   "name": "Configure spacecraft (Customise template)",
+   "ok": true,
+   "detail": "Created and saved custom configuration at 24% O2"
+  },
+  {
+   "n": 2,
+   "name": "Inspect compartment in digital twin",
+   "ok": true,
+   "detail": "Crew quarters selected"
+  },
+  {
+   "n": 3,
+   "name": "Select object",
+   "ok": true,
+   "detail": "Sleeping bag selected"
+  },
+  {
+   "n": 4,
+   "name": "Identify component materials",
+   "ok": true,
+   "detail": "Shell fabric | Inner fabric | Padding | Fasteners | Zipper"
+  },
+  {
+   "n": 5,
+   "name": "Traverse knowledge graphs",
+   "ok": true,
+   "detail": "Multi-hop traces (7) · 76 nodes · 99 relationships · tick 158"
+  },
+  {
+   "n": 6,
+   "name": "Retrieve NASA evidence",
+   "ok": true,
+   "detail": "mode: hybrid+graph · graph entities: SC-03EB16CF/C-CREW/O-BAG"
+  },
+  {
+   "n": 7,
+   "name": "Assess applicability",
+   "ok": true,
+   "detail": "Factor chips shown, e.g. material: mismatch"
+  },
+  {
+   "n": 8,
+   "name": "Generate eligible prediction",
+   "ok": true,
+   "detail": "21% O2, 2.5 mm: Model-supported estimate; 30% O2, 1.7 mm: Unavailable"
+  },
+  {
+   "n": 9,
+   "name": "Investigate source discrepancies",
+   "ok": true,
+   "detail": "Air flow velocity · 20 cm/s vs 25 cm/s"
+  },
+  {
+   "n": 10,
+   "name": "Compare scenarios",
+   "ok": true,
+   "detail": "E2E Lab Module vs Lunar Surface Habitat"
+  },
+  {
+   "n": 11,
+   "name": "Identify research gaps",
+   "ok": true,
+   "detail": "264 cells with no finding"
+  },
+  {
+   "n": 12,
+   "name": "Replay simulated incident",
+   "ok": true,
+   "detail": "12 candidate components; timeline replayed"
+  },
+  {
+   "n": 13,
+   "name": "Generate mission evidence report",
+   "ok": true,
+   "detail": "PDF generated and previewed"
+  },
+  {
+   "n": 14,
+   "name": "Global Copilot (extra)",
+   "ok": true,
+   "detail": "Evidence retrieval (no LLM)"
+  },
+  {
+   "n": 15,
+   "name": "AI Evaluation Centre (extra)",
+   "ok": true,
+   "detail": "Loaded"
+  }
+ ],
+ "console_errors": [
+  "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+ ]
+}

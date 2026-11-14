@@ -1,0 +1,3446 @@
+{
+ "generated_utc": "2026-11-14T06:51:39+00:00",
+ "retrieval": {
+  "k": 5,
+  "n_questions": 41,
+  "label_file_sha256": "790c482ba6a5106a5ce05683f2fc7fbea45d13f82ee0b5f0b9ffd78e6ce848a1",
+  "semantic_model": {
+   "enabled": true,
+   "loaded": true,
+   "error": null,
+   "dim": 384,
+   "model": "sentence-transformers/all-MiniLM-L6-v2",
+   "embedding_check": {
+    "corpus_embeddings": [
+     42,
+     384
+    ],
+    "norm_mean": 1.0,
+    "cos(related paraphrase)": 0.5639779567718506,
+    "cos(unrelated)": 0.009210793301463127,
+    "passed": true
+   }
+  },
+  "modes": {
+   "keyword": {
+    "all": {
+     "n": 38,
+     "recall@5": 0.7294172932330827,
+     "precision@5": 0.23157894736842108,
+     "mrr": 0.7837719298245615,
+     "latency_ms_median": 0.43466899990107777
+    },
+    "single-hop": {
+     "n": 26,
+     "recall@5": 0.9743589743589743,
+     "precision@5": 0.27692307692307694,
+     "mrr": 0.9807692307692307,
+     "latency_ms_median": 0.4381020000892022
+    },
+    "multi-hop": {
+     "n": 12,
+     "recall@5": 0.19871031746031745,
+     "precision@5": 0.13333333333333333,
+     "mrr": 0.35694444444444445,
+     "latency_ms_median": 0.3929279999965729
+    },
+    "n_unsupported_excluded": 3
+   },
+   "semantic": {
+    "all": {
+     "n": 38,
+     "recall@5": 0.7116541353383459,
+     "precision@5": 0.2210526315789474,
+     "mrr": 0.6982456140350877,
+     "latency_ms_median": 9.645033499964484
+    },
+    "single-hop": {
+     "n": 26,
+     "recall@5": 0.9743589743589743,
+     "precision@5": 0.27692307692307694,
+     "mrr": 0.8987179487179487,
+     "latency_ms_median": 9.783557499986273
+    },
+    "multi-hop": {
+     "n": 12,
+     "recall@5": 0.14246031746031745,
+     "precision@5": 0.1,
+     "mrr": 0.2638888888888889,
+     "latency_ms_median": 9.512888500012195
+    },
+    "n_unsupported_excluded": 3
+   },
+   "hybrid": {
+    "all": {
+     "n": 38,
+     "recall@5": 0.7419486215538847,
+     "precision@5": 0.2473684210526316,
+     "mrr": 0.7684210526315789,
+     "latency_ms_median": 9.174770999948123
+    },
+    "single-hop": {
+     "n": 26,
+     "recall@5": 0.9743589743589743,
+     "precision@5": 0.27692307692307694,
+     "mrr": 0.9615384615384616,
+     "latency_ms_median": 9.159321000083764
+    },
+    "multi-hop": {
+     "n": 12,
+     "recall@5": 0.23839285714285713,
+     "precision@5": 0.18333333333333335,
+     "mrr": 0.35,
+     "latency_ms_median": 9.3719435001276
+    },
+    "n_unsupported_excluded": 3
+   },
+   "hybrid+graph": {
+    "all": {
+     "n": 38,
+     "recall@5": 0.8533834586466166,
+     "precision@5": 0.32105263157894737,
+     "mrr": 0.875,
+     "latency_ms_median": 8.956053499900918
+    },
+    "single-hop": {
+     "n": 26,
+     "recall@5": 0.9743589743589743,
+     "precision@5": 0.27692307692307694,
+     "mrr": 0.9615384615384616,
+     "latency_ms_median": 8.761491499967633
+    },
+    "multi-hop": {
+     "n": 12,
+     "recall@5": 0.5912698412698413,
+     "precision@5": 0.4166666666666667,
+     "mrr": 0.6875,
+     "latency_ms_median": 9.196546499879332
+    },
+    "n_unsupported_excluded": 3
+   }
+  },
+  "graph_effect_by_question": [
+   {
+    "id": "S01",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S02",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S03",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S04",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S05",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S06",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S07",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S08",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S09",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S10",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S11",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S12",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S13",
+    "type": "single-hop",
+    "hybrid_recall@5": 0.3333333333333333,
+    "graph_recall@5": 0.3333333333333333,
+    "effect": "no change"
+   },
+   {
+    "id": "S14",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S15",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S16",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S17",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S18",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S19",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S20",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S21",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S22",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S23",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S24",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S25",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "S26",
+    "type": "single-hop",
+    "hybrid_recall@5": 1.0,
+    "graph_recall@5": 1.0,
+    "effect": "no change"
+   },
+   {
+    "id": "M01",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.2,
+    "graph_recall@5": 0.6,
+    "effect": "improved"
+   },
+   {
+    "id": "M02",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.25,
+    "graph_recall@5": 0.75,
+    "effect": "improved"
+   },
+   {
+    "id": "M03",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.5,
+    "graph_recall@5": 0.5,
+    "effect": "no change"
+   },
+   {
+    "id": "M04",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.5,
+    "graph_recall@5": 1.0,
+    "effect": "improved"
+   },
+   {
+    "id": "M05",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.2857142857142857,
+    "graph_recall@5": 0.42857142857142855,
+    "effect": "improved"
+   },
+   {
+    "id": "M06",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.125,
+    "graph_recall@5": 0.25,
+    "effect": "improved"
+   },
+   {
+    "id": "M07",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.5,
+    "graph_recall@5": 1.0,
+    "effect": "improved"
+   },
+   {
+    "id": "M08",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.0,
+    "graph_recall@5": 1.0,
+    "effect": "improved"
+   },
+   {
+    "id": "M09",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.5,
+    "graph_recall@5": 0.6666666666666666,
+    "effect": "improved"
+   },
+   {
+    "id": "M10",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.0,
+    "graph_recall@5": 0.4,
+    "effect": "improved"
+   },
+   {
+    "id": "M11",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.0,
+    "graph_recall@5": 0.5,
+    "effect": "improved"
+   },
+   {
+    "id": "M12",
+    "type": "multi-hop",
+    "hybrid_recall@5": 0.0,
+    "graph_recall@5": 0.0,
+    "effect": "no change"
+   }
+  ],
+  "graph_effect_counts": {
+   "single-hop": {
+    "no change": 26
+   },
+   "multi-hop": {
+    "improved": 10,
+    "no change": 2
+   }
+  },
+  "per_question": [
+   {
+    "mode": "keyword",
+    "rows": [
+     {
+      "id": "S01",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.9765120000793104,
+      "top5": [
+       "EV-FLEX-02",
+       "EV-FLEX-05",
+       "EV-FLEX-01",
+       "EV-GUIDE-01",
+       "EV-FLEX-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S02",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.533789999963119,
+      "top5": [
+       "EV-FLEX-01",
+       "EV-GUIDE-03",
+       "EV-SAME-02",
+       "EV-GUIDE-02",
+       "EV-BASS2-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S03",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.40404700007456995,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-FLEX-01",
+       "EV-FLEX-02",
+       "EV-AP13-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S04",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.4399130000365403,
+      "top5": [
+       "EV-FLEX-04",
+       "EV-FLEX-01",
+       "EV-FLEX-06",
+       "EV-FLEX-02",
+       "EV-GUIDE-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S05",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.4139949999171222,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-MIR-02",
+       "EV-FLEX-02",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S06",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.6190750000314438,
+      "top5": [
+       "EV-SAF-09",
+       "EV-SAF-03",
+       "EV-SAF-01",
+       "EV-SAF6-02",
+       "EV-SAF-10"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S07",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 0.5,
+      "latency_ms": 0.4560200000014447,
+      "top5": [
+       "EV-SAF6-02",
+       "EV-SAF-10",
+       "EV-SAF-04",
+       "EV-SOFIE-01",
+       "EV-LUCI-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S08",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.4744630000459438,
+      "top5": [
+       "EV-SAF-07",
+       "EV-SAF-08",
+       "EV-FM2-01",
+       "EV-AP1-03",
+       "EV-FLEX-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S09",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.4334569998718507,
+      "top5": [
+       "EV-SAF6-01",
+       "EV-GUIDE-02",
+       "EV-SAF-08",
+       "EV-AP1-02",
+       "EV-FLEX-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S10",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.5257079999410053,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-LUCI-02",
+       "EV-MIR-01",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S11",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.41656700000203273,
+      "top5": [
+       "EV-SAF6-02",
+       "EV-SAF-02",
+       "EV-GUIDE-02",
+       "EV-SAF6-01",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S12",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.45417799992719665,
+      "top5": [
+       "EV-SAF6-03",
+       "EV-FLEX-01",
+       "EV-FM2-02",
+       "EV-SAF6-04",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S13",
+      "type": "single-hop",
+      "recall@5": 0.3333333333333333,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.43629100014186406,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-SOFIE-03",
+       "EV-GUIDE-02",
+       "EV-SAF6-02",
+       "EV-SOFIE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S14",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.5328119998466718,
+      "top5": [
+       "EV-BASS2-01",
+       "EV-SOFIE-01",
+       "EV-SAF-01",
+       "EV-LUCI-02",
+       "EV-GUIDE-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S15",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.4774910000833188,
+      "top5": [
+       "EV-SOFIE-02",
+       "EV-AP1-01",
+       "EV-GUIDE-02",
+       "EV-AP1-02",
+       "EV-SAF-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S16",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.4128739999487152,
+      "top5": [
+       "EV-FM2-01",
+       "EV-FM2-02",
+       "EV-AP1-02",
+       "EV-LUCI-01",
+       "EV-LUCI-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S17",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.46191299998099566,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-FM2-02",
+       "EV-SAF6-02",
+       "EV-SAF-05",
+       "EV-SAF-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S18",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.40821099992172094,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-SAF6-04",
+       "EV-MIR-01",
+       "EV-SAF-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S19",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.48886900003708433,
+      "top5": [
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-MIR-03",
+       "EV-FLEX-03",
+       "EV-FLEX-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S20",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.40963800006466045,
+      "top5": [
+       "EV-MIR-03",
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-SAF-02",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S21",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.4358809999303048,
+      "top5": [
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP13-01",
+       "EV-SAF-01",
+       "EV-SAF6-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S22",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.40327800002160075,
+      "top5": [
+       "EV-AP1-02",
+       "EV-FM2-01",
+       "EV-SAF6-01",
+       "EV-AP1-01",
+       "EV-AP13-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S23",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.5158700000720273,
+      "top5": [
+       "EV-AP13-01",
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP1-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S24",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.40915799991125823,
+      "top5": [
+       "EV-GUIDE-03",
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-MIR-01",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S25",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.3968280000208324,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-FM2-01",
+       "EV-GUIDE-03",
+       "EV-SAF-08"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S26",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.4317410000567179,
+      "top5": [
+       "EV-SOFIE-03",
+       "EV-AP13-01",
+       "EV-AP1-03",
+       "EV-SAF6-01",
+       "EV-FLEX-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M01",
+      "type": "multi-hop",
+      "recall@5": 0.2,
+      "precision@5": 0.2,
+      "rr": 0.25,
+      "latency_ms": 0.4453999999896041,
+      "top5": [
+       "EV-SAF-02",
+       "EV-FM2-02",
+       "EV-MIR-03",
+       "EV-AP1-03",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M02",
+      "type": "multi-hop",
+      "recall@5": 0.25,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "latency_ms": 0.4310330000407703,
+      "top5": [
+       "EV-SAF-02",
+       "EV-MIR-01",
+       "EV-AP1-03",
+       "EV-AP13-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M03",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.2,
+      "latency_ms": 0.3953299999466253,
+      "top5": [
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-FM2-02",
+       "EV-MIR-01",
+       "EV-AP1-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M04",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 0.47109800016187364,
+      "top5": [
+       "EV-MIR-01",
+       "EV-MIR-02",
+       "EV-SAF-01",
+       "EV-AP13-01",
+       "EV-FLEX-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M05",
+      "type": "multi-hop",
+      "recall@5": 0.14285714285714285,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.31868799987933016,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SAF-02",
+       "EV-FLEX-01",
+       "EV-SAF-01",
+       "EV-LUCI-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M06",
+      "type": "multi-hop",
+      "recall@5": 0.125,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 0.2735059999849909,
+      "top5": [
+       "EV-FM2-02",
+       "EV-LUCI-01",
+       "EV-FM2-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M07",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 0.35924200005865714,
+      "top5": [
+       "EV-MIR-03",
+       "EV-SAF-01",
+       "EV-SAF-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M08",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 0.381000000061249,
+      "top5": [],
+      "entities": []
+     },
+     {
+      "id": "M09",
+      "type": "multi-hop",
+      "recall@5": 0.16666666666666666,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 0.447976999794264,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-07",
+       "EV-AP13-01",
+       "EV-SOFIE-02",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M10",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 0.3905260000465205,
+      "top5": [
+       "EV-FM2-02",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-SAF-03",
+       "EV-FLEX-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M11",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 0.3449029998137121,
+      "top5": [
+       "EV-FM2-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M12",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 0.4626829997960158,
+      "top5": [
+       "EV-FM2-02",
+       "EV-MIR-03",
+       "EV-SAF-02",
+       "EV-BASS2-01",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "U01",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U02",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U03",
+      "type": "unsupported",
+      "excluded": true
+     }
+    ]
+   },
+   {
+    "mode": "semantic",
+    "rows": [
+     {
+      "id": "S01",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 14.159375999952317,
+      "top5": [
+       "EV-FLEX-02",
+       "EV-GUIDE-01",
+       "EV-FLEX-05",
+       "EV-FLEX-01",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S02",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.2,
+      "latency_ms": 14.630030999796872,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-03",
+       "EV-FLEX-07",
+       "EV-AP1-01",
+       "EV-FLEX-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S03",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 13.044445999867094,
+      "top5": [
+       "EV-GUIDE-01",
+       "EV-FLEX-03",
+       "EV-FLEX-01",
+       "EV-FLEX-02",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S04",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 13.24629200007621,
+      "top5": [
+       "EV-GUIDE-01",
+       "EV-FLEX-04",
+       "EV-FLEX-01",
+       "EV-SOFIE-01",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S05",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 12.945202000082645,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-GUIDE-01",
+       "EV-SAME-01",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S06",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 12.325966000162225,
+      "top5": [
+       "EV-SAF-03",
+       "EV-SAF-05",
+       "EV-SAF-10",
+       "EV-SAF-09",
+       "EV-LUCI-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S07",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.944273999963116,
+      "top5": [
+       "EV-SAF-10",
+       "EV-SAF-03",
+       "EV-SAF6-02",
+       "EV-SAF-06",
+       "EV-SAF-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S08",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 10.611582999899838,
+      "top5": [
+       "EV-SAF-07",
+       "EV-GUIDE-02",
+       "EV-SAF-08",
+       "EV-SAF-01",
+       "EV-SAF-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S09",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.63380700000016,
+      "top5": [
+       "EV-SAF6-01",
+       "EV-SAF-08",
+       "EV-MIR-02",
+       "EV-SAF-05",
+       "EV-GUIDE-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S10",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.910855000043739,
+      "top5": [
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-SAF6-04",
+       "EV-FLEX-03",
+       "EV-MIR-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S11",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "latency_ms": 9.656259999928807,
+      "top5": [
+       "EV-SAF-01",
+       "EV-SAF-05",
+       "EV-SAF6-02",
+       "EV-SAF-06",
+       "EV-SAF-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S12",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 10.477890000174739,
+      "top5": [
+       "EV-SAF6-03",
+       "EV-FLEX-07",
+       "EV-SAF-01",
+       "EV-FLEX-03",
+       "EV-GUIDE-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S13",
+      "type": "single-hop",
+      "recall@5": 0.3333333333333333,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.938382999962414,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-SAF6-02",
+       "EV-SAF-10",
+       "EV-SAF-08",
+       "EV-SAF-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S14",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.465570999964257,
+      "top5": [
+       "EV-BASS2-01",
+       "EV-SAF-04",
+       "EV-SAF-10",
+       "EV-SOFIE-01",
+       "EV-SOFIE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S15",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.216205000029731,
+      "top5": [
+       "EV-SOFIE-02",
+       "EV-FLEX-03",
+       "EV-AP1-01",
+       "EV-SAF6-03",
+       "EV-FM2-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S16",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.428445000139618,
+      "top5": [
+       "EV-FM2-01",
+       "EV-FM2-02",
+       "EV-SAF-01",
+       "EV-SAF-07",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S17",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.31299199987734,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-FLEX-07",
+       "EV-SAF-05",
+       "EV-GUIDE-03",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S18",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 12.432230000058553,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-SAF6-04",
+       "EV-GUIDE-03",
+       "EV-SAF-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S19",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 11.703374000035183,
+      "top5": [
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-MIR-03",
+       "EV-AP1-02",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S20",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.291474000065136,
+      "top5": [
+       "EV-MIR-03",
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-SAF-02",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S21",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.821777000093789,
+      "top5": [
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-FM2-02",
+       "EV-SAF6-04",
+       "EV-AP1-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S22",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.943798000018433,
+      "top5": [
+       "EV-AP1-02",
+       "EV-FLEX-03",
+       "EV-SAF6-01",
+       "EV-MIR-01",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S23",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.380734999946071,
+      "top5": [
+       "EV-AP13-01",
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP1-02",
+       "EV-FM2-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S24",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "latency_ms": 8.491018000086115,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-GUIDE-03",
+       "EV-SAF-01",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S25",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.230381999941528,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-LUCI-01",
+       "EV-SAF-05",
+       "EV-SAF-03",
+       "EV-SAF-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S26",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.070210000118095,
+      "top5": [
+       "EV-SOFIE-03",
+       "EV-FLEX-03",
+       "EV-FLEX-07",
+       "EV-SAF6-04",
+       "EV-MIR-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M01",
+      "type": "multi-hop",
+      "recall@5": 0.4,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 11.108709000154704,
+      "top5": [
+       "EV-AP1-03",
+       "EV-SOFIE-02",
+       "EV-SAF-02",
+       "EV-LUCI-02",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M02",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.48049700014053,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-FLEX-03",
+       "EV-SAF6-03",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M03",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.500007000042388,
+      "top5": [
+       "EV-SAF6-04",
+       "EV-SAF-02",
+       "EV-AP13-01",
+       "EV-SAF6-03",
+       "EV-SAME-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M04",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.81052399993132,
+      "top5": [
+       "EV-MIR-01",
+       "EV-AP1-01",
+       "EV-MIR-03",
+       "EV-FLEX-03",
+       "EV-AP13-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M05",
+      "type": "multi-hop",
+      "recall@5": 0.14285714285714285,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "latency_ms": 9.799841999893033,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAF-09",
+       "EV-SAF6-02",
+       "EV-FLEX-04",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M06",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.056948000079501,
+      "top5": [
+       "EV-FM2-02",
+       "EV-AP1-01",
+       "EV-SAF6-04",
+       "EV-AP1-03",
+       "EV-FM2-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M07",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "latency_ms": 9.52342999994471,
+      "top5": [
+       "EV-MIR-03",
+       "EV-SAF-02",
+       "EV-AP1-01",
+       "EV-SAF6-03",
+       "EV-FLEX-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M08",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.110293000048841,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAME-01",
+       "EV-SAF6-03",
+       "EV-SAF6-04",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M09",
+      "type": "multi-hop",
+      "recall@5": 0.16666666666666666,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 10.232608000023902,
+      "top5": [
+       "EV-FLEX-07",
+       "EV-FLEX-02",
+       "EV-SAME-01",
+       "EV-SAF6-04",
+       "EV-SAF-05"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M10",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.222675000046365,
+      "top5": [
+       "EV-FM2-02",
+       "EV-AP1-01",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-AP1-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M11",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.50234700007968,
+      "top5": [
+       "EV-AP1-01",
+       "EV-MIR-03",
+       "EV-AP13-01",
+       "EV-MIR-02",
+       "EV-FLEX-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M12",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 10.805838999885964,
+      "top5": [
+       "EV-MIR-03",
+       "EV-LUCI-02",
+       "EV-AP1-01",
+       "EV-SAF-01",
+       "EV-MIR-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "U01",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U02",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U03",
+      "type": "unsupported",
+      "excluded": true
+     }
+    ]
+   },
+   {
+    "mode": "hybrid",
+    "rows": [
+     {
+      "id": "S01",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.169293000013568,
+      "top5": [
+       "EV-FLEX-02",
+       "EV-FLEX-05",
+       "EV-GUIDE-01",
+       "EV-FLEX-01",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S02",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 11.159360999954515,
+      "top5": [
+       "EV-GUIDE-03",
+       "EV-FLEX-01",
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S03",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.10619899991616,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-FLEX-01",
+       "EV-FLEX-02",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S04",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.037168000077145,
+      "top5": [
+       "EV-FLEX-04",
+       "EV-FLEX-01",
+       "EV-GUIDE-01",
+       "EV-FLEX-02",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S05",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.104189000026963,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-GUIDE-01",
+       "EV-SAF6-04",
+       "EV-MIR-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S06",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.86003600019103,
+      "top5": [
+       "EV-SAF-03",
+       "EV-SAF-09",
+       "EV-SAF-10",
+       "EV-SAF6-02",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S07",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.390633999828424,
+      "top5": [
+       "EV-SAF-10",
+       "EV-SAF6-02",
+       "EV-SAF-04",
+       "EV-SAF-03",
+       "EV-SAF-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S08",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 10.722324000198569,
+      "top5": [
+       "EV-SAF-07",
+       "EV-SAF-08",
+       "EV-GUIDE-02",
+       "EV-FM2-01",
+       "EV-SAF-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S09",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 10.06296199989265,
+      "top5": [
+       "EV-SAF6-01",
+       "EV-SAF-08",
+       "EV-GUIDE-02",
+       "EV-SAF-01",
+       "EV-AP1-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S10",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 10.574691000101666,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-MIR-01",
+       "EV-SAF6-04",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S11",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.713176999866846,
+      "top5": [
+       "EV-SAF6-02",
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-SAF6-03",
+       "EV-SAF6-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S12",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 11.30088199988677,
+      "top5": [
+       "EV-SAF6-03",
+       "EV-FLEX-07",
+       "EV-FLEX-01",
+       "EV-FLEX-03",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S13",
+      "type": "single-hop",
+      "recall@5": 0.3333333333333333,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.601868999880026,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-SAF6-02",
+       "EV-SOFIE-03",
+       "EV-GUIDE-02",
+       "EV-SAF-08"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S14",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.180248999882679,
+      "top5": [
+       "EV-BASS2-01",
+       "EV-SOFIE-01",
+       "EV-LUCI-02",
+       "EV-SAF-01",
+       "EV-SOFIE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S15",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.149349000153961,
+      "top5": [
+       "EV-SOFIE-02",
+       "EV-AP1-01",
+       "EV-FLEX-03",
+       "EV-AP1-02",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S16",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.615174000145998,
+      "top5": [
+       "EV-FM2-01",
+       "EV-FM2-02",
+       "EV-SAF-01",
+       "EV-LUCI-01",
+       "EV-LUCI-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S17",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.561505999954534,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-SAF-05",
+       "EV-SAF6-04",
+       "EV-SAF6-02",
+       "EV-SAF-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S18",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.2510940001157,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-SAF6-04",
+       "EV-GUIDE-03",
+       "EV-SAF-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S19",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.20876199986742,
+      "top5": [
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-MIR-03",
+       "EV-FLEX-03",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S20",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.603953999909209,
+      "top5": [
+       "EV-MIR-03",
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-SAF-02",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S21",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.565051000005042,
+      "top5": [
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP13-01",
+       "EV-SAF-01",
+       "EV-AP1-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S22",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.549235999907978,
+      "top5": [
+       "EV-AP1-02",
+       "EV-SAF6-01",
+       "EV-FLEX-03",
+       "EV-FM2-01",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S23",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 7.80067899995629,
+      "top5": [
+       "EV-AP13-01",
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP1-02",
+       "EV-FM2-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S24",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 8.155376999866348,
+      "top5": [
+       "EV-SAME-01",
+       "EV-GUIDE-03",
+       "EV-SAME-02",
+       "EV-MIR-01",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S25",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.102481000127227,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SAF-08",
+       "EV-FM2-01",
+       "EV-LUCI-01",
+       "EV-GUIDE-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S26",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.671542000001864,
+      "top5": [
+       "EV-SOFIE-03",
+       "EV-SAF6-01",
+       "EV-SOFIE-02",
+       "EV-GUIDE-01",
+       "EV-FLEX-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M01",
+      "type": "multi-hop",
+      "recall@5": 0.2,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 9.44702500009953,
+      "top5": [
+       "EV-SAF-02",
+       "EV-AP1-03",
+       "EV-SOFIE-02",
+       "EV-FM2-02",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M02",
+      "type": "multi-hop",
+      "recall@5": 0.25,
+      "precision@5": 0.2,
+      "rr": 0.25,
+      "latency_ms": 8.80778099985946,
+      "top5": [
+       "EV-SAF-02",
+       "EV-MIR-01",
+       "EV-AP13-01",
+       "EV-AP1-03",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M03",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.2,
+      "latency_ms": 9.29686200015567,
+      "top5": [
+       "EV-SAF-02",
+       "EV-AP13-01",
+       "EV-FM2-02",
+       "EV-SAF-01",
+       "EV-AP1-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M04",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.581130000015037,
+      "top5": [
+       "EV-MIR-01",
+       "EV-AP1-01",
+       "EV-AP13-01",
+       "EV-FLEX-03",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M05",
+      "type": "multi-hop",
+      "recall@5": 0.2857142857142857,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.983632000057696,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SAF-01",
+       "EV-SAF6-02",
+       "EV-SAF-02",
+       "EV-SAF-09"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M06",
+      "type": "multi-hop",
+      "recall@5": 0.125,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 9.454043000005186,
+      "top5": [
+       "EV-FM2-02",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-AP1-01",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M07",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.25,
+      "latency_ms": 9.142856999915239,
+      "top5": [
+       "EV-MIR-03",
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-AP1-01",
+       "EV-SAF6-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M08",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 8.457145999955173,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAME-01",
+       "EV-SAF6-03",
+       "EV-SAF6-04",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M09",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.6,
+      "rr": 0.5,
+      "latency_ms": 10.655584000005547,
+      "top5": [
+       "EV-FLEX-07",
+       "EV-FLEX-02",
+       "EV-SAF6-04",
+       "EV-FLEX-05",
+       "EV-FLEX-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M10",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 8.859819999997853,
+      "top5": [
+       "EV-FM2-02",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-SAF-03",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M11",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.069023999927595,
+      "top5": [
+       "EV-FM2-02",
+       "EV-AP1-01",
+       "EV-MIR-03",
+       "EV-AP13-01",
+       "EV-MIR-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M12",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 9.757541999988462,
+      "top5": [
+       "EV-MIR-03",
+       "EV-LUCI-02",
+       "EV-SAF-01",
+       "EV-SAF-02",
+       "EV-BASS2-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "U01",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U02",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U03",
+      "type": "unsupported",
+      "excluded": true
+     }
+    ]
+   },
+   {
+    "mode": "hybrid+graph",
+    "rows": [
+     {
+      "id": "S01",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 10.206880999930945,
+      "top5": [
+       "EV-FLEX-02",
+       "EV-FLEX-05",
+       "EV-GUIDE-01",
+       "EV-FLEX-01",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S02",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 10.119357999883505,
+      "top5": [
+       "EV-GUIDE-03",
+       "EV-FLEX-01",
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S03",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.621238999921843,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-FLEX-01",
+       "EV-FLEX-02",
+       "EV-FLEX-07"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S04",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.180711999988489,
+      "top5": [
+       "EV-FLEX-04",
+       "EV-FLEX-01",
+       "EV-GUIDE-01",
+       "EV-FLEX-02",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S05",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.110478000138755,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-GUIDE-01",
+       "EV-SAF6-04",
+       "EV-MIR-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S06",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 7073.29722999998,
+      "top5": [
+       "EV-SAF-03",
+       "EV-SAF-09",
+       "EV-SAF-01",
+       "EV-LUCI-01",
+       "EV-SAF-10"
+      ],
+      "entities": [
+       "MAT-SIBAL",
+       "MAT-COTTON"
+      ]
+     },
+     {
+      "id": "S07",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 14.03639199997997,
+      "top5": [
+       "EV-SAF-10",
+       "EV-SAF6-02",
+       "EV-SAF-04",
+       "EV-SAF-03",
+       "EV-SAF-06"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S08",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 10.281601999849954,
+      "top5": [
+       "EV-SAF-07",
+       "EV-AP1-03",
+       "EV-SAF-01",
+       "EV-AP1-01",
+       "EV-SAF-08"
+      ],
+      "entities": [
+       "MAT-SILICONE"
+      ]
+     },
+     {
+      "id": "S09",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 10.148241000024427,
+      "top5": [
+       "EV-SAF6-01",
+       "EV-SAF-08",
+       "EV-GUIDE-02",
+       "EV-SAF-01",
+       "EV-SAF6-02"
+      ],
+      "entities": [
+       "MAT-NOMEX",
+       "MAT-PMMA"
+      ]
+     },
+     {
+      "id": "S10",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.181880999904024,
+      "top5": [
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-MIR-01",
+       "EV-SAF6-04",
+       "EV-MIR-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S11",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.137328999941019,
+      "top5": [
+       "EV-SAF6-02",
+       "EV-SAF-01",
+       "EV-SAF6-03",
+       "EV-GUIDE-02",
+       "EV-SAF-02"
+      ],
+      "entities": [
+       "MAT-PMMA"
+      ]
+     },
+     {
+      "id": "S12",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 9.71983700014789,
+      "top5": [
+       "EV-SAF6-03",
+       "EV-FLEX-07",
+       "EV-FLEX-01",
+       "EV-FLEX-03",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S13",
+      "type": "single-hop",
+      "recall@5": 0.3333333333333333,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.901744000013423,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-SAF6-02",
+       "EV-GUIDE-02",
+       "EV-SAF-08",
+       "EV-SOFIE-03"
+      ],
+      "entities": [
+       "MAT-PMMA"
+      ]
+     },
+     {
+      "id": "S14",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.317009999927905,
+      "top5": [
+       "EV-BASS2-01",
+       "EV-SOFIE-01",
+       "EV-LUCI-02",
+       "EV-SAF-01",
+       "EV-SOFIE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S15",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.188159000155792,
+      "top5": [
+       "EV-SOFIE-02",
+       "EV-AP1-01",
+       "EV-FLEX-03",
+       "EV-AP1-02",
+       "EV-GUIDE-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S16",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.73092699996414,
+      "top5": [
+       "EV-FM2-01",
+       "EV-FM2-02",
+       "EV-SAF-01",
+       "EV-LUCI-01",
+       "EV-LUCI-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S17",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.208066999941366,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-SAF-05",
+       "EV-SAF6-04",
+       "EV-SAF6-02",
+       "EV-SAF-03"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S18",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.259164000037345,
+      "top5": [
+       "EV-SAME-01",
+       "EV-SAME-02",
+       "EV-SAF6-04",
+       "EV-GUIDE-03",
+       "EV-SAF-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S19",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 7.595846999947753,
+      "top5": [
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-MIR-03",
+       "EV-FLEX-03",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S20",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 7.821524999826579,
+      "top5": [
+       "EV-MIR-03",
+       "EV-MIR-02",
+       "EV-MIR-01",
+       "EV-SAF-02",
+       "EV-SAF6-04"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S21",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 7.882740000013655,
+      "top5": [
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP13-01",
+       "EV-SAF-01",
+       "EV-AP1-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S22",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.610488999920562,
+      "top5": [
+       "EV-AP1-02",
+       "EV-SAF6-01",
+       "EV-FLEX-03",
+       "EV-FM2-01",
+       "EV-AP1-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S23",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 7.476994999933595,
+      "top5": [
+       "EV-AP13-01",
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-AP1-02",
+       "EV-FM2-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S24",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 8.000434999985373,
+      "top5": [
+       "EV-SAME-01",
+       "EV-GUIDE-03",
+       "EV-SAME-02",
+       "EV-MIR-01",
+       "EV-SAF-01"
+      ],
+      "entities": []
+     },
+     {
+      "id": "S25",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.347433999915665,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SAF-08",
+       "EV-SAF-01",
+       "EV-FM2-01",
+       "EV-BASS2-02"
+      ],
+      "entities": [
+       "MAT-PMMA"
+      ]
+     },
+     {
+      "id": "S26",
+      "type": "single-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "latency_ms": 8.322689000124228,
+      "top5": [
+       "EV-SOFIE-03",
+       "EV-SAF6-01",
+       "EV-SOFIE-02",
+       "EV-GUIDE-01",
+       "EV-FLEX-02"
+      ],
+      "entities": []
+     },
+     {
+      "id": "M01",
+      "type": "multi-hop",
+      "recall@5": 0.6,
+      "precision@5": 0.6,
+      "rr": 1.0,
+      "latency_ms": 9.397895000120116,
+      "top5": [
+       "EV-AP1-03",
+       "EV-SAF-01",
+       "EV-AP1-01",
+       "EV-SAF-08",
+       "EV-SAF-02"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-CREW"
+      ]
+     },
+     {
+      "id": "M02",
+      "type": "multi-hop",
+      "recall@5": 0.75,
+      "precision@5": 0.6,
+      "rr": 1.0,
+      "latency_ms": 8.497194000028685,
+      "top5": [
+       "EV-AP1-03",
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-AP1-01",
+       "EV-SAF-08"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-CREW/O-BAG"
+      ]
+     },
+     {
+      "id": "M03",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 8.763779999981125,
+      "top5": [
+       "EV-SAF-01",
+       "EV-AP1-03",
+       "EV-SAF-02",
+       "EV-AP1-01",
+       "EV-AP13-01"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-ECLSS/O-SEAL/K-SEAL"
+      ]
+     },
+     {
+      "id": "M04",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 9.382729999970252,
+      "top5": [
+       "EV-MIR-01",
+       "EV-MIR-02",
+       "EV-AP1-01",
+       "EV-AP13-01",
+       "EV-FLEX-03"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-ECLSS/O-O2GEN"
+      ]
+     },
+     {
+      "id": "M05",
+      "type": "multi-hop",
+      "recall@5": 0.42857142857142855,
+      "precision@5": 0.6,
+      "rr": 1.0,
+      "latency_ms": 9.010362999788413,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SAF-01",
+       "EV-SAF6-02",
+       "EV-SAF-08",
+       "EV-SAF-02"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-LAB/O-RACK/K-RACK-WIN",
+       "MAT-PMMA"
+      ]
+     },
+     {
+      "id": "M06",
+      "type": "multi-hop",
+      "recall@5": 0.25,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.265725999990536,
+      "top5": [
+       "EV-LUCI-01",
+       "EV-FM2-02",
+       "EV-FM2-01",
+       "EV-SAF-01",
+       "EV-SAF-04"
+      ],
+      "entities": [
+       "SC-LUNAR/C-HAB/O-CURTAIN"
+      ]
+     },
+     {
+      "id": "M07",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 0.5,
+      "latency_ms": 8.784814999899027,
+      "top5": [
+       "EV-MIR-03",
+       "EV-AP1-01",
+       "EV-SAF-02",
+       "EV-SAF-01",
+       "EV-AP1-03"
+      ],
+      "entities": [
+       "SC-CAPSULE/C-CABIN/O-SEATS/K-SEAT-PAD"
+      ]
+     },
+     {
+      "id": "M08",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "latency_ms": 8.746368999936749,
+      "top5": [
+       "EV-AP13-01",
+       "EV-AP1-02",
+       "EV-SAF-02",
+       "EV-SAME-01",
+       "EV-SAF6-03"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-LAB/O-HARNESS"
+      ]
+     },
+     {
+      "id": "M09",
+      "type": "multi-hop",
+      "recall@5": 0.6666666666666666,
+      "precision@5": 0.8,
+      "rr": 0.5,
+      "latency_ms": 10.278325999934168,
+      "top5": [
+       "EV-FLEX-07",
+       "EV-FLEX-02",
+       "EV-FLEX-05",
+       "EV-FLEX-03",
+       "EV-FLEX-01"
+      ],
+      "entities": [
+       "SC-ORBITAL/C-LAB/O-FUEL"
+      ]
+     },
+     {
+      "id": "M10",
+      "type": "multi-hop",
+      "recall@5": 0.4,
+      "precision@5": 0.4,
+      "rr": 0.25,
+      "latency_ms": 9.5655259999603,
+      "top5": [
+       "EV-FM2-02",
+       "EV-LUCI-01",
+       "EV-FM2-01",
+       "EV-BASS2-01",
+       "EV-GUIDE-02"
+      ],
+      "entities": [
+       "SC-LUNAR/C-HAB/O-TABLE"
+      ]
+     },
+     {
+      "id": "M11",
+      "type": "multi-hop",
+      "recall@5": 0.5,
+      "precision@5": 0.2,
+      "rr": 0.5,
+      "latency_ms": 11.538385999983802,
+      "top5": [
+       "EV-AP1-01",
+       "EV-AP1-03",
+       "EV-SAF-01",
+       "EV-FM2-02",
+       "EV-MIR-03"
+      ],
+      "entities": [
+       "SC-LUNAR/C-AIRLOCK/O-SUITSTOW/K-SUIT-SEAL",
+       "SC-ORBITAL/C-ECLSS/O-SEAL/K-SEAL"
+      ]
+     },
+     {
+      "id": "M12",
+      "type": "multi-hop",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "latency_ms": 10.680487999934485,
+      "top5": [
+       "EV-SAF-01",
+       "EV-MIR-03",
+       "EV-LUCI-02",
+       "EV-SAF-02",
+       "EV-BASS2-01"
+      ],
+      "entities": [
+       "SC-CAPSULE/C-STOW/O-CARGO"
+      ]
+     },
+     {
+      "id": "U01",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U02",
+      "type": "unsupported",
+      "excluded": true
+     },
+     {
+      "id": "U03",
+      "type": "unsupported",
+      "excluded": true
+     }
+    ]
+   }
+  ],
+  "disclosure": "Small labelled set written by the build assistant before the first run (hash locked in eval/LABELS.lock). Indicative only; multi-hop questions name spacecraft elements defined in this app's own templates, so they test configuration-aware traversal, not general retrieval quality."
+ },
+ "copilot": {
+  "n_cases": 12,
+  "n_passed": 11,
+  "by_expected": {
+   "answer": {
+    "n": 6,
+    "passed": 6
+   },
+   "boundary": {
+    "n": 3,
+    "passed": 3
+   },
+   "abstain": {
+    "n": 3,
+    "passed": 2
+   }
+  },
+  "modes_observed": [
+   "boundary",
+   "evidence-retrieval",
+   "no-evidence"
+  ],
+  "claude_live": false,
+  "claude_error": null,
+  "case_file_sha256": "0aad67754d713544173555261b9db2b951cde18315b2c8abb8f91d070de89090",
+  "cases": [
+   {
+    "id": "C01",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-LUCI-01",
+     "EV-SAF-03",
+     "EV-SAF-05"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C02",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-FLEX-02",
+     "EV-FLEX-05",
+     "EV-FLEX-07"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C03",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-SAF-01",
+     "EV-SAF-08",
+     "EV-SAF6-01"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C04",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-MIR-01",
+     "EV-MIR-02",
+     "EV-MIR-03"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C05",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-FM2-01",
+     "EV-FM2-02",
+     "EV-LUCI-02"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C06",
+    "expected": "answer",
+    "mode": "evidence-retrieval",
+    "passed": true,
+    "cited": [
+     "EV-AP1-03",
+     "EV-SAF-01",
+     "EV-SAF-02"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C07",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true,
+    "cited": [],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C08",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true,
+    "cited": [],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C09",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true,
+    "cited": [],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C10",
+    "expected": "abstain",
+    "mode": "evidence-retrieval",
+    "passed": false,
+    "cited": [
+     "EV-SAF-03",
+     "EV-SAF-10",
+     "EV-SOFIE-02"
+    ],
+    "dropped_claims": 0,
+    "top_cosine": null
+   },
+   {
+    "id": "C11",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "passed": true,
+    "cited": [],
+    "dropped_claims": 0,
+    "top_cosine": 0.30376338958740234
+   },
+   {
+    "id": "C12",
+    "expected": "abstain",
+    "mode": "no-evidence",
+    "passed": true,
+    "cited": [],
+    "dropped_claims": 0,
+    "top_cosine": 0.12682917714118958
+   }
+  ],
+  "disclosure": "12 cases. Evaluated in mode(s): boundary, evidence-retrieval, no-evidence. Claude was NOT live for this run (no API key or API error), so answers were evidence-retrieval summaries; Claude-mode quality is untested."
+ },
+ "eligibility": {
+  "n_cases": 10,
+  "n_passed": 10,
+  "cases": [
+   {
+    "case": "Inside data, methanol 1 atm",
+    "expected": "Model-supported estimate",
+    "outcome": "Model-supported estimate",
+    "passed": true,
+    "reasons": [
+     "All checks passed"
+    ]
+   },
+   {
+    "case": "Within each 1-D range but untested combination (30% O2 with 1.7 mm)",
+    "expected": "not Model-supported",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Request lies outside the joint experimental domain and far from any tested condition (extrapolation)"
+    ]
+   },
+   {
+    "case": "O2 above tested range",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Request lies outside the joint experimental domain and far from any tested condition (extrapolation)"
+    ]
+   },
+   {
+    "case": "Fabric instead of droplet",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Material form 'fabric' differs from the experiments (isolated liquid droplets)"
+    ]
+   },
+   {
+    "case": "Missing diameter",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Missing input: d0_mm"
+    ]
+   },
+   {
+    "case": "Negative pressure",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Pressure must be positive and below 1000 kPa"
+    ]
+   },
+   {
+    "case": "CO2 diluent",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Diluent 'carbon dioxide' is not covered by the nitrogen-diluent models"
+    ]
+   },
+   {
+    "case": "Partial gravity",
+    "expected": "Unavailable",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Gravity 'partial gravity' differs from the microgravity experiments"
+    ]
+   },
+   {
+    "case": "Exploratory model, in-domain (heptane 0.7 atm)",
+    "expected": "Exploratory estimate",
+    "outcome": "Exploratory estimate",
+    "passed": true,
+    "reasons": [
+     "Model FLEX-K-HEPT-0.7atm is exploratory (failed: min_tests, min_sessions, min_skill)"
+    ]
+   },
+   {
+    "case": "Non-predictor diameter outside range (methanol 0.7 atm, D0 1.2 mm)",
+    "expected": "not Model-supported",
+    "outcome": "Unavailable",
+    "passed": true,
+    "reasons": [
+     "Droplet diameter is outside the tested range and the O2-diameter combination is not covered by any test"
+    ]
+   }
+  ]
+ },
+ "models": [
+  {
+   "model_id": "FLEX-K-METH-1atm",
+   "status": "Model-supported",
+   "failed_criteria": [],
+   "n_observations": 41,
+   "n_sessions": 13,
+   "n_parameters": 3,
+   "features": [
+    "O2 mole percent",
+    "Initial droplet diameter (mm)"
+   ],
+   "validation": {
+    "scheme": "leave-one-session-out",
+    "n_scored": 41,
+    "mae": 0.03088935129792934,
+    "rmse": 0.044895194522035255,
+    "baseline_mae": 0.09723000698931379,
+    "baseline_rmse": 0.11775222030632528,
+    "predictive_skill": 0.6823063964057487,
+    "oof_r2": 0.8350845731974156
+   },
+   "benchmark": {
+    "identical_folds": true,
+    "mean_baseline": {
+     "mae": 0.09723000698931379,
+     "n_parameters": 1
+    },
+    "ols": {
+     "mae": 0.03088935129792934,
+     "rmse": 0.044895194522035255,
+     "predictive_skill": 0.6823063964057487,
+     "n_parameters": 3
+    },
+    "random_forest": {
+     "mae": 0.047040159392909876,
+     "rmse": 0.07356688757844668,
+     "predictive_skill": 0.5161970995427378,
+     "settings": "300 trees, max_depth 3, min_samples_leaf 3, random_state 0"
+    },
+    "decision": "OLS retained as primary: random forest did not achieve lower out-of-fold MAE"
+   },
+   "uncertainty_90_mm2_s": 0.05475122663756338
+  },
+  {
+   "model_id": "FLEX-K-METH-0.7atm",
+   "status": "Exploratory",
+   "failed_criteria": [
+    "min_tests",
+    "min_sessions"
+   ],
+   "n_observations": 12,
+   "n_sessions": 6,
+   "n_parameters": 2,
+   "features": [
+    "O2 mole percent"
+   ],
+   "validation": {
+    "scheme": "leave-one-session-out",
+    "n_scored": 12,
+    "mae": 0.053851716641077185,
+    "rmse": 0.07015179640045718,
+    "baseline_mae": 0.10145791245791246,
+    "baseline_rmse": 0.11689619207860151,
+    "predictive_skill": 0.46922112493280044,
+    "oof_r2": 0.512309177962692
+   },
+   "benchmark": {
+    "identical_folds": true,
+    "mean_baseline": {
+     "mae": 0.10145791245791246,
+     "n_parameters": 1
+    },
+    "ols": {
+     "mae": 0.053851716641077185,
+     "rmse": 0.07015179640045718,
+     "predictive_skill": 0.46922112493280044,
+     "n_parameters": 2
+    },
+    "random_forest": {
+     "mae": 0.09179037548100032,
+     "rmse": 0.1031360606387331,
+     "predictive_skill": 0.0952861806704578,
+     "settings": "300 trees, max_depth 3, min_samples_leaf 3, random_state 0"
+    },
+    "decision": "OLS retained as primary: random forest did not achieve lower out-of-fold MAE"
+   },
+   "uncertainty_90_mm2_s": 0.06848177141579068
+  },
+  {
+   "model_id": "FLEX-K-HEPT-1atm",
+   "status": "Exploratory",
+   "failed_criteria": [
+    "min_skill"
+   ],
+   "n_observations": 31,
+   "n_sessions": 14,
+   "n_parameters": 3,
+   "features": [
+    "O2 mole percent",
+    "Initial droplet diameter (mm)"
+   ],
+   "validation": {
+    "scheme": "leave-one-session-out",
+    "n_scored": 31,
+    "mae": 0.10547324912250686,
+    "rmse": 0.14050134993897523,
+    "baseline_mae": 0.13681090100111234,
+    "baseline_rmse": 0.17308662408640008,
+    "predictive_skill": 0.22905814996679763,
+    "oof_r2": 0.25530160511642785
+   },
+   "benchmark": {
+    "identical_folds": true,
+    "mean_baseline": {
+     "mae": 0.13681090100111234,
+     "n_parameters": 1
+    },
+    "ols": {
+     "mae": 0.10547324912250686,
+     "rmse": 0.14050134993897523,
+     "predictive_skill": 0.22905814996679763,
+     "n_parameters": 3
+    },
+    "random_forest": {
+     "mae": 0.14509922093801736,
+     "rmse": 0.18809897234265005,
+     "predictive_skill": -0.060582306499374905,
+     "settings": "300 trees, max_depth 3, min_samples_leaf 3, random_state 0"
+    },
+    "decision": "OLS retained as primary: random forest did not achieve lower out-of-fold MAE"
+   },
+   "uncertainty_90_mm2_s": 0.22266887091168275
+  },
+  {
+   "model_id": "FLEX-K-HEPT-0.7atm",
+   "status": "Exploratory",
+   "failed_criteria": [
+    "min_tests",
+    "min_sessions",
+    "min_skill"
+   ],
+   "n_observations": 9,
+   "n_sessions": 6,
+   "n_parameters": 2,
+   "features": [
+    "O2 mole percent"
+   ],
+   "validation": {
+    "scheme": "leave-one-session-out",
+    "n_scored": 9,
+    "mae": 0.10946588362722164,
+    "rmse": 0.1275176252968731,
+    "baseline_mae": 0.13515873015873017,
+    "baseline_rmse": 0.15950108669011884,
+    "predictive_skill": 0.19009387333940553,
+    "oof_r2": 0.1138856797163268
+   },
+   "benchmark": {
+    "identical_folds": true,
+    "mean_baseline": {
+     "mae": 0.13515873015873017,
+     "n_parameters": 1
+    },
+    "ols": {
+     "mae": 0.10946588362722164,
+     "rmse": 0.1275176252968731,
+     "predictive_skill": 0.19009387333940553,
+     "n_parameters": 2
+    },
+    "random_forest": {
+     "mae": 0.12971031746031703,
+     "rmse": 0.15523983244031325,
+     "predictive_skill": 0.04031121550205852,
+     "settings": "300 trees, max_depth 3, min_samples_leaf 3, random_state 0"
+    },
+    "decision": "OLS retained as primary: random forest did not achieve lower out-of-fold MAE"
+   },
+   "uncertainty_90_mm2_s": 0.17499999999999993
+  }
+ ],
+ "audit": {
+  "counts": {
+   "Confirmed discrepancy": 8,
+   "Missing information": 6,
+   "Potential discrepancy": 9
+  },
+  "flex_rows_compared": 274
+ },
+ "graph": {
+  "nodes": 199,
+  "edges": 343,
+  "by_label": {
+   "Material": 16,
+   "Spacecraft": 3,
+   "Compartment": 7,
+   "Object": 14,
+   "Component": 23,
+   "Source": 19,
+   "Investigation": 16,
+   "Finding": 42,
+   "Condition": 3,
+   "Concern": 34,
+   "AuditItem": 18,
+   "Model": 4
+  },
+  "by_relationship": {
+   "HAS_COMPARTMENT": 7,
+   "CONTAINS": 14,
+   "HAS_COMPONENT": 23,
+   "MADE_OF": 23,
+   "RECORDS": 6,
+   "REPORTED_IN": 42,
+   "FROM_INVESTIGATION": 42,
+   "INVOLVES": 52,
+   "UNDER": 42,
+   "CONCERNS": 66,
+   "FLAGS": 18,
+   "FITTED_ON": 4,
+   "PREDICTS_FOR": 4
+  },
+  "neo4j": {
+   "configured": false,
+   "connected": false,
+   "last_sync": null,
+   "error": null,
+   "nodes_synced": 0,
+   "mode": "In-memory graph + SQLite fallback (Neo4j not configured)"
+  }
+ },
+ "data": {
+  "evidence_statements": 42,
+  "quotes_verified": 42
+ },
+ "run_history": [
+  {
+   "run": 1,
+   "note": "Entity linking searched only the first spacecraft when none was named in the question (bug).",
+   "hybrid+graph multi-hop recall@5": 0.4107142857142857
+  },
+  {
+   "run": 2,
+   "note": "After fixing that bug. Labels and questions unchanged (same SHA-256).",
+   "hybrid+graph multi-hop recall@5": 0.5912698412698413
+  }
+ ],
+ "runtime_s": 13.3
+}

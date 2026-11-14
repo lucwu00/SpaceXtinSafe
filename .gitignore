@@ -1,0 +1,13 @@
+node_modules/
+dist/
+__pycache__/
+*.sqlite3
+.env
+.env.*
+!.env.example
+.venv/
+.hf/
+frontend/tsconfig.tsbuildinfo
+backend/.hf/
+*.log
+backend/app/data/copilot_usage.jsonl
