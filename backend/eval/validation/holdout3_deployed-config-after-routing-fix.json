@@ -1,0 +1,776 @@
+{
+ "config": {
+  "generated_utc": "2026-11-14T22:07:13+00:00",
+  "tag": "deployed-config-after-routing-fix",
+  "semantic": false,
+  "graph_engine": "in-memory networkx (NEO4J_URI unset for validation)",
+  "claude_key_present": false
+ },
+ "run": "deterministic (no LLM call; evidence-retrieval answers)",
+ "case_file_sha256": "59774f4bdf101a7ae0c45fcb6f9be39826a6fda850e8b066bd066c155854ce6a",
+ "retrieval": {
+  "k": 5,
+  "n_answerable": 12,
+  "modes": {
+   "keyword": {
+    "all": {
+     "n": 12,
+     "recall@5": 0.9166666666666666,
+     "precision@5": 0.21666666666666667,
+     "mrr": 0.8611111111111112
+    },
+    "direct": {
+     "n": 3,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 0.7777777777777778
+    },
+    "limitation": {
+     "n": 2,
+     "recall@5": 0.5,
+     "precision@5": 0.1,
+     "mrr": 0.5
+    },
+    "multi-hop": {
+     "n": 2,
+     "recall@5": 1.0,
+     "precision@5": 0.4,
+     "mrr": 1.0
+    },
+    "numerical": {
+     "n": 5,
+     "recall@5": 1.0,
+     "precision@5": 0.2,
+     "mrr": 1.0
+    },
+    "per_question": [
+     {
+      "id": "H3-01",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-07",
+       "EV-FLEX-03",
+       "EV-GUIDE-01",
+       "EV-FLEX-04",
+       "EV-FLEX-05"
+      ]
+     },
+     {
+      "id": "H3-02",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-02",
+       "EV-BASS2-02",
+       "EV-SAF-01",
+       "EV-LUCI-02",
+       "EV-SAF6-02"
+      ]
+     },
+     {
+      "id": "H3-03",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SOFIE-01",
+       "EV-BASS2-02",
+       "EV-SOFIE-03",
+       "EV-SOFIE-02",
+       "EV-FLEX-04"
+      ]
+     },
+     {
+      "id": "H3-04",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-05",
+       "EV-SAF-08",
+       "EV-SAF-06",
+       "EV-SAF6-02",
+       "EV-LUCI-01"
+      ]
+     },
+     {
+      "id": "H3-05",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-SAF-03",
+       "EV-SAF-04",
+       "EV-SAF6-01",
+       "EV-SAF6-02",
+       "EV-SAF-10"
+      ]
+     },
+     {
+      "id": "H3-06",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 0.3333333333333333,
+      "top5": [
+       "EV-GUIDE-01",
+       "EV-FLEX-02",
+       "EV-FLEX-04",
+       "EV-FLEX-05",
+       "EV-FLEX-01"
+      ]
+     },
+     {
+      "id": "H3-07",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-AP13-01",
+       "EV-MIR-01",
+       "EV-FLEX-03",
+       "EV-SAF-02",
+       "EV-SAF6-04"
+      ]
+     },
+     {
+      "id": "H3-08",
+      "type": "multi-hop",
+      "recall@5": 1.0,
+      "precision@5": 0.4,
+      "rr": 1.0,
+      "top5": [
+       "EV-AP1-03",
+       "EV-AP1-01",
+       "EV-SAF-07",
+       "EV-AP13-01",
+       "EV-SAF-05"
+      ]
+     },
+     {
+      "id": "H3-09",
+      "type": "limitation",
+      "recall@5": 0.0,
+      "precision@5": 0.0,
+      "rr": 0.0,
+      "top5": [
+       "EV-AP1-02",
+       "EV-FLEX-03",
+       "EV-SAME-01",
+       "EV-SAF-02",
+       "EV-SAF6-01"
+      ]
+     },
+     {
+      "id": "H3-10",
+      "type": "direct",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-03",
+       "EV-GUIDE-03",
+       "EV-GUIDE-02",
+       "EV-FLEX-04",
+       "EV-FLEX-05"
+      ]
+     },
+     {
+      "id": "H3-11",
+      "type": "numerical",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-GUIDE-02",
+       "EV-SOFIE-01",
+       "EV-FM2-01",
+       "EV-AP13-01",
+       "EV-SAF-08"
+      ]
+     },
+     {
+      "id": "H3-12",
+      "type": "limitation",
+      "recall@5": 1.0,
+      "precision@5": 0.2,
+      "rr": 1.0,
+      "top5": [
+       "EV-FLEX-05",
+       "EV-FLEX-06",
+       "EV-FLEX-02",
+       "EV-FLEX-04",
+       "EV-FLEX-07"
+      ]
+     }
+    ]
+   },
+   "semantic": {
+    "status": "not available in this configuration"
+   },
+   "hybrid": {
+    "status": "not available in this configuration"
+   },
+   "hybrid+graph": {
+    "status": "not available in this configuration"
+   }
+  }
+ },
+ "copilot": {
+  "n": 20,
+  "passed": 15,
+  "by_type": {
+   "numerical": {
+    "n": 5,
+    "passed": 5
+   },
+   "direct": {
+    "n": 3,
+    "passed": 3
+   },
+   "multi-hop": {
+    "n": 2,
+    "passed": 2
+   },
+   "limitation": {
+    "n": 2,
+    "passed": 1
+   },
+   "literature-only": {
+    "n": 5,
+    "passed": 1
+   },
+   "unsupported": {
+    "n": 3,
+    "passed": 3
+   }
+  },
+  "answerable": {
+   "n": 12,
+   "answered": 12,
+   "citation_correct": 12,
+   "cites_relevant": 11,
+   "numbers_ok": "5/5"
+  },
+  "abstention": {
+   "n": 6,
+   "abstained": 2
+  },
+  "boundary_and_verdict": [
+   {
+    "id": "H3-19",
+    "expected": "refuse_or_abstain",
+    "mode": "evidence-retrieval",
+    "passed": true
+   },
+   {
+    "id": "H3-20",
+    "expected": "boundary",
+    "mode": "boundary",
+    "passed": true
+   }
+  ],
+  "safety_verdicts": 0,
+  "claim_support_rate": null,
+  "live_success": "not run (no API key in this run)"
+ },
+ "failures": [
+  {
+   "id": "H3-09",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-AP1-02",
+    "EV-FLEX-03",
+    "EV-SAME-01"
+   ],
+   "numbers_ok": null,
+   "answer": "Tests in a 16.5 psia oxygen atmosphere showed sparks from electrical arcs can ignite combustibles several inches away. A main FLEX objective was the limiting oxygen index (the oxygen level below which combustion does not occur); observed values appeared slightly lower than initially expected. SAME-2 aged smoke in a chamber to simulate transport time from the source to the detector, varying it from 11 to 1800 s."
+  },
+  {
+   "id": "H3-14",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-07",
+    "EV-GUIDE-01",
+    "EV-SAF-02"
+   ],
+   "numbers_ok": null,
+   "answer": "Droplet experiments demonstrated radiative and diffusive extinction, instabilities, lower flammability limits and cool flames after visible flame extinction. The FLEX report catalogues more than 100 combustion histories without interpreting them. Saffire tests ran in an uncrewed Cygnus vehicle after it left the ISS, so large fires could be studied without risk to crew."
+  },
+  {
+   "id": "H3-15",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-GUIDE-02",
+    "EV-SAF-08",
+    "EV-SOFIE-01"
+   ],
+   "numbers_ok": null,
+   "answer": "BASS burned a 2 cm acrylic (PMMA) sphere in microgravity at 17% oxygen and 10 cm/s flow. In the combined PMMA and Nomex sample 2-7, the PMMA section burned (5 cm) but the adjoining Nomex did not burn in microgravity. For 0.1 mm PMMA, radiative quenching occurred below about 2 cm/s and blowoff extinction approached as flow crossed about 40 cm/s."
+  },
+  {
+   "id": "H3-16",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-BASS2-01",
+    "EV-BASS2-02",
+    "EV-SAF6-02"
+   ],
+   "numbers_ok": null,
+   "answer": "BASS-II crew-adapted flow variations, including blowoff extinctions, helped outline a U-shaped flammability boundary versus flow. In Saffire VI the cotton-fiberglass sample reached a steady size and spread rate quickly, while the thick PMMA samples kept growing until flow speed was reduced. BASS-II tested flows near the quenching limit, below those normally produced by ISS ventilation."
+  },
+  {
+   "id": "H3-17",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-LUCI-01",
+    "EV-LUCI-02",
+    "EV-SAME-01"
+   ],
+   "numbers_ok": null,
+   "answer": "SAME-2 aged smoke in a chamber to simulate transport time from the source to the detector, varying it from 11 to 1800 s. LUCI showed material flammability testing at partial gravity is feasible on a spinning vehicle. On the LUCI rotating sounding rocket (simulated Lunar gravity), cotton-fiberglass fabric burning downward had a flame-base spread rate of 0.92 mm/s and flame-tip spread rate of 1.1 mm/s."
+  }
+ ],
+ "cases": [
+  {
+   "id": "H3-01",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-03",
+    "EV-FLEX-07",
+    "EV-GUIDE-01"
+   ],
+   "latency_ms": 17,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "The FLEX report catalogues more than 100 combustion histories without interpreting them. A main FLEX objective was the limiting oxygen index (the oxygen level below which combustion does not occur); observed values appeared slightly lower than initially expected. Droplet experiments demonstrated radiative and diffusive extinction, instabilities, lower flammability limits and cool flames after visible flame extinction.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-02",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-BASS2-02",
+    "EV-SAF-01",
+    "EV-SAF-02"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Saffire tests ran in an uncrewed Cygnus vehicle after it left the ISS, so large fires could be studied without risk to crew. BASS-II tested flows near the quenching limit, below those normally produced by ISS ventilation. Saffire aimed to measure how fast a large-scale fire grows in low gravity and to compare low-g flammability limits with NASA's 1-g screening test.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-03",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-BASS2-01",
+    "EV-BASS2-02",
+    "EV-SOFIE-01"
+   ],
+   "latency_ms": 29,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "BASS-II tested flows near the quenching limit, below those normally produced by ISS ventilation. For 0.1 mm PMMA, radiative quenching occurred below about 2 cm/s and blowoff extinction approached as flow crossed about 40 cm/s. BASS-II crew-adapted flow variations, including blowoff extinctions, helped outline a U-shaped flammability boundary versus flow.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-04",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-SAF-05",
+    "EV-SAF-06",
+    "EV-SAF-08"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Saffire-II sample 2-5 (5 cm wide cotton-fiberglass, 20 cm/s concurrent, about 22.1% O2) burned its full 29 cm at 2.1 mm/s. In the combined PMMA and Nomex sample 2-7, the PMMA section burned (5 cm) but the adjoining Nomex did not burn in microgravity. Saffire-II sample 2-6 (cotton-fiberglass) burned its full length at 2.6 mm/s. NTRS lists 25 cm/s flow; PSI-99 lists 20 cm/s (audit conflict).",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-05",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-SAF-03",
+    "EV-SAF-04",
+    "EV-SAF6-01"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Saffire-I sample I-1: a 40.6 cm wide, 0.37 mm cotton-fiberglass sheet in 20 cm/s concurrent flow at 21.5-21.7% O2 burned about 84 cm at 1.8 mm/s (Table 1). Saffire-I opposed-flow sample I-2 spread only about 10 cm, at 1.3 mm/s, over 70 s. On Saffire VI the Nomex fabric sample did not ignite.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-06",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-02",
+    "EV-FLEX-04",
+    "EV-GUIDE-01"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Droplet experiments demonstrated radiative and diffusive extinction, instabilities, lower flammability limits and cool flames after visible flame extinction. The FLEX 'burning rate' is the average burning-rate constant from a linear fit of droplet diameter squared versus time; Table IX reports it in mm2/s (the PSI-69 column header says 'mm'). Both radiative extinction (larger droplets, higher dilution) and diffusive extinction (smaller droplets) were observed in FLEX.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-07",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-AP13-01",
+    "EV-FLEX-03",
+    "EV-MIR-01"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "On Apollo 13, service module oxygen tank no. 2 lost pressure rapidly and two fuel cells lost their oxygen supply, leading to mission abort. In 1997 a solid-fuel oxygen generator canister on Mir ignited, producing a three-foot flame, dense smoke, and blocking the route to a Soyuz escape vehicle. A main FLEX objective was the limiting oxygen index (the oxygen level below which combustion does not occur); observed values appeared slightly lower than initially expected.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-08",
+   "type": "multi-hop",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-AP1-01",
+    "EV-AP1-03",
+    "EV-SAF-07"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Solid combustibles in the Apollo command module included nylon, polyurethane and silicone rubber plastics. The Apollo 204 board listed conditions that led to the disaster, including a sealed oxygen-pressurized cabin and extensive combustible materials. Thin silicone samples showed insignificant burning in microgravity at 20 cm/s and about 22% O2, yet sample 2-1 burned roughly completely in the 1-g upward reference test.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-09",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-AP1-02",
+    "EV-FLEX-03",
+    "EV-SAME-01"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Tests in a 16.5 psia oxygen atmosphere showed sparks from electrical arcs can ignite combustibles several inches away. A main FLEX objective was the limiting oxygen index (the oxygen level below which combustion does not occur); observed values appeared slightly lower than initially expected. SAME-2 aged smoke in a chamber to simulate transport time from the source to the detector, varying it from 11 to 1800 s.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": false,
+   "numbers_ok": null,
+   "passed": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-10",
+   "type": "direct",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-03",
+    "EV-GUIDE-02",
+    "EV-GUIDE-03"
+   ],
+   "latency_ms": 5,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "A main FLEX objective was the limiting oxygen index (the oxygen level below which combustion does not occur); observed values appeared slightly lower than initially expected. SPICE investigated the transition of gas-jet flames from non-sooting to sooting. BASS burned a 2 cm acrylic (PMMA) sphere in microgravity at 17% oxygen and 10 cm/s flow.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-11",
+   "type": "numerical",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-GUIDE-02",
+    "EV-SAF-08",
+    "EV-SOFIE-01"
+   ],
+   "latency_ms": 6,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "BASS burned a 2 cm acrylic (PMMA) sphere in microgravity at 17% oxygen and 10 cm/s flow. For 0.1 mm PMMA, radiative quenching occurred below about 2 cm/s and blowoff extinction approached as flow crossed about 40 cm/s. In the combined PMMA and Nomex sample 2-7, the PMMA section burned (5 cm) but the adjoining Nomex did not burn in microgravity.",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": true,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-12",
+   "type": "limitation",
+   "expected": "answer",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-02",
+    "EV-FLEX-05",
+    "EV-FLEX-06"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "A trace low-volatility contaminant was present in some FLEX tests; the authors judge burning-rate constants minimally influenced. Disruptive extinction of methanol droplets is probably caused by the contaminant, so disruption outcomes should be treated cautiously. The FLEX 'burning rate' is the average burning-rate constant from a linear fit of droplet diameter squared versus time; Table IX reports it in mm2/s (the PSI-69 column header says 'mm').",
+   "answered": true,
+   "citation_correct": true,
+   "cites_relevant": true,
+   "numbers_ok": null,
+   "passed": true,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-13",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 3,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "No retrieved NASA evidence reports density; the library does not contain material property data of this kind.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-14",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-FLEX-07",
+    "EV-GUIDE-01",
+    "EV-SAF-02"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "Droplet experiments demonstrated radiative and diffusive extinction, instabilities, lower flammability limits and cool flames after visible flame extinction. The FLEX report catalogues more than 100 combustion histories without interpreting them. Saffire tests ran in an uncrewed Cygnus vehicle after it left the ISS, so large fires could be studied without risk to crew.",
+   "passed": false,
+   "false_answer_citations": [
+    "EV-FLEX-07",
+    "EV-GUIDE-01",
+    "EV-SAF-02"
+   ],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-15",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-GUIDE-02",
+    "EV-SAF-08",
+    "EV-SOFIE-01"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "BASS burned a 2 cm acrylic (PMMA) sphere in microgravity at 17% oxygen and 10 cm/s flow. In the combined PMMA and Nomex sample 2-7, the PMMA section burned (5 cm) but the adjoining Nomex did not burn in microgravity. For 0.1 mm PMMA, radiative quenching occurred below about 2 cm/s and blowoff extinction approached as flow crossed about 40 cm/s.",
+   "passed": false,
+   "false_answer_citations": [
+    "EV-GUIDE-02",
+    "EV-SAF-08",
+    "EV-SOFIE-01"
+   ],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-16",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-BASS2-01",
+    "EV-BASS2-02",
+    "EV-SAF6-02"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "BASS-II crew-adapted flow variations, including blowoff extinctions, helped outline a U-shaped flammability boundary versus flow. In Saffire VI the cotton-fiberglass sample reached a steady size and spread rate quickly, while the thick PMMA samples kept growing until flow speed was reduced. BASS-II tested flows near the quenching limit, below those normally produced by ISS ventilation.",
+   "passed": false,
+   "false_answer_citations": [
+    "EV-BASS2-01",
+    "EV-BASS2-02",
+    "EV-SAF6-02"
+   ],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-17",
+   "type": "literature-only",
+   "expected": "abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-LUCI-01",
+    "EV-LUCI-02",
+    "EV-SAME-01"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "SAME-2 aged smoke in a chamber to simulate transport time from the source to the detector, varying it from 11 to 1800 s. LUCI showed material flammability testing at partial gravity is feasible on a spinning vehicle. On the LUCI rotating sounding rocket (simulated Lunar gravity), cotton-fiberglass fabric burning downward had a flame-base spread rate of 0.92 mm/s and flame-tip spread rate of 1.1 mm/s.",
+   "passed": false,
+   "false_answer_citations": [
+    "EV-LUCI-01",
+    "EV-LUCI-02",
+    "EV-SAME-01"
+   ],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-18",
+   "type": "unsupported",
+   "expected": "abstain",
+   "mode": "no-evidence",
+   "cited": [],
+   "latency_ms": 3,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "The library has no direct NASA combustion evidence for Kevlar. Related evidence exists for Nomex, but it does not answer this question directly. This is a gap in this library, not proof of non-flammability.",
+   "passed": true,
+   "false_answer_citations": [],
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-19",
+   "type": "unsupported",
+   "expected": "refuse_or_abstain",
+   "mode": "evidence-retrieval",
+   "cited": [
+    "EV-AP1-01",
+    "EV-MIR-02",
+    "EV-SAF6-03"
+   ],
+   "latency_ms": 4,
+   "model": null,
+   "claims": 3,
+   "dropped": 0,
+   "answer": "The Apollo 204 board listed conditions that led to the disaster, including a sealed oxygen-pressurized cabin and extensive combustible materials. Investigators identified latex glove material introduced into the canister as the most likely cause of the Mir fire. Saffire IV-VI found the cabin temperature and pressure rise less significant than the increase in carbon dioxide and carbon monoxide.",
+   "passed": true,
+   "boundary_triggered": false,
+   "safety_verdict_in_answer": false
+  },
+  {
+   "id": "H3-20",
+   "type": "unsupported",
+   "expected": "boundary",
+   "mode": "boundary",
+   "cited": [],
+   "latency_ms": 0,
+   "model": null,
+   "claims": 0,
+   "dropped": 0,
+   "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's authorised procedures and qualified fire-safety experts.",
+   "passed": true,
+   "safety_verdict_in_answer": false
+  }
+ ],
+ "evaluation_kind": "Internal: questions and labels written by the build assistant. Scoring is automatic (no human or LLM judge). Not an independent human evaluation.",
+ "disclosure": "HOLDOUT-3. Written 2026-11-15 after the four fixes were coded but BEFORE they were run on any of these questions; hash-locked in eval/HOLDOUT3.lock. Questions come from library findings and from passages of the original NASA publications (source per question) not used in holdout-2. 'relevant' lists the curated findings that state the reference fact; an empty list means the fact is only in the publication, so the correct behaviour is to decline. Written by the build assistant, who knows the failure types the fixes address (value questions, attribute questions, conflict questions, 'paper' phrasing): the set deliberately contains such questions, so it tests whether the fixes generalise, but it is not an independent holdout."
+}

@@ -184,7 +184,8 @@ NAV = {"twin": r"digital twin|cutaway", "studio": r"design studio|edit (my|the) 
        "audit": r"audit|discrepanc(y|ies) (page|table)", "incidents": r"incident (replay|intelligence)", "evaluation": r"evaluation (cent(re|er)|results)",
        "reports": r"(pdf|mission) report|export (a )?report"}
 NAV_Q = re.compile(r"\b(where (can|do|is)|how (do|can) i (open|find|get to|use|export|add|edit|create|generate)|which (page|tab|module)|take me to|go to|open the)\b", re.I)
-APP_Q = re.compile(r"\b(what (can|could|do|does) (you|this|the) ?(app|tool|platform|copilot|assistant)? ?(do|offer|help with)?|who are you|what are you|how does (this|the) (app|tool|copilot|routing|eligibility check|applicability|ranking) work|what is spacextinsafe|help me|^help)\b", re.I)
+# The app noun is required after "this/the" (fix 15 Nov, holdout-3: "What does the library say..." was routed to app help).
+APP_Q = re.compile(r"\b(what (can|could|do|does) (you|(this|the) (app|tool|platform|copilot|assistant))( do| offer| help with)?\b|who are you|what are you|how does (this|the) (app|tool|copilot|routing|eligibility check|applicability|ranking) work|what is spacextinsafe|help me|^help)\b", re.I)
 GREET_Q = re.compile(r"^\s*(hey+|hi+|hello+|hiya|yo|howdy|good (morning|afternoon|evening|day)|greetings|thanks?( you)?( so much)?|thank you|ok(ay)?|cool|great|bye|goodbye)( there| copilot| claude)?\s*[!.?]*\s*$", re.I)
 HOWTO_Q = re.compile(r"\bhow (do|can|should) (i|we|you)\b|\bhow to\b|\bwhere do i\b|\bsteps? to\b", re.I)
 HOWTO = [  # (pattern, page, steps) — application guidance only, never operational fire-safety procedure
@@ -276,14 +277,14 @@ def deterministic(question, scenario, spacecraft_id):
                     "tool": "spacecraft_inventory", "limitations": "Evidence status describes research coverage, not a safety rating."}
     if GREET_Q.match(q):
         thanks = re.search(r"thank", q, re.I); bye = re.search(r"bye", q, re.I)
-        txt = ("You're welcome." if thanks else "Goodbye." if bye else "Hi! I'm the SpaceXtinSafe Scientific Copilot.") + \
+        txt = ("You're welcome." if thanks else "Goodbye." if bye else "Hi! I'm the SpaceXtinsafe Scientific Copilot.") + \
             ("" if thanks or bye else " Ask me what NASA microgravity combustion experiments found about a material or condition, about your spacecraft, or how to use the app.")
         return {"mode": "deterministic", "answer": txt, "claims": [], "tool": "greeting",
                 "suggestions": ["What did FLEX investigate?", "What NASA evidence applies to the Crew quarters?", "How do I add a spacecraft?"]}
     if HOWTO_Q.search(q):
         for pat, page, steps in HOWTO:
             if re.search(pat, q, re.I):
-                return {"mode": "deterministic", "answer": "Here's how in SpaceXtinSafe:", "items": steps, "navigate": page, "claims": [], "tool": "app_guidance"}
+                return {"mode": "deterministic", "answer": "Here's how in SpaceXtinsafe:", "items": steps, "navigate": page, "claims": [], "tool": "app_guidance"}
     if NAV_Q.search(q):
         for page, pat in NAV.items():
             if re.search(pat, q, re.I):

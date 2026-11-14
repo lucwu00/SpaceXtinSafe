@@ -13,6 +13,7 @@ _ap = argparse.ArgumentParser()
 _ap.add_argument("--only", default="gaps,regression,holdout2,impact")
 _ap.add_argument("--tag", default="")
 _ap.add_argument("--live", action="store_true")
+_ap.add_argument("--set", default="holdout2", help="Copilot question set: holdout2 or holdout3")
 ARGS = _ap.parse_args()
 # Work on a copy of the database so benchmark materials never reach the real one.
 _HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -300,7 +301,7 @@ def regression():
 
 # ---------------------------------------------------------------- 3. Copilot holdout-2
 def holdout2(live=False):
-    spec, h = locked("holdout2_copilot.json", "HOLDOUT2.lock")
+    spec, h = locked(f"{ARGS.set}_copilot.json", f"{ARGS.set.upper()}.lock")
     qs = spec["questions"]; K = 5
     modes = ["keyword", "semantic", "hybrid", "hybrid+graph"]
     ret = {}
@@ -328,7 +329,7 @@ def holdout2(live=False):
         router._cache.clear(); router.RATE = 10_000; router.BUDGET_USD = max(router.BUDGET_USD, 5.0)
     for q in qs:
         t0 = time.time()
-        r = copilot.ask(q["q"], None, None, "auto", "validation-holdout2") if live else copilot.ask(q["q"])
+        r = copilot.ask(q["q"], None, None, "auto", f"validation-{ARGS.set}") if live else copilot.ask(q["q"])
         lat = round((time.time() - t0) * 1000)
         retrieved = {e["id"] for e in r.get("evidence", [])}
         cited = sorted({x for cl in r.get("claims", []) for x in cl["citations"]})
@@ -371,7 +372,7 @@ def holdout2(live=False):
            "cases": rows,
            "evaluation_kind": "Internal: questions and labels written by the build assistant. Scoring is automatic (no human or LLM judge). Not an independent human evaluation.",
            "disclosure": spec["about"]}
-    write(f"holdout2{'_live' if live else ''}", res, rows)
+    write(f"{ARGS.set}{'_live' if live else ''}", res, rows)
     return res
 
 

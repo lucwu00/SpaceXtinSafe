@@ -69,6 +69,24 @@ def check_claims(claims, retrieved):
     return kept, dropped
 
 
+# A question asking for a specific value: an answer without any number does not answer it (fix 15 Nov, holdout-2 H2-06).
+VALUE_Q = re.compile(r"\b(at what|how (fast|far|much|many|long|large|big|thick|wide)|what (was|is|were|are) the (\w+ )?(rate|speed|pressure|"
+                     r"temperature|concentration|diameter|length|width|duration|time|distance|value|ratio|percentage|range))\b", re.I)
+# Attributes that must appear in the cited evidence when the question asks for them (fix 15 Nov, holdout-2 H2-20).
+ATTR = re.compile(r"\b(sizes?|dimensions?|ratios?|diameters?|thickness|widths?|lengths?|volumes?|mass(?:es)?|weights?|temperatures?|durations?|"
+                  r"compositions?|percentages?)\b", re.I)
+
+
+def _attr_missing(question, kept, ev):
+    """Requested attributes (e.g. 'sample sizes') that none of the cited findings mention."""
+    asked = {m.group(1).lower().rstrip("s")[:6] for m in ATTR.finditer(question)}
+    if not asked or not kept:
+        return []
+    evm = {e["id"]: e for e in ev}
+    text = " ".join((evm[x]["statement"] + " " + evm[x]["quote"]).lower() for c in kept for x in c["citations"] if x in evm)
+    return [a for a in asked if a not in text]
+
+
 def _abstain(reason, question, related=None, kind="no-evidence"):
     return {"mode": kind, "answer": reason, "claims": [], "dropped": [], "evidence": related or [], "abstained": True}
 
@@ -229,14 +247,29 @@ def _ask(question, scenario, spacecraft_id, mode, client):
         c = router.cost(tier, a, b); tin += a; tout += b; usd += c; router.spend(c, a + b)
         kept, dropped = check_claims(j.get("claims", []), ev)
         STATE.update(mode="claude", last_error=None, verified_live=True)
-        # escalate only when evidence was judged sufficient but the answer failed the checks or came back empty
-        weak = (not kept) or (len(dropped) > len(kept))
+        no_value = bool(VALUE_Q.search(question)) and bool(kept) and not any(_nums(c["text"]) for c in kept)
+        missing_attr = _attr_missing(question, kept, ev)
+        # escalate only when evidence was judged sufficient but the answer failed the checks, came back empty,
+        # or omitted the value / attribute the question asked for
+        weak = (not kept) or (len(dropped) > len(kept)) or no_value or bool(missing_attr)
         if weak and tier < ceiling and not _blocked(client):
             routing["escalations"].append({"from": router.model_for(tier), "to": router.model_for(tier + 1),
                                            "why": "no claim passed the checks" if not kept else f"{len(dropped)} of {len(kept) + len(dropped)} claims failed the checks"})
             tier += 1; continue
         routing.update(tier=tier, model=router.model_for(tier), engine=f"Claude · {router.TIERS[tier]['name']}",
                        input_tokens=tin, output_tokens=tout, cost_usd=round(usd, 6))
+        if missing_attr or no_value:
+            # still unanswered after escalation: decline rather than answer from related findings
+            why = (f"No retrieved NASA finding reports the requested {', '.join(missing_attr)}." if missing_attr else
+                   "No retrieved NASA finding states the requested value.")
+            return {"mode": "no-evidence", "answer": why + " This is a gap in this library, not in all literature.", "claims": [], "dropped": kept + dropped,
+                    "evidence": ev, "abstained": True, "retrieval_mode": r["mode"], "graph_engine": r.get("graph_engine"),
+                    "routing": {**routing, "reason": "declined after the checks: answer did not contain what the question asked for"}}
+        if router.CONFLICT_Q.search(question):
+            # a conflict question must show the recorded conflict findings it was given, whether or not the model cited them (fix 15 Nov, deployed check 6)
+            cited = {x for c in kept for x in c["citations"]}
+            conf = [e for e in ev if e["category"] == "Conflicting evidence" and e["id"] not in cited]
+            kept = kept + [{"text": f"Recorded source conflict: {e['statement']}", "citations": [e["id"]], "added_by": "conflict rule"} for e in conf]
         return {"mode": "claude", "model": router.model_for(tier), "answer": " ".join(c["text"] for c in kept) or "The evidence does not support an answer.",
                 "claims": kept, "dropped": dropped, "limitations": j.get("limitations"), "evidence": ev, "retrieval_mode": r["mode"], "graph_engine": r.get("graph_engine"), "routing": routing}
 

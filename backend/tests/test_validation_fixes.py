@@ -19,3 +19,21 @@ def test_non_numeric_prediction_input_is_unavailable_not_an_error():
 def test_spacecraft_element_question_is_not_abstained_for_low_cosine():
     r = copilot.ask("What NASA evidence exists for the materials in the sleeping bag?", None, "SC-ORBITAL")
     assert r["mode"] != "no-evidence"
+
+
+def test_paper_in_publication_sense_is_not_the_material():
+    from app.core import retrieval
+    assert "MAT-PAPER" not in retrieval.entities("What were the objectives according to the 2016 Saffire objectives paper?")
+    assert "MAT-PAPER" in retrieval.entities("What NASA evidence exists for paper?")
+
+
+def test_library_question_is_not_routed_to_app_help():
+    from app.core import router
+    assert router.kind_of("What does the library say about silicone?") != "app"
+    assert router.kind_of("What can you do?") == "app"
+
+
+def test_value_and_attribute_rules():
+    assert copilot.VALUE_Q.search("At what oxygen pressure did sparks ignite combustibles?")
+    ev = [{"id": "E1", "statement": "LUCI burned fabric at lunar gravity.", "quote": "flame spread"}]
+    assert copilot._attr_missing("What sample sizes were flown?", [{"text": "x", "citations": ["E1"]}], ev) == ["size"]

@@ -113,8 +113,11 @@ def entities(q, spacecraft_id=None):
                 for k in o["components"]:
                     if k["name"].lower() in ql:
                         hits.append(f"{oid}/{k['id']}")
+    # 'paper' used in the publication sense (e.g. "the objectives paper") is not the material Paper (fix 15 Nov, holdout-2 H2-01)
+    qm = re.sub(r"\b(objectives?|research|conference|technical|review|journal|white|position|this|that|the|their|its|nasa|2016|2017|2018|2020|2024|2025|2026)\s+papers?\b"
+                r"|\bpapers?\s+(by|from|on|about|describ\w*|report\w*|states?|says?|notes?)\b", " ", ql)
     for alias, mid in data.material_aliases().items():
-        if re.search(r"\b" + re.escape(alias) + r"\b", ql):
+        if re.search(r"\b" + re.escape(alias) + r"\b", qm):
             hits.append(mid)
     # most specific first: drop a spacecraft hit if a compartment/object inside it was named
     specific = [h for h in hits if not any(o != h and o.startswith(h + "/") for o in hits)]
