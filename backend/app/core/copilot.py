@@ -5,7 +5,7 @@ evidence-retrieval summary, and the response says which mode produced it.
 """
 from __future__ import annotations
 import json, os, re, time
-from . import retrieval, data, models, store, router
+from . import retrieval, data, models, store, router, graph
 
 MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5-5")
 STATE = {"mode": "claude" if os.environ.get("ANTHROPIC_API_KEY") else "evidence-retrieval", "last_error": None, "verified_live": False}
@@ -194,6 +194,14 @@ def _ask(question, scenario, spacecraft_id, mode, client):
     ctx = "\n".join(f"[{e['id']}] ({e['investigation']}, {e['location']}) {e['statement']} QUOTE: \"{e['quote']}\"" for e in ev)
     links = _graph_links(question, spacecraft_id)
     if links:
+        # the graph candidate list is not ranked by relevance, so make sure the strongest experimental findings for the named
+        # element's materials are in the context (does not change the retrieval benchmark, which scores retrieval.search alone)
+        have = {e["id"] for e in ev}
+        direct = [e for mid in _linked_materials(question, spacecraft_id) for e in data.evidence_for_material(mid)
+                  if e["category"] in data.EV_CATS_DIRECT and e["id"] not in have]
+        seen = set(); direct = [e for e in direct if not (e["id"] in seen or seen.add(e["id"]))]
+        ev = ev + direct[:4]
+    if links:
         ctx = ("Spacecraft knowledge graph (facts about the user's configuration, not NASA findings; use them only to connect the "
                "named spacecraft element to the evidence about its materials):\n" + links + "\n\nNASA evidence:\n" + ctx)
     if scenario:
@@ -228,6 +236,10 @@ def _ask(question, scenario, spacecraft_id, mode, client):
                        input_tokens=tin, output_tokens=tout, cost_usd=round(usd, 6))
         return {"mode": "claude", "model": router.model_for(tier), "answer": " ".join(c["text"] for c in kept) or "The evidence does not support an answer.",
                 "claims": kept, "dropped": dropped, "limitations": j.get("limitations"), "evidence": ev, "retrieval_mode": r["mode"], "graph_engine": r.get("graph_engine"), "routing": routing}
+
+
+def _linked_materials(question, spacecraft_id):
+    return [m for ent in retrieval.entities(question, spacecraft_id) for m in graph.materials_for(ent)]
 
 
 def _graph_links(question, spacecraft_id):
