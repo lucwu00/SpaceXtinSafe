@@ -1,6 +1,7 @@
 """Run all evaluations and write eval/results.json. Every total is derived from the executed results.
 Usage: python -m scripts.run_eval"""
 import os as _os, tempfile as _tf
+_os.environ["SXS_RF_BENCHMARK"] = "1"  # evaluation always recomputes the random-forest benchmark
 _os.environ.setdefault("SXS_USAGE_LOG", _os.path.join(_tf.gettempdir(), "sxs_eval_usage.jsonl"))  # keep evaluation calls out of the server usage log
 import hashlib, json, os, statistics, time, datetime
 import numpy as np

@@ -82,9 +82,9 @@ function Copilot() {
               {h.r.mode === "claude" ? `Claude (${h.r.model})` : h.r.mode === "evidence-retrieval" ? "Evidence retrieval (no LLM)" : h.r.mode === "deterministic" ? "Deterministic (no LLM)" : h.r.mode}</span>
               {h.r.retrieval_mode && <span className="pill">retrieval: {h.r.retrieval_mode}{h.r.graph_engine ? ` · graph: ${h.r.graph_engine === "neo4j" ? "Neo4j" : "in-memory"}` : ""}</span>}</div>
             {h.r.routing && <RoutingLine rt={h.r.routing} />}
-            {h.r.items?.length > 0 && <ul className="small" style={{ paddingLeft: 18 }}>{h.r.items.map((x: string) => <li key={x}>{x}</li>)}</ul>}
             {h.r.claims?.length ? <ul style={{ paddingLeft: 18, margin: 0 }}>{h.r.claims.map((c: any, j: number) =>
               <li key={j}>{c.text} <span className="mono faint">[{c.citations.join(", ")}]</span></li>)}</ul> : <p>{h.r.answer}</p>}
+            {h.r.items?.length > 0 && <ul className="small" style={{ paddingLeft: 18, marginTop: 6 }}>{h.r.items.map((x: string) => <li key={x}>{x}</li>)}</ul>}
             {h.r.dropped?.length > 0 && <div className="banner" style={{ marginTop: 8 }}>{h.r.dropped.length} claim(s) removed by the citation and number check: {h.r.dropped.map((d: any) => d.problems.join("; ")).join(" | ")}</div>}
             {h.r.limitations && <div className="small faint" style={{ marginTop: 6 }}>{h.r.limitations}</div>}
             {h.r.evidence?.length > 0 && <details style={{ marginTop: 8 }}><summary className="small muted">Evidence used ({h.r.evidence.length})</summary>

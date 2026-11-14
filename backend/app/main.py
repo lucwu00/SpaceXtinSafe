@@ -19,7 +19,7 @@ def _warm():
     import threading
     def go():
         try:
-            retrieval.status(); graph.build()
+            retrieval.status(); graph.build(); models.registry()  # warm the FLEX models so the first prediction is instant
             if os.environ.get("NEO4J_URI"):
                 graph.neo4j_sync()  # verified connection status comes only from a real sync
             if router.api_key():

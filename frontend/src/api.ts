@@ -52,7 +52,12 @@ function fromSnapshot(method: string, url: string, body?: any): any {
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   if (SNAP) return fromSnapshot(init?.method || "GET", path, init?.body ? JSON.parse(String(init.body)) : undefined);
-  const r = await fetch(BASE + path, { headers: { "Content-Type": "application/json" }, ...init });
+  // Never spin forever: a free-tier backend can be asleep or restarting. 90 s covers a cold start.
+  const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 90_000);
+  let r: Response;
+  try { r = await fetch(BASE + path, { headers: { "Content-Type": "application/json" }, signal: ctl.signal, ...init }); }
+  catch (e: any) { throw new Error(e?.name === "AbortError" ? "The server took more than 90 s to answer (it may be waking up or restarting). Please try again." : `Cannot reach the API: ${e?.message || e}`); }
+  finally { clearTimeout(timer); }
   if (!r.ok) {
     let msg = r.statusText;
     try { msg = (await r.json()).detail || msg; } catch { /* keep status text */ }

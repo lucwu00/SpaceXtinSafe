@@ -9,6 +9,7 @@ Pre-registered rules (fixed before fitting, not tuned on results):
 - Parameter count includes the intercept (O2-only OLS = 2 parameters; O2 + D0 = 3).
 """
 from __future__ import annotations
+import os
 from functools import lru_cache
 import numpy as np
 from scipy.spatial import Delaunay
@@ -72,6 +73,20 @@ def _metrics(y, p, b):
             "oof_r2": 1 - ss_res / ss_tot if ss_tot else None}
 
 
+def _stored_rf(model_id):
+    """The random-forest benchmark is evaluation-only and expensive (300 trees x leave-one-session-out). The serving path
+    reuses the figures from the last executed evaluation (eval/results.json) instead of refitting on every cold start."""
+    try:
+        import json
+        f = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "eval", "results.json")
+        for m in json.load(open(f))["models"]:
+            if m["model_id"] == model_id:
+                r = m["benchmark"]["random_forest"]
+                return {"mae": r["mae"], "rmse": r["rmse"], "predictive_skill": r["predictive_skill"]}
+    except Exception:
+        return None
+
+
 @lru_cache
 def registry() -> list[dict]:
     out = []
@@ -85,9 +100,12 @@ def registry() -> list[dict]:
             beta = _ols(X, y)
             oof, base = _loso(rows, X, y, lambda a, b_, c: _pred(_ols(a, b_), c))
             met = _metrics(y, oof, base)
-            rf = lambda a, b_, c: RandomForestRegressor(n_estimators=300, max_depth=3, min_samples_leaf=3, random_state=0).fit(a, b_).predict(c)
-            rf_oof, _ = _loso(rows, X, y, rf)
-            rf_met = _metrics(y, rf_oof, base)
+            mid = f"FLEX-K-{'METH' if fuel == 'methanol' else 'HEPT'}-{band}"
+            rf_met = _stored_rf(mid) if not os.environ.get("SXS_RF_BENCHMARK") else None
+            if rf_met is None:  # evaluation runs (SXS_RF_BENCHMARK=1) or no stored result: recompute the 300-tree benchmark
+                rf = lambda a, b_, c: RandomForestRegressor(n_estimators=300, max_depth=3, min_samples_leaf=3, random_state=0).fit(a, b_).predict(c)
+                rf_oof, _ = _loso(rows, X, y, rf)
+                rf_met = _metrics(y, rf_oof, base)
             sessions = len({t["date"] for t in rows})
             failed = [k for k, ok in (("min_tests", len(rows) >= RULES["min_tests"]), ("min_sessions", sessions >= RULES["min_sessions"]),
                                        ("min_skill", (met["predictive_skill"] or 0) >= RULES["min_skill"])) if not ok]
