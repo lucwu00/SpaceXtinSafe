@@ -1,0 +1,167 @@
+{
+ "config": {
+  "generated_utc": "2026-11-14T21:20:22+00:00",
+  "tag": "local",
+  "semantic": true,
+  "graph_engine": "in-memory networkx (NEO4J_URI unset for validation)",
+  "claude_key_present": false
+ },
+ "task_file_sha256": "0f30a08fb5c9cf69cd3bf6fb338b42b415de7278655d90db365a10c19bb50799",
+ "tasks": [
+  {
+   "id": "T1",
+   "type": "evidence retrieval",
+   "task": "Find every NASA finding on Nomex burning in microgravity.",
+   "baseline_ms": 1.4,
+   "baseline_pages_matched": 10,
+   "baseline_pages_to_read_for_all_refs": 4,
+   "baseline_ref_pages_found": "2/2",
+   "baseline_ref_in_top10": "2/2",
+   "baseline_top10_precision": 0.2,
+   "baseline_sources_matched": 4,
+   "posthoc_or_pages_matched": 10,
+   "posthoc_or_ref_pages_found": "2/2",
+   "posthoc_or_pages_to_read_for_all_refs": 4,
+   "system_ms": 1.4,
+   "system_items": [
+    "EV-SAF-08",
+    "EV-SAF6-01"
+   ],
+   "system_completeness": 1.0,
+   "system_precision": 1.0,
+   "system_citations_verified": "2/2"
+  },
+  {
+   "id": "T2",
+   "type": "interaction analysis",
+   "task": "Is there documented evidence of PMMA and Nomex burning as a combined sample, and of polyester with polyurethane foam?",
+   "baseline_ms": 1.5,
+   "baseline_pages_matched": 6,
+   "baseline_pages_to_read_for_all_refs": null,
+   "baseline_ref_pages_found": "0/1",
+   "baseline_ref_in_top10": "0/1",
+   "baseline_top10_precision": 0.0,
+   "baseline_sources_matched": 3,
+   "posthoc_or_pages_matched": 100,
+   "posthoc_or_ref_pages_found": "1/1",
+   "posthoc_or_pages_to_read_for_all_refs": 32,
+   "system_ms": 0.3,
+   "system_items": [
+    "EV-SAF-08"
+   ],
+   "system_completeness": 1.0,
+   "system_precision": 1.0,
+   "system_citations_verified": "1/1",
+   "pair_status": [
+    "Documented interaction",
+    "No documented interaction (research gap)"
+   ],
+   "absence_reported": true
+  },
+  {
+   "id": "T3",
+   "type": "applicability",
+   "task": "Which findings apply to cotton-fiberglass fabric in microgravity at about 21% O2 and 20 cm/s flow, and which of them carry a source conflict?",
+   "baseline_ms": 1.3,
+   "baseline_pages_matched": 11,
+   "baseline_pages_to_read_for_all_refs": null,
+   "baseline_ref_pages_found": "1/2",
+   "baseline_ref_in_top10": "1/2",
+   "baseline_top10_precision": 0.1,
+   "baseline_sources_matched": 5,
+   "posthoc_or_pages_matched": 229,
+   "posthoc_or_ref_pages_found": "1/2",
+   "posthoc_or_pages_to_read_for_all_refs": null,
+   "system_ms": 2.7,
+   "system_items": [
+    "EV-SAF-10",
+    "EV-SAF-03",
+    "EV-SAF-04",
+    "EV-SAF-05",
+    "EV-SAF6-02",
+    "EV-SAF6-03",
+    "EV-SAF-09",
+    "EV-SAF-06",
+    "EV-LUCI-01"
+   ],
+   "system_completeness": 1.0,
+   "system_precision": 0.5555555555555556,
+   "system_citations_verified": "9/9",
+   "conflicts_flagged": [
+    "EV-SAF-06",
+    "EV-SAF-09"
+   ],
+   "tiers": {
+    "EV-SAF-10": "Directly applicable",
+    "EV-SAF-03": "Directly applicable",
+    "EV-SAF-04": "Directly applicable",
+    "EV-SAF-05": "Directly applicable",
+    "EV-SAF6-02": "Directly applicable",
+    "EV-SAF6-03": "Directly applicable",
+    "EV-SAF-09": "Partially applicable",
+    "EV-SAF-06": "Partially applicable",
+    "EV-LUCI-01": "Partially applicable"
+   }
+  },
+  {
+   "id": "T4",
+   "type": "gap identification",
+   "task": "Of PMMA, cotton-fiberglass (SIBAL), Nomex, silicone, methanol and Kapton, which have no direct experimental finding at partial (lunar or Martian) gravity?",
+   "baseline_ms": 1.5,
+   "baseline_pages_matched": 1,
+   "baseline_pages_to_read_for_all_refs": null,
+   "baseline_ref_pages_found": "0/1",
+   "baseline_ref_in_top10": "0/1",
+   "baseline_top10_precision": 0.0,
+   "baseline_sources_matched": 1,
+   "posthoc_or_pages_matched": 48,
+   "posthoc_or_ref_pages_found": "0/1",
+   "posthoc_or_pages_to_read_for_all_refs": null,
+   "posthoc_literature_pages_partial_g_with_gap_material": [
+    "20200000361.pages.json p.6",
+    "ASGSR 2025-LUCI-Ferkul-Presentation-v2-20250010653.pages.json p.12",
+    "ASGSR 2025-LUCI-Ferkul-Presentation-v2-20250010653.pages.json p.13",
+    "ASGSR 2025-LUCI-Ferkul-Presentation-v2-20250010653.pages.json p.16",
+    "ASGSR 2025-LUCI-Ferkul-Presentation-v2-20250010653.pages.json p.17",
+    "Ferkul-Lunar and Planetary Science Conference 2026.pages.json p.2",
+    "Saffire-ICES-2024-ICES-365-accepted final.pages.json p.6"
+   ],
+   "system_ms": 6.2,
+   "system_items": [
+    "EV-LUCI-01"
+   ],
+   "system_completeness": 1.0,
+   "system_precision": 1.0,
+   "system_citations_verified": "1/1",
+   "gaps_reported": [
+    "MAT-KAPTON",
+    "MAT-METHANOL",
+    "MAT-NOMEX",
+    "MAT-PMMA",
+    "MAT-SILICONE"
+   ],
+   "gap_set_correct": true
+  },
+  {
+   "id": "T5",
+   "type": "report preparation",
+   "task": "Prepare a cited evidence summary of the Orbital Research Module at its cabin conditions, including gaps and limitations.",
+   "system_ms": 380.9,
+   "pdf_bytes": 15437,
+   "sections_present": {
+    "evidence": true,
+    "gap": true,
+    "limitation": false,
+    "citation": true,
+    "boundary": false
+   },
+   "ev_ids_cited_in_pdf": 0
+  }
+ ],
+ "label": "AUTOMATED PROXY. Machine time and retrieval coverage only; no human participants and no manual research times. The traditional-search proxy is exact-keyword full-text search over the same 14 NASA publications the library was curated from.",
+ "caveats": [
+  "The SpaceXtinsafe side reads findings the build assistant curated from these same publications, so completeness against curated references favours it by construction.",
+  "Keyword search also surfaces literature the library did not curate (see T4), which a human researcher would find and the system would not.",
+  "Millisecond timings are machine latency, not research time."
+ ]
+}

@@ -13,7 +13,7 @@ OPERATIONAL = re.compile(r"\b(steps to|procedure (for|to)|should (the )?crew|sho
 QUANT = re.compile(r"\b(predict|estimate|forecast|calculate|compute|how fast will|what will (the|its))\b", re.I)
 INTERACT = re.compile(r"\b(together|each other|adjacent|next to|combined|interact\w*|in contact)\b", re.I)
 PROPERTY = re.compile(r"\b(melting point|boiling point|ignition temperature|autoignition|flash point|thermal conductivity|density|specific heat|heat of combustion|toxicity|tensile|modulus)\b", re.I)
-GENERIC = set("what which how does did do is are was were the a an of in on for to and or with by at from about this that these those there any some known know nasa evidence research find found findings say says show shows study studied data result results experiment experiments test tests spacecraft space fire fires flame flames burn burning burns combustion material materials happen happens happened when why can could would will should relate relates related relevant apply applies applicable regarding concern concerning cover covers information tell explain describe".split())
+GENERIC = set("what which how does did do is are was were the a an of in on for to and or with by at from about this that these those there any some known know nasa evidence research find found findings say says show shows study studied data result results experiment experiments test tests spacecraft space fire fires flame flames burn burning burns combustion material materials happen happens happened when why can could would will should relate relates related relevant apply applies applicable regarding concern concerning cover covers information tell explain describe exist exists existing available".split())
 
 
 def _stem(w):
@@ -171,7 +171,10 @@ def _ask(question, scenario, spacecraft_id, mode, client):
     # Rule added 2026-11-15 after user testing ("What did FLEX investigate?" abstained at cosine 0.30): a question that names a NASA
     # investigation, with every salient word found in evidence retrieved from that same investigation, is not treated as weak.
     inv_named = {e["investigation"] for e in ev[:3] if re.search(r"\b" + re.escape(e["investigation"].split()[0].split("-")[0]) + r"\b", question, re.I)}
-    weak = ((top_cos is not None and top_cos < 0.35 and not (inv_named and ov == 1.0))
+    # Same exception for a question that names a spacecraft element resolved by the knowledge graph (e.g. "the sleeping bag"):
+    # NASA findings never mention the object itself, so the cosine is low by construction (added 2026-11-15, deployed check 5).
+    element_named = any("/" in x for x in retrieval.entities(question, spacecraft_id)) if spacecraft_id else False
+    weak = ((top_cos is not None and top_cos < 0.35 and not ((inv_named or element_named) and ov == 1.0))
             or (top_cos is None and not retrieval.bm25(question)) or ov == 0)
     if not ev or weak:
         return {"mode": "no-evidence", "answer": "No NASA evidence in the library answers this question." + (f" Retrieved findings do not mention: {', '.join(missing)}." if missing else ""),

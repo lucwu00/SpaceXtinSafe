@@ -1,0 +1,15 @@
+{
+ "about": "Matched research tasks for the impact comparison, written 2026-11-15 before any run and hash-locked in eval/IMPACT.lock. 'reference' lists the curated findings a complete answer must cite; each finding maps to a page of an original NASA publication. 'keywords' is what a researcher would type into a full-text search of the same 14 publications (the traditional-search proxy). The automated comparison is a PROXY: it measures machine retrieval of the reference pages, not human time.",
+ "tasks": [
+  {"id": "T1", "type": "evidence retrieval", "task": "Find every NASA finding on Nomex burning in microgravity.", "keywords": ["Nomex"], "reference": ["EV-SAF-08", "EV-SAF6-01"],
+   "system": {"call": "material", "material": "MAT-NOMEX"}},
+  {"id": "T2", "type": "interaction analysis", "task": "Is there documented evidence of PMMA and Nomex burning as a combined sample, and of polyester with polyurethane foam?", "keywords": ["PMMA", "Nomex"], "reference": ["EV-SAF-08"], "absence_pairs": [["MAT-POLYESTER", "MAT-PU"]],
+   "system": {"call": "interaction", "pairs": [["MAT-PMMA", "MAT-NOMEX"], ["MAT-POLYESTER", "MAT-PU"]]}},
+  {"id": "T3", "type": "applicability", "task": "Which findings apply to cotton-fiberglass fabric in microgravity at about 21% O2 and 20 cm/s flow, and which of them carry a source conflict?", "keywords": ["cotton", "fiberglass", "flow"], "reference": ["EV-SAF-03", "EV-SAF-04", "EV-SAF-05", "EV-SAF-06", "EV-SAF-09"], "conflicts": ["EV-SAF-06", "EV-SAF-09"],
+   "system": {"call": "rank", "scenario": {"material_id": "MAT-SIBAL", "form": "fabric", "o2_pct": 21, "pressure_kpa": 101.3, "gravity": "microgravity", "flow_cm_s": 20}}},
+  {"id": "T4", "type": "gap identification", "task": "Of PMMA, cotton-fiberglass (SIBAL), Nomex, silicone, methanol and Kapton, which have no direct experimental finding at partial (lunar or Martian) gravity?", "keywords": ["lunar", "partial gravity", "Martian"], "reference_gaps": ["MAT-PMMA", "MAT-NOMEX", "MAT-SILICONE", "MAT-METHANOL", "MAT-KAPTON"], "reference_evidence": ["EV-LUCI-01"],
+   "system": {"call": "gaps", "materials": ["MAT-PMMA", "MAT-SIBAL", "MAT-NOMEX", "MAT-SILICONE", "MAT-METHANOL", "MAT-KAPTON"]}},
+  {"id": "T5", "type": "report preparation", "task": "Prepare a cited evidence summary of the Orbital Research Module at its cabin conditions, including gaps and limitations.", "keywords": [], "required_sections": ["evidence", "gap", "limitation", "citation", "boundary"],
+   "system": {"call": "report", "spacecraft_id": "SC-ORBITAL"}}
+ ]
+}

@@ -1,0 +1,467 @@
+{
+ "config": {
+  "generated_utc": "2026-11-14T21:20:22+00:00",
+  "tag": "local",
+  "semantic": true,
+  "graph_engine": "in-memory networkx (NEO4J_URI unset for validation)",
+  "claude_key_present": false
+ },
+ "models": [
+  {
+   "model_id": "FLEX-K-METH-1atm",
+   "status": "Model-supported",
+   "n": 41,
+   "sessions": 13,
+   "features": [
+    "O2 mole percent",
+    "Initial droplet diameter (mm)"
+   ],
+   "mae": 0.03088935129792934,
+   "baseline_mae": 0.09723000698931379,
+   "skill": 0.6823063964057487,
+   "oof_r2": 0.8350845731974156,
+   "bootstrap": {
+    "B": 2000,
+    "unit": "session",
+    "mae_95ci": [
+     0.022212606762460813,
+     0.043217231778215924
+    ],
+    "skill_95ci": [
+     0.5414771885833853,
+     0.7782707339103482
+    ],
+    "bias_95ci": [
+     -0.011242476539958883,
+     0.009819360442230635
+    ]
+   },
+   "residual_bias": {
+    "mean_mm2_s": 0.001019249067478084,
+    "per_session_mean_range": [
+     -0.08266246113320053,
+     0.033384860718675136
+    ],
+    "sessions_with_abs_mean_resid_gt_mae": 2,
+    "per_session": {
+     "1/11/2010": 0.033384860718675136,
+     "1/12/2010": -0.08266246113320053,
+     "11/13/09": 0.00838475267555755,
+     "11/27/09": -0.01671466982457573,
+     "2/4/2010": 0.021316243173943053,
+     "3/19/2010": 0.0018128687802369202,
+     "3/29/2010": 0.0024485231525099155,
+     "3/31/2009": -0.0060630839403591485,
+     "3/5/2009": 0.01023139902819481,
+     "4/19/2010": 0.012065106254419044,
+     "8/24/2011": 0.007243824278241995,
+     "9/8/2011": 0.0008078463573501227,
+     "9/9/2011": -0.01255622427826486
+    }
+   },
+   "interval_90": {
+    "half_width_mm2_s": 0.05475122663756338,
+    "app_band_coverage_in_sample": 0.9024390243902439,
+    "cross_conformal_session_coverage": 0.8780487804878049,
+    "n": 41,
+    "note": "App band = 90th percentile of all out-of-fold residuals, so its in-sample coverage is ~0.9 by construction. Cross-conformal: for each session the band is built from the other sessions' residuals only."
+   },
+   "sensitivity": {
+    "centroid": {
+     "o2_pct": 17.658536585365855,
+     "d0_mm": 2.7912195121951218
+    },
+    "estimate_at_centroid": 0.43975609756097567,
+    "delta_K_per_+1pp_O2": 0.01831474091534403,
+    "delta_K_per_+0.5mm_D0": -0.027244081139348123,
+    "O2_slope_across_folds": [
+     0.017603523083593142,
+     0.018744167072689832
+    ],
+    "D0_slope_across_folds": [
+     -0.06114316858291058,
+     -0.043749425754475345
+    ],
+    "O2_slope_sign_stable": true
+   }
+  },
+  {
+   "model_id": "FLEX-K-METH-0.7atm",
+   "status": "Exploratory",
+   "n": 12,
+   "sessions": 6,
+   "features": [
+    "O2 mole percent"
+   ],
+   "mae": 0.053851716641077185,
+   "baseline_mae": 0.10145791245791246,
+   "skill": 0.46922112493280044,
+   "oof_r2": 0.512309177962692,
+   "bootstrap": {
+    "B": 2000,
+    "unit": "session",
+    "mae_95ci": [
+     0.028437193648958147,
+     0.07869515157968257
+    ],
+    "skill_95ci": [
+     -0.09899084621490539,
+     0.7754813531872496
+    ],
+    "bias_95ci": [
+     -0.06259512497207044,
+     0.04137792234888662
+    ]
+   },
+   "residual_bias": {
+    "mean_mm2_s": -0.010270527086503759,
+    "per_session_mean_range": [
+     -0.10070820021299247,
+     0.06377059569074783
+    ],
+    "sessions_with_abs_mean_resid_gt_mae": 2,
+    "per_session": {
+     "1/29/2010": -0.0408823529411762,
+     "1/7/2010": 0.06377059569074783,
+     "1/8/2010": 0.03348648648648622,
+     "10/24/09": -0.10070820021299247,
+     "11/9/2009": 0.03348648648648622,
+     "12/15/09": -0.0008441558441558694
+    }
+   },
+   "interval_90": {
+    "half_width_mm2_s": 0.06848177141579068,
+    "app_band_coverage_in_sample": 0.8333333333333334,
+    "cross_conformal_session_coverage": 0.9166666666666666,
+    "n": 12,
+    "note": "App band = 90th percentile of all out-of-fold residuals, so its in-sample coverage is ~0.9 by construction. Cross-conformal: for each session the band is built from the other sessions' residuals only."
+   },
+   "sensitivity": {
+    "centroid": {
+     "o2_pct": 29.166666666666668,
+     "d0_mm": 3.330833333333333
+    },
+    "estimate_at_centroid": 0.5941666666666665,
+    "delta_K_per_+1pp_O2": 0.01566367713004484,
+    "delta_K_per_+0.5mm_D0": 0.0,
+    "O2_slope_across_folds": [
+     0.013647058823529418,
+     0.019592651757188495
+    ],
+    "D0_slope_across_folds": null,
+    "O2_slope_sign_stable": true
+   }
+  },
+  {
+   "model_id": "FLEX-K-HEPT-1atm",
+   "status": "Exploratory",
+   "n": 31,
+   "sessions": 14,
+   "features": [
+    "O2 mole percent",
+    "Initial droplet diameter (mm)"
+   ],
+   "mae": 0.10547324912250686,
+   "baseline_mae": 0.13681090100111234,
+   "skill": 0.22905814996679763,
+   "oof_r2": 0.25530160511642785,
+   "bootstrap": {
+    "B": 2000,
+    "unit": "session",
+    "mae_95ci": [
+     0.0681339388781741,
+     0.15112495027697512
+    ],
+    "skill_95ci": [
+     -0.0384410412208192,
+     0.4545601763230258
+    ],
+    "bias_95ci": [
+     -0.0589348852456748,
+     0.07985154702100444
+    ]
+   },
+   "residual_bias": {
+    "mean_mm2_s": 0.004804534289253109,
+    "per_session_mean_range": [
+     -0.1654526082634128,
+     0.24815275321531324
+    ],
+    "sessions_with_abs_mean_resid_gt_mae": 4,
+    "per_session": {
+     "1/11/2010": -0.022681841615497245,
+     "1/12/2010": -0.03355699952140445,
+     "1/19/2010": 0.0363802457666591,
+     "11/13/09": 0.02695073126165831,
+     "11/27/09": -0.054991467576249786,
+     "3/11/2010": -0.030613542017656314,
+     "3/23/2010": 0.24815275321531324,
+     "3/30/2010": -0.1654526082634128,
+     "4/10/2009": 0.10631084666115975,
+     "8/29/2011": -0.05870782092299279,
+     "8/30/2011": -0.09176373095486162,
+     "9/1/2011": -0.1317023353562031,
+     "9/23/2011": -0.017007460495563786,
+     "9/24/2011": 0.0026571615232523216
+    }
+   },
+   "interval_90": {
+    "half_width_mm2_s": 0.22266887091168275,
+    "app_band_coverage_in_sample": 0.9032258064516129,
+    "cross_conformal_session_coverage": 0.8709677419354839,
+    "n": 31,
+    "note": "App band = 90th percentile of all out-of-fold residuals, so its in-sample coverage is ~0.9 by construction. Cross-conformal: for each session the band is built from the other sessions' residuals only."
+   },
+   "sensitivity": {
+    "centroid": {
+     "o2_pct": 19.548387096774192,
+     "d0_mm": 2.914516129032257
+    },
+    "estimate_at_centroid": 0.5458064516129031,
+    "delta_K_per_+1pp_O2": 0.022610046683581454,
+    "delta_K_per_+0.5mm_D0": -0.052179810690762427,
+    "O2_slope_across_folds": [
+     0.01930299555974558,
+     0.029971904296923847
+    ],
+    "D0_slope_across_folds": [
+     -0.10877342161023786,
+     -0.09181703087141643
+    ],
+    "O2_slope_sign_stable": true
+   }
+  },
+  {
+   "model_id": "FLEX-K-HEPT-0.7atm",
+   "status": "Exploratory",
+   "n": 9,
+   "sessions": 6,
+   "features": [
+    "O2 mole percent"
+   ],
+   "mae": 0.10946588362722164,
+   "baseline_mae": 0.13515873015873017,
+   "skill": 0.19009387333940553,
+   "oof_r2": 0.1138856797163268,
+   "bootstrap": {
+    "B": 2000,
+    "unit": "session",
+    "mae_95ci": [
+     0.06394351160398888,
+     0.1620263381478335
+    ],
+    "skill_95ci": [
+     -0.06265617335059326,
+     0.4363582818304892
+    ],
+    "bias_95ci": [
+     -0.04289870545096816,
+     0.13659546061415226
+    ]
+   },
+   "residual_bias": {
+    "mean_mm2_s": 0.0400187313369802,
+    "per_session_mean_range": [
+     -0.06712918660287093,
+     0.20499999999999993
+    ],
+    "sessions_with_abs_mean_resid_gt_mae": 2,
+    "per_session": {
+     "1/29/2010": 0.20499999999999993,
+     "1/7/2010": 0.025654205607476888,
+     "1/8/2010": -0.015263157894736923,
+     "10/24/09": -0.06299065420560768,
+     "11/9/2009": -0.06712918660287093,
+     "8/26/2009": 0.15228971962616844
+    }
+   },
+   "interval_90": {
+    "half_width_mm2_s": 0.17499999999999993,
+    "app_band_coverage_in_sample": 0.8888888888888888,
+    "cross_conformal_session_coverage": 0.7777777777777778,
+    "n": 9,
+    "note": "App band = 90th percentile of all out-of-fold residuals, so its in-sample coverage is ~0.9 by construction. Cross-conformal: for each session the band is built from the other sessions' residuals only."
+   },
+   "sensitivity": {
+    "centroid": {
+     "o2_pct": 29.11111111111111,
+     "d0_mm": 3.2322222222222226
+    },
+    "estimate_at_centroid": 0.6722222222222224,
+    "delta_K_per_+1pp_O2": 0.02199261992619927,
+    "delta_K_per_+0.5mm_D0": 0.0,
+    "O2_slope_across_folds": [
+     0.018901869158878495,
+     0.0375
+    ],
+    "D0_slope_across_folds": null,
+    "O2_slope_sign_stable": true
+   }
+  }
+ ],
+ "ood_grid": {
+  "model": "FLEX-K-METH-1atm",
+  "o2_range_tested": [
+   12.0,
+   30.0
+  ],
+  "d0_range_tested": [
+   1.61,
+   3.97
+  ],
+  "n_points": 1058,
+  "outside_1d_ranges": {
+   "Model-supported estimate": 0,
+   "Exploratory estimate": 90,
+   "Unavailable": 797
+  },
+  "inside_1d_ranges": {
+   "Model-supported estimate": 67,
+   "Exploratory estimate": 93,
+   "Unavailable": 11
+  },
+  "model_supported_outside_ranges": 0
+ },
+ "invalid_requests": [
+  {
+   "request": "O2 0%",
+   "outcome": "Unavailable",
+   "reasons": [
+    "O2 percent must be within (0, 100]"
+   ],
+   "error": null
+  },
+  {
+   "request": "O2 150%",
+   "outcome": "Unavailable",
+   "reasons": [
+    "O2 percent must be within (0, 100]"
+   ],
+   "error": null
+  },
+  {
+   "request": "pressure -5 kPa",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Pressure must be positive and below 1000 kPa"
+   ],
+   "error": null
+  },
+  {
+   "request": "pressure 0",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Pressure must be positive and below 1000 kPa"
+   ],
+   "error": null
+  },
+  {
+   "request": "D0 0 mm",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Droplet diameter must be positive and at most 10 mm"
+   ],
+   "error": null
+  },
+  {
+   "request": "D0 25 mm",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Droplet diameter must be positive and at most 10 mm"
+   ],
+   "error": null
+  },
+  {
+   "request": "D0 missing",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Missing input: d0_mm"
+   ],
+   "error": null
+  },
+  {
+   "request": "fuel missing",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Missing input: fuel"
+   ],
+   "error": null
+  },
+  {
+   "request": "O2 as text",
+   "outcome": "Unavailable",
+   "reasons": [
+    "O2, pressure and diameter must be numbers"
+   ],
+   "error": null
+  },
+  {
+   "request": "pressure 50 kPa (no band)",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Pressure outside every tested band"
+   ],
+   "error": null
+  },
+  {
+   "request": "pressure 300 kPa (CO2-free band absent)",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Pressure outside every tested band"
+   ],
+   "error": null
+  },
+  {
+   "request": "helium diluent",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Diluent 'helium' is not covered by the nitrogen-diluent models"
+   ],
+   "error": null
+  },
+  {
+   "request": "1-g",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Gravity '1-g' differs from the microgravity experiments"
+   ],
+   "error": null
+  },
+  {
+   "request": "ethanol",
+   "outcome": "Unavailable",
+   "reasons": [
+    "Fuel 'ethanol' was not tested in FLEX"
+   ],
+   "error": null
+  }
+ ],
+ "leakage_audit": {
+  "grouping": "leave-one-session-out; session = test date; assertion that no session appears in both train and test passed for every fold",
+  "preprocessing": "Features are raw O2 percent and D0 (no scaling, imputation or feature selection fitted on data). Standardisation is used only by the eligibility checks, never in fitting or scoring.",
+  "fitted_choices": "Feature set (D0 included if n >= 25), status thresholds and random-forest settings are fixed rules in models.RULES, not tuned on CV results.",
+  "baseline": "Mean baseline is fitted on the training sessions of each fold (same folds as OLS).",
+  "interval": "The app's 90% half-width is a quantile of out-of-fold residuals pooled over all sessions; it is reported as an empirical band, not a calibrated interval.",
+  "excluded_tests": [
+   {
+    "test": "AUD-FLEX-070-k_mm2_s",
+    "reason": true,
+    "field": null,
+    "status": "Confirmed discrepancy"
+   }
+  ],
+  "n_excluded": 1,
+  "duplicate_rows_across_sessions": 0
+ },
+ "thresholds": {
+  "min_tests": 20,
+  "min_sessions": 8,
+  "min_skill": 0.3,
+  "d0_feature_min_n": 25,
+  "knn_k": 3,
+  "knn_quantile": 0.95,
+  "local_min_points": 3,
+  "local_min_sessions": 2
+ },
+ "note": "Thresholds unchanged by this validation."
+}

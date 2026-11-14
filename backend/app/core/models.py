@@ -190,7 +190,11 @@ def assess(req: dict) -> dict:
     add("Required inputs", not missing, "All inputs provided" if not missing else f"Missing: {', '.join(missing)}", "missing")
     if missing:
         return {"outcome": "Unavailable", "estimate": None, "checks": checks, "reasons": [f"Missing input: {k}" for k in missing], "model": None}
-    o2, p, d0 = float(req["o2_pct"]), float(req["pressure_kpa"]), float(req["d0_mm"])
+    try:
+        o2, p, d0 = float(req["o2_pct"]), float(req["pressure_kpa"]), float(req["d0_mm"])
+    except (TypeError, ValueError):  # non-numeric input returned as Unavailable, not a server error (found by validate_science)
+        add("Physical validity", False, "O2, pressure and diameter must be numbers", "physical")
+        return {"outcome": "Unavailable", "estimate": None, "checks": checks, "reasons": ["O2, pressure and diameter must be numbers"], "model": None}
     phys = [(0 < o2 <= 100, "O2 percent must be within (0, 100]"), (0 < p <= 1000, "Pressure must be positive and below 1000 kPa"),
             (0 < d0 <= 10, "Droplet diameter must be positive and at most 10 mm")]
     bad = [msg for ok, msg in phys if not ok]

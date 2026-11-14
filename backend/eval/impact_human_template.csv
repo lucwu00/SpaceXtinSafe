@@ -1,0 +1,3 @@
+participant_code,arm,task_set,task_id,condition,start_utc,stop_utc,timed_out,answer_text,citations_source_page,reference_items_found,reference_items_total,citations_correct,citations_total,absence_correctly_stated,safety_from_absence_error,scorer_code,notes
+P01,AB-A,A,T1,traditional,,,,,,,,,,,,,
+P01,AB-A,A,T2,traditional,,,,,,,,,,,,,

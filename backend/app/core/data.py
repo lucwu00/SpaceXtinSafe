@@ -167,8 +167,13 @@ def bass2_tests() -> list[dict]:
 def material_aliases() -> dict[str, str]:  # noqa: D401
     """lower-case evidence material name -> material id"""
     m = {}
+    base = _base_materials()
     for mid, mat in materials().items():
         for a in [mat["name"], *mat["aliases"]]:
+            # A user-defined name or alias never takes over a catalogue name: otherwise the catalogue material
+            # would silently lose its NASA findings (found by the gap benchmark, case G20).
+            if a.lower() in m and m[a.lower()] in base and mid not in base:
+                continue
             m[a.lower()] = mid
     return m
 
