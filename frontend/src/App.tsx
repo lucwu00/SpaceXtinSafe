@@ -37,9 +37,9 @@ function StatusPills() {
 function RoutingLine({ rt }: { rt: any }) {
   const engine = rt.engine || (rt.tier ? `Tier ${rt.tier}` : "Python (no LLM)");
   return <div className="small muted" style={{ marginBottom: 6 }}>
-    <div><b>Engine:</b> {engine}{rt.model ? ` · ${rt.model}` : ""} · tier {rt.tier ?? 0}{rt.selected_tier && rt.selected_tier !== rt.tier ? ` (routed to tier ${rt.selected_tier}: ${rt.selected_model})` : ""}{rt.cached ? " · cached" : ""}</div>
+    <div><b>Engine:</b> {engine}{rt.model ? ` · ${rt.model}` : ""} · tier {rt.tier ?? 0}{rt.selected_tier && rt.selected_tier !== rt.tier ? (rt.escalations?.length && rt.tier > rt.selected_tier ? ` (started at tier ${rt.selected_tier}: ${rt.selected_model})` : ` (routed to tier ${rt.selected_tier}: ${rt.selected_model}, not used)`) : ""}{rt.cached ? " · cached" : ""}</div>
     <div><b>Why:</b> {rt.reason}</div>
-    <div>{rt.latency_ms != null && `${rt.latency_ms} ms`}{rt.input_tokens != null && ` · ${rt.input_tokens} in / ${rt.output_tokens} out tokens`}{rt.cost_usd != null && ` · est. $${rt.cost_usd.toFixed(5)}`}{` · ${rt.evidence_retrieved ?? 0} evidence`}</div>
+    <div>{rt.latency_ms != null && `${rt.latency_ms} ms`}{rt.input_tokens != null && !rt.cached && ` · ${rt.input_tokens} in / ${rt.output_tokens} out tokens`}{rt.cost_usd != null && (rt.cached ? " · cached: no new API cost" : ` · est. $${rt.cost_usd.toFixed(5)}`)}{` · ${rt.evidence_retrieved ?? 0} evidence`}</div>
     {rt.escalations?.length > 0 && <div><b>Escalated:</b> {rt.escalations.map((e: any) => `${e.from}${e.to ? " → " + e.to : ""} (${e.why})`).join("; ")}</div>}
     {rt.fallback && <div><b>Fallback:</b> {rt.fallback}</div>}
   </div>;
@@ -106,7 +106,7 @@ function Welcome() {
     <div className="welcome-back" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
       <div className="welcome">
         <div className="small" style={{ color: "var(--acc2)", letterSpacing: 2, fontFamily: "var(--mono)" }}>WELCOME · NASA SPACE APPS 2026 · FLAME IN FREEFALL</div>
-        <h1 id="welcome-title" style={{ fontSize: 26, margin: "8px 0 6px" }}>SpaceXtinSafe</h1>
+        <h1 id="welcome-title" style={{ fontSize: 26, margin: "8px 0 6px" }}>SpaceXtinsafe</h1>
         <p className="muted" style={{ marginTop: 0 }}>Links the things inside a spacecraft to what NASA microgravity fire experiments actually measured, shows how far each finding applies, and says clearly where the evidence stops.</p>
         <div className="grid g3" style={{ margin: "14px 0" }}>
           <div className="kpi"><b style={{ fontSize: 15 }}>1 · Take the tour</b><span>18 short steps drive the real app: digital twin, evidence, predictions, audit, gaps, reports. About 3 minutes.</span></div>
@@ -132,7 +132,7 @@ function Shell() {
     <div className="app">
       <aside className="side">
         <div className="brand"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden><circle cx="16" cy="16" r="14" fill="none" stroke="#4ea1ff" strokeWidth="2" /><path d="M16 7c4 5 6 8 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3 0-6 1-9z" fill="#ff8a3d" /></svg>
-          <div><b>SpaceXtinSafe</b><small>From Research to Readiness</small></div></div>
+          <div><b>SpaceXtinsafe</b><small>From Research to Readiness</small></div></div>
         {NAV.map(([g, items]) => <div key={g}><div className="navgroup">{g}</div>
           {items.map(([id, label, ic]) => <button key={id} className={`nav ${page === id ? "on" : ""}`} onClick={() => go(id)}><span style={{ width: 16, textAlign: "center" }}>{ic}</span>{label}</button>)}</div>)}
         <div className="small faint" style={{ padding: "16px 10px" }}>Research prototype. Not NASA-endorsed. No safety verdicts or emergency instructions.</div>
@@ -149,7 +149,7 @@ function Shell() {
           <label className="row small muted" title="Plain-language explanations for non-specialists"><input type="checkbox" checked={simple} onChange={(e) => setSimple(e.target.checked)} /> Plain language</label>
         </div>
         <div className="content" style={{ paddingBottom: demo !== null ? 150 : undefined }}>
-          {STATIC && <div className="banner info">Static preview of the SpaceXtinSafe app. Every response on this page was recorded from the real FastAPI backend{SNAP_META.recorded ? ` on ${SNAP_META.recorded}` : ""} ({SNAP_META.responses || "many"} responses). Navigation, the three template spacecraft, the graph, audit, evaluation, reports and the suggested questions all work. Editing spacecraft and arbitrary new queries need the live backend.</div>}
+          {STATIC && <div className="banner info">Static preview of the SpaceXtinsafe app. Every response on this page was recorded from the real FastAPI backend{SNAP_META.recorded ? ` on ${SNAP_META.recorded}` : ""} ({SNAP_META.responses || "many"} responses). Navigation, the three template spacecraft, the graph, audit, evaluation, reports and the suggested questions all work. Editing spacecraft and arbitrary new queries need the live backend.</div>}
           <P /></div>
       </div>
       <Copilot />

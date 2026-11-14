@@ -39,10 +39,12 @@ def salient_overlap(question, evidence, spacecraft_id=None):
 
 
 BOUNDARY = re.compile(r"\b(is|are|was|were)\b[^?.]{0,60}\bsafe\b|\bunsafe\b|\bsafe to\b|fire[- ]risk (score|percent|percentage|probability)|probability of (a )?fire|what should (the )?crew do|\bevacuat|emergency procedure|how (do|should|can) (we|i|they|the crew) (put out|extinguish|fight)", re.I)
-SYSTEM = ("You are SpaceXtinSafe's scientific copilot. Answer ONLY from the NASA evidence provided. Return JSON: "
+SYSTEM = ("You are SpaceXtinsafe's scientific copilot. Answer ONLY from the NASA evidence provided. Return JSON: "
           '{"claims":[{"text":"...","citations":["EV-..."]}],"limitations":"..."}. Every claim needs at least one citation from the provided IDs. '
           "Copy numbers exactly as written in the evidence. Never give safe/unsafe verdicts, fire-risk percentages, or emergency or operational instructions. "
           "Related evidence is not enough: if the evidence does not directly answer the question, return no claims and explain in limitations. "
+          "Exception: when a 'Spacecraft knowledge graph' section lists what a named spacecraft element is made of, NASA findings about those materials ARE relevant to that element: "
+          "state the link explicitly in each claim (e.g. 'The sleeping bag's shell fabric is Nomex; in Saffire-II ...'), and say the finding comes from material tests, not tests of that object. "
           "State experimental conditions (gravity, O2, flow, sample form) when you report a measurement.")
 
 
@@ -71,7 +73,7 @@ def _abstain(reason, question, related=None, kind="no-evidence"):
     return {"mode": kind, "answer": reason, "claims": [], "dropped": [], "evidence": related or [], "abstained": True}
 
 
-APP_HELP = ("SpaceXtinSafe modules: Mission overview; Design Studio (build/edit spacecraft, custom materials); Digital twin (cutaway with "
+APP_HELP = ("SpaceXtinsafe modules: Mission overview; Design Studio (build/edit spacecraft, custom materials); Digital twin (cutaway with "
             "evidence, gap, conflict, interaction and sensor overlays); Material inventory; Mission Workspace (question + conditions -> evidence, "
             "applicability, insights, eligibility-checked prediction); Evidence library (keyword/semantic/hybrid/graph search; NASA investigations "
             "and datasets tab); Knowledge graphs (multi-hop traces, Neo4j sync); Virtual Fire Lab (L1 material intelligence, L2 interactions, FLEX "
@@ -79,7 +81,7 @@ APP_HELP = ("SpaceXtinSafe modules: Mission overview; Design Studio (build/edit 
             "pressure); Evidence audit; Incident intelligence (simulated replays, procedure registry); AI Evaluation Centre; Mission reports (PDF). "
             "Prediction eligibility: missing inputs, physical validity, condition compatibility, pressure band, convex hull, nearest-neighbour "
             "distance and local coverage -> Model-supported, Exploratory or Unavailable. The tool gives no safety verdicts or emergency instructions.")
-APP_SYSTEM = ("You are the SpaceXtinSafe app guide. Answer in at most 4 sentences using ONLY the app description provided. Do not make "
+APP_SYSTEM = ("You are the SpaceXtinsafe app guide. Answer in at most 4 sentences using ONLY the app description provided. Do not make "
               "scientific or numerical claims about combustion; for science, tell the user to ask a scientific question. Return JSON: "
               '{"answer":"..."}')
 
@@ -123,7 +125,7 @@ def ask(question: str, scenario: dict | None = None, spacecraft_id: str | None =
 
 def _ask(question, scenario, spacecraft_id, mode, client):
     if BOUNDARY.search(question) or OPERATIONAL.search(question):
-        return {"mode": "boundary", "answer": "SpaceXtinSafe does not give safety verdicts, fire-risk scores or emergency instructions. "
+        return {"mode": "boundary", "answer": "SpaceXtinsafe does not give safety verdicts, fire-risk scores or emergency instructions. "
                 "It can show what NASA research found for the materials and conditions you choose. For operational decisions, use the vehicle's "
                 "authorised procedures and qualified fire-safety experts.", "claims": [], "dropped": [], "evidence": [], "boundary_triggered": True,
                 "routing": {"reason": "boundary rule (verdict, risk score or operational instruction requested)"}}
@@ -183,7 +185,17 @@ def _ask(question, scenario, spacecraft_id, mode, client):
     if blocked:
         routing.update(fallback=blocked, engine="Evidence retrieval (no LLM)")
         return {**_evidence_fallback(ev, r, blocked), "routing": routing}
+    if router.CONFLICT_Q.search(question):
+        # a question about conflicting sources must see the recorded conflict findings for the investigations it names
+        names = {e["investigation"].split("-")[0].lower() for e in ev} | {w.lower() for w in re.findall(r"[A-Za-z]+", question)}
+        extra = [e for e in data.evidence() if e["category"] == "Conflicting evidence" and e["id"] not in {x["id"] for x in ev}
+                 and e["investigation"].split("-")[0].lower() in names]
+        ev = ev + extra[:3]
     ctx = "\n".join(f"[{e['id']}] ({e['investigation']}, {e['location']}) {e['statement']} QUOTE: \"{e['quote']}\"" for e in ev)
+    links = _graph_links(question, spacecraft_id)
+    if links:
+        ctx = ("Spacecraft knowledge graph (facts about the user's configuration, not NASA findings; use them only to connect the "
+               "named spacecraft element to the evidence about its materials):\n" + links + "\n\nNASA evidence:\n" + ctx)
     if scenario:
         ctx += f"\n\nActive scenario: {json.dumps(scenario)}"
     user = f"Evidence:\n{ctx}\n\nQuestion: {question}\n" + ("Keep it brief and plain. " if kind in ("term", "summary") else "") + "Return only JSON."
@@ -216,6 +228,31 @@ def _ask(question, scenario, spacecraft_id, mode, client):
                        input_tokens=tin, output_tokens=tout, cost_usd=round(usd, 6))
         return {"mode": "claude", "model": router.model_for(tier), "answer": " ".join(c["text"] for c in kept) or "The evidence does not support an answer.",
                 "claims": kept, "dropped": dropped, "limitations": j.get("limitations"), "evidence": ev, "retrieval_mode": r["mode"], "graph_engine": r.get("graph_engine"), "routing": routing}
+
+
+def _graph_links(question, spacecraft_id):
+    """For spacecraft elements named in the question, list what they are made of (graph containment), so the model can
+    link e.g. 'Sleeping bag' to the Nomex and polyurethane findings without inventing the connection."""
+    if not spacecraft_id:
+        return ""
+    sc = store.get_spacecraft(spacecraft_id); mats = data.materials(); out = []
+    if not sc:
+        return ""
+    for ent in retrieval.entities(question, spacecraft_id):
+        parts = ent.split("/")
+        if len(parts) < 2 or parts[0] != spacecraft_id:
+            continue
+        for c in sc["compartments"]:
+            if c["id"] != parts[1]:
+                continue
+            for o in c["objects"]:
+                if len(parts) > 2 and o["id"] != parts[2]:
+                    continue
+                for k in o["components"]:
+                    if len(parts) > 3 and k["id"] != parts[3]:
+                        continue
+                    out.append(f"- {sc['name']} › {c['name']} › {o['name']} › {k['name']}: {mats.get(k['material_id'], {}).get('name', k['material_id'])} ({k.get('form')})")
+    return "\n".join(out[:25])
 
 
 def _blocked(client):
